@@ -1,0 +1,5 @@
+book_filename: "aula-estatistica_basica"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
