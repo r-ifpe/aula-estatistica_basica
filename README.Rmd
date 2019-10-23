@@ -1,0 +1,13 @@
+---
+title: "Estatística Básica"
+output:
+  github_document:
+    fig_width: 9
+    fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Livro base para as aulas de estatística básica
