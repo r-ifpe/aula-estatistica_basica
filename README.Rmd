@@ -10,4 +10,4 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Livro base para as aulas de estatística básica
+Livro base para as aulas de estatística básica UHU
