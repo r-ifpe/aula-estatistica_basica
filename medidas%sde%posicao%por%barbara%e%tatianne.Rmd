@@ -172,7 +172,7 @@ $\frac{9}{10}  x n=   \frac{9}{10}  x 12=  \frac{108}{10}=\color{purple}{\text{1
 
 $\color{purple}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}$
 
-3.	Logo;
+3. Logo;
 
 $\color{purple}{\text{1° $D=  \frac{(20+21)}{2}=20,5 ≡1° D=20,5$}}$
 

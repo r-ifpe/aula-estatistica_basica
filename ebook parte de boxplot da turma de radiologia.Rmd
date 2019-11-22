@@ -106,4 +106,4 @@ $\color{red}{\text{1º Q= 10 ↔10}}$ $\color{green}{\text{-4,5}}$ $\color{red}{
 
 $\color{purple}{\text{3º=13 ↔13}}$ $\color{green}{\text{+ 4,5}}$ $\color{purple}{\text{=}}$ 17,5
 
-3.	Faça o BoxPlot:
+3. Faça o BoxPlot:
