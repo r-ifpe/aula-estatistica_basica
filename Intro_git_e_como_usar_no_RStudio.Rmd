@@ -26,7 +26,7 @@ O controle de versão foi projetado para gerenciar o código-fonte. Funciona mel
 Git é uma implementação específica do controle de versão. É realmente poderoso e tem muitos recursos, mas apenas arranharemos a superfície.
 
 ## O que é o GitHub?
-Quando você inicia um projeto Git no seu computador, armazena todo o histórico do projeto localmente. O armazenamento do seu projeto e seu histórico é chamado de repositório. No entanto, a grande vantagem de usar o controle de versão, como o Git, é poder colaborar com outras pessoas (e também armazenar seu repositório em outro lugar).
+Quando você inicia um projeto Git no seu computador, armazena todo o histórico do projeto localmente. O armazenamento do seu projeto e seu histórico é chamado de **repositório**. No entanto, a grande vantagem de usar o controle de versão, como o Git, é poder colaborar com outras pessoas (e também armazenar seu repositório em outro lugar).
 O GitHub é um site comercial que permite armazenar seu repositório publicamente de graça (você precisa pagar se quiser mantê-lo privado, também é possível obter uma conta educativa com um endereço de e-mail .edu que fornecerá algumas contas privadas gratuitas). Existem outros sites que oferecem serviços semelhantes, incluindo o BitBucket. Armazenar seus repositórios nesse site tem muitas vantagens. Ele oferece uma interface amigável para muitas operações comuns, para que você não precise se lembrar de como fazê-las na linha de comando. Eles também fornecem outros recursos úteis, incluindo um "Rastreador de problemas" e wikis.
 
 ## O fluxo de trabalho Git (The Git workflow)
@@ -42,7 +42,7 @@ Commits são baratos. Confirme com frequência e forneça mensagens úteis para 
 
 <center>![](G:\aula-estatistica_basica\Intro_git_e_como_usar_no_RStudio_files\figure-html\commit_messages.png)<center>
 
-<center>À MEDIDA QUE O PROJETO SE ARRASTA, O MEU GIT COMMIT MESSAGES FICA MENOS E MENOS INFORMATIVO.</center>
+<center>**À MEDIDA QUE O PROJETO SE ARRASTA, O MEU $\color{red}{\text{GIT COMMIT MESSAGES}}$ FICA MENOS E MENOS INFORMATIVO.**</center>
 
 ## Ramificações (Branching)
 A ramificação é um ótimo recurso do controle de versão. Ele permite que você duplique seu repositório existente, desenvolva ou experimente um novo recurso de forma independente e, se gostar do que está fazendo, poderá mesclar essas modificações novamente no seu projeto.
@@ -61,11 +61,11 @@ Com o Pull Request, você está solicitando a alguém que mantém um repositóri
 
 Para emitir um Pull Request:
 
-1. Primeiro, você precisa de uma cópia do repositório que contém o código que deseja melhorar. Para fazer isso, você o bifurcará (Fork) de seu local original. Você também precisará informar ao Git que esta é uma cópia de outro projeto (também conhecido como upstream);
+1. Primeiro, você precisa de uma cópia do repositório que contém o código que deseja melhorar. Para fazer isso, você o bifurcará **(Fork)** de seu local original. Você também precisará informar ao Git que esta é uma cópia de outro projeto (também conhecido como **upstream**);
 2. Você precisa importar o código para o seu computador. Para fazer isso, você clonará o Fork no computador;
 3. Agora que o código está no seu computador, você pode editá-lo e modificá-lo. Quando terminar, você pode enviá-lo para o seu repositório;
-4. Quando o código estiver no seu repositório, você poderá emitir Pull Request para que o proprietário original do código (upstream) possa revisar, comentar, aceitar (ou rejeitar) as modificações propostas;
-5. Em algum momento, você precisará extrair alterações que ocorram upstream para o seu próprio repositório, se desejar continuar contribuindo para o projeto.
+4. Quando o código estiver no seu repositório, você poderá emitir Pull Request para que o proprietário original do código **(upstream)** possa revisar, comentar, aceitar (ou rejeitar) as modificações propostas;
+5. Em algum momento, você precisará **extrair** alterações que ocorram upstream para o seu próprio repositório, se desejar continuar contribuindo para o projeto.
 
 ## Como fazer isso usando o RStudio e o GitHub?
 1. Vá para a página do repositório no GitHub do projeto que você gostaria de melhorar e clique no botão "Fork" no canto superior direito.
@@ -82,7 +82,7 @@ No nosso exemplo, isso seria https://github.com/fmichonneau/challenges-francois 
 `git remote add upstream https://github.com/r-bio/challenges-francois`.
 Certifique-se de que funcionou digitando `git remote –v` , ele deve exibir 4 linhas, 2 que começam com a origem e o endereço do seu fork e 2 que começam com o upstream e o endereço do repositório upstream. Observe que aqui usamos pstream para nomear o repositório upstream, mas poderíamos ter dado outro nome a ele. Nesse caso, o upstream é fácil de lembrar e preciso. Mantenha sua janela do shell aberta.
 
-5. Agora vamos criar uma ramificação (branch) para nossas alterações, para que elas sejam independentes. Também não há como fazer isso no RStudio, portanto, vamos inserir comandos adicionais no shell para criá-lo:
+5. Agora vamos criar uma ramificação **(branch)** para nossas alterações, para que elas sejam independentes. Também não há como fazer isso no RStudio, portanto, vamos inserir comandos adicionais no shell para criá-lo:
 `git checkout -b proposed-fixes master`.
 Aqui, proposed-fixes é um nome arbitrário que damos ao nosso branch. Idealmente, você deve escolher um nome que resuma o objetivo das alterações propostas. Depois de ver a mensagem Switched to a new branch..., você pode fechar a janela do shell.
 
@@ -102,19 +102,19 @@ Este comando envia sua modificação para o seu fork no GitHub.
 https://github.com/fmichonneau/challenges-francois e clique no ícone verde:
 <center>![](G:\aula-estatistica_basica\Intro_git_e_como_usar_no_RStudio_files\figure-html\icone_verde.png)<center>
 
-9. Verifique se a Branch correta está selecionada no menu suspenso compare no canto superior direito e clique no botão verde: "Create pull request".
+9. Verifique se a Branch correta está selecionada no menu suspenso **compare** no canto superior direito e clique no botão verde: "Create pull request".
 
 10. Deixe uma mensagem com alguma explicação para as alterações e sugestões propostas e clique no botão verde "Create Pull Request". Isso enviará uma notificação ao proprietário do repositório, que revisará sua solicitação.
 
 ## O que fazer se você receber uma solicitação de recebimento (Pull Request)?
-Se você deseja aceitar o pull request, você pode clicar no botão "Merge pull request" no seu repositório e, após adicionar um comentário opcional, clique novamente no botão "Accept pull request".
+Se você deseja aceitar o **pull request**, você pode clicar no botão "Merge pull request" no seu repositório e, após adicionar um comentário opcional, clique novamente no botão "Accept pull request".
 
-Depois disso, você precisa importar (Pull) essas alterações para sua cópia local do repositório. Você deve conseguir fazer as alterações clicando em "Pull branches" no menu "Git" do seu projeto R no RStudio.
+Depois disso, você precisa importar **(Pull)** essas alterações para sua cópia local do repositório. Você deve conseguir fazer as alterações clicando em "Pull branches" no menu "Git" do seu projeto R no RStudio.
 
 ## Explorando mais
 
 Existem muitos recursos na Web para aprender sobre o Git e o GitHub:
 
-* O Git Tower fornece bons infográficos que ilustram como as diferentes partes do fluxo de trabalho do Git se encaixam. Git workflow
-* Um excelente (mas talvez muito abrangente para iniciantes) é o Pro Git Book. Este capítulo é ótimo para aprender como usar o GitHub para contribuir com um projeto.
+* O Git Tower fornece bons infográficos que ilustram como as diferentes partes do fluxo de trabalho do Git se encaixam. [Git workflow](https://www.git-tower.com/blog/workflow-of-git)
+* Um excelente (mas talvez muito abrangente para iniciantes) é o [Pro Git Book](https://git-scm.com/book/en/v2). Este capítulo é ótimo para aprender como usar o [GitHub](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) para contribuir com um projeto.
 
