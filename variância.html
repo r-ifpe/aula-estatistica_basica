@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Variância e Desvio Padrão</title>
+  <meta name="description" content="Variância e Desvio Padrão" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Variância e Desvio Padrão" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Variância e Desvio Padrão" />
+  
+  
+  
+
+<meta name="author" content="Neydison Lucas, Gisele Ramos e Eddie Müller" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="desvio-padrão.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="variância.html"><a href="variância.html"><i class="fa fa-check"></i><b>1</b> VARIÂNCIA</a><ul>
+<li class="chapter" data-level="1.1" data-path="variância.html"><a href="variância.html#como-calcular-a-variância-de-uma-amostra"><i class="fa fa-check"></i><b>1.1</b> COMO CALCULAR A VARIÂNCIA DE UMA AMOSTRA</a></li>
+<li class="chapter" data-level="1.2" data-path="variância.html"><a href="variância.html#como-calcular-a-variância-de-uma-população"><i class="fa fa-check"></i><b>1.2</b> COMO CALCULAR A VARIÂNCIA DE UMA POPULAÇÃO</a></li>
+<li class="chapter" data-level="1.3" data-path="variância.html"><a href="variância.html#exemplos"><i class="fa fa-check"></i><b>1.3</b> EXEMPLOS</a></li>
+<li class="chapter" data-level="1.4" data-path="variância.html"><a href="variância.html#exercícios"><i class="fa fa-check"></i><b>1.4</b> EXERCÍCIOS</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="desvio-padrão.html"><a href="desvio-padrão.html"><i class="fa fa-check"></i><b>2</b> DESVIO PADRÃO</a><ul>
+<li class="chapter" data-level="2.1" data-path="desvio-padrão.html"><a href="desvio-padrão.html#como-calcular-o-desvio-padrão-populacional"><i class="fa fa-check"></i><b>2.1</b> COMO CALCULAR O DESVIO PADRÃO POPULACIONAL</a></li>
+<li class="chapter" data-level="2.2" data-path="desvio-padrão.html"><a href="desvio-padrão.html#como-calcular-o-desvio-padrão-amostral"><i class="fa fa-check"></i><b>2.2</b> COMO CALCULAR O DESVIO PADRÃO AMOSTRAL</a></li>
+<li class="chapter" data-level="2.3" data-path="desvio-padrão.html"><a href="desvio-padrão.html#bônus-como-calcular-o-desvio-padrão-populacional-e-amostral-na-calculadora-científica"><i class="fa fa-check"></i><b>2.3</b> BÔNUS: COMO CALCULAR O DESVIO PADRÃO POPULACIONAL E AMOSTRAL NA CALCULADORA CIENTÍFICA</a></li>
+<li class="chapter" data-level="2.4" data-path="desvio-padrão.html"><a href="desvio-padrão.html#exercícios-1"><i class="fa fa-check"></i><b>2.4</b> EXERCÍCIOS</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Variância e Desvio Padrão</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Variância e Desvio Padrão</h1>
+<p class="author"><em>Neydison Lucas, Gisele Ramos e Eddie Müller</em></p>
+<p class="date"><em>23/11/2019</em></p>
+</div>
+<div id="variância" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> VARIÂNCIA</h1>
+<p>Dado um conjunto de dados, a variância é uma medida de dispersão que mostra o quão distante cada valor desse conjunto está do valor central(médio).
+Na teoria da probabilidade e na estatística, a variância de uma variável aleatória é uma medida da sua dispersão estatística, expondo assim “a maior distância” em geral os seus valores se encontram do valor esperado.
+Quanto menor é a variância, mais próximos os valores estão da média; mas quanto maior for ela, mais os valores estão distantes da média.
+A variância de uma variável aleatória real é o seu segundo momento central, e também o seu segundo cumulante (os cumulantes só diferem dos momentos centrais a partir do 4° grau). Sendo o seu valor o quadrado do desvio padrão.</p>
+<div id="como-calcular-a-variância-de-uma-amostra" class="section level2">
+<h2><span class="header-section-number">1.1</span> COMO CALCULAR A VARIÂNCIA DE UMA AMOSTRA</h2>
+<p><strong>MÉTODO 1 de 2 - PASSOS:</strong></p>
+<p><strong>1. Escreva o conjunto de dados de sua amostra:</strong></p>
+<p>Na maioria dos casos, estatísticos têm acesso apenas a uma amostra, ou um subconjunto da população que estão estudando. Por exemplo, em vez de analisar a população “custo de todos os carros na Alemanha”, um estatístico poderá analisar uma amostra aleatória de alguns milhares de carros. Ele pode usar essa amostra para obter uma estimativa dos custos de carros alemães, mas o resultado provavelmente não equivalerá aos valores reais com precisão.<br />
+Exemplo: ao analisar a quantidade de bolinhos vendidos diariamente em uma cafeteria, você pode amostrar seis dias aleatórios e obter os seguintes resultados: <span class="math inline">\(17, 15, 23, 7, 9, 13\)</span>. Essa é uma amostra, e não uma uma população, já que não há dados relativos a todos os dias em que a cafeteria estava aberta. população, já que não há dados relativos a todos os dias em que a cafeteria estava aberta.</p>
+<p><strong>2. Escreva a fórmula de variância da amostra:</strong></p>
+<p>A variância de um conjunto de dados diz a você quão espalhados eles estão. Quanto mais próxima de zero, mais próximos estarão uns dos outros. Ao trabalhar com conjuntos de dados amostrais, use a seguinte fórmula para calcular a variância:</p>
+<p><span class="math display">\[s^2 = \frac{\sum[(x_i - \overline x)^2]}{n-1} \]</span></p>
+<ul>
+<li><span class="math inline">\(s^2\)</span> representa a variância, que é sempre medida em unidades elevadas ao quadrado.</li>
+<li><span class="math inline">\(x_i\)</span> representa um termo de seu conjunto de dados.</li>
+<li><span class="math inline">\(\sum\)</span>, que significa “somatória”, leva você a calcular os seguintes termos para cada valor de <span class="math inline">\(x_i\)</span> e, a seguir, somá-los em conjunto.</li>
+<li><span class="math inline">\(\overline x\)</span> representa o valor médio da amostra.</li>
+<li><span class="math inline">\(n\)</span> é a quantidade de pontos de dados presentes na amostra.</li>
+</ul>
+<p><strong>3. Calcule a média da amostra:</strong></p>
+<p>O símbolo <span class="math inline">\(\overline x\)</span> ou “x barra” se refere à média aritmética de uma amostra. Calcule-o como se ele fosse qualquer outro tipo de média: some todos os dados existentes e divida o resultado pela quantidade deles.</p>
+<ul>
+<li><p><strong>Exemplo:</strong> Inicialmente, some os pontos de dados: <span class="math inline">\(17 + 15 + 23 + 7 + 9 + 13 = 84\)</span>.
+A seguir, divida a sua resposta por sua quantidade, ou seis, nesse caso: <span class="math inline">\(84 ÷ 6 = 14\)</span>.<br />
+<strong>Média aritmética da amostra = <span class="math inline">\(\overline x\)</span> = 14.</strong></p></li>
+<li><p>Você pode pensar na média aritmética como se ela representasse o “ponto central” do conjunto de dados. Se eles estiverem aglomerados ao redor da média, isso indica que a variância é baixa. Caso estejam bem espalhados e distantes, a variância é alta.</p></li>
+</ul>
+<p><strong>4. Subtraia a média de cada um dos dados:</strong></p>
+<p>Agora é o momento de calcular <span class="math inline">\(x_i - \overline x\)</span>, onde <span class="math inline">\(x_i\)</span> representa cada número presente no conjunto de dados. Cada resposta indica o desvio existente entre o número e a média aritmética ou, em outras palavras, qual é a distância entre eles.</p>
+<ul>
+<li><p><strong>Exemplo:</strong><br />
+<span class="math inline">\(\begin{equation} x_1 - \overline x = 17 - 14 = 3 \\ x_2 - \overline x = 15 - 14 = 1 \\ x_3 - \overline x = 23 - 14 = 9 \\ x_4 - \overline x = 7 - 14 = -7 \\ x_5 - \overline x = 9 - 14 = -5 \\ x_6 - \overline x = 13 - 14 = -1 \end{equation}\)</span></p></li>
+<li><p>É fácil revisar o trabalho feito, já que as respostas somadas devem resultar em zero. Isso acontece por conta da definição de média aritmética, uma vez que as respostas negativas (distância entre a média e os números menores) cancelam com precisão as respostas positivas (distância entre a média e os números maiores).</p></li>
+</ul>
+<p><strong>5. Eleve cada resultado ao quadrado:</strong></p>
+<p>Como descrito acima, a lista atual de desvios <span class="math inline">\((x_i- \overline x)\)</span> se soma para resultar em zero. Isso significa que o “desvio médio” também será sempre zero, o que nada nos diz sobre a dispersão dos dados. Para solucionar esse problema, encontre o quadrado de cada desvio. Isso transformará todos em números positivos, de modo que negativos e positivos não mais se cancelarão em zero.</p>
+<ul>
+<li><p><strong>Exemplo:</strong><br />
+<span class="math inline">\(\begin{equation} (x_1 - \overline x)^2 = 3^2 = 9 \\ (x_2 - \overline x)^2 = 1^2 = 1 \\ 9^2 = 81 \\ (-7)^2 = 49 \\ (-5)^2 = 25 \\ (-1)^2 = 1 \end{equation}\)</span></p></li>
+<li><p>Você agora tem o valor para cada ponto de dados da amostra.</p></li>
+</ul>
+<p><strong>6. Encontre a soma dos valores elevados ao quadrado:</strong></p>
+<p>Agora, calcularemos todo o numerador da fórmula: O sigma maiúsculo, <span class="math inline">\(\sum(x_i - \overline x)^2\)</span>, leva-nos a somar o valor do seguinte termo para cada valor de <span class="math inline">\(x_i\)</span>. Você já calculou para cada valor de <span class="math inline">\(x_i\)</span> presente na amostra, e agora só falta somar os resultados.</p>
+<ul>
+<li>Exemplo: <span class="math inline">\(9 + 1 + 81 + 49 + 25 + 1 = 166\)</span>.</li>
+</ul>
+<p><strong>7. Divida por <span class="math inline">\(n - 1\)</span>, onde <span class="math inline">\(n\)</span> representa a quantidade de pontos de dados.</strong></p>
+<p>Há muito tempo, estatísticos dividiam por n ao calcular a variância de uma amostra. Isso dá a você o valor médio do desvio elevado ao quadrado, que se combina perfeitamente com a variância da amostra. Ainda assim, lembre-se de que uma amostra representa apenas uma estimativa de uma população maior. Se você tomar outra amostra aleatória e fizer os mesmos cálculos, obterá um resultado completamente diferente. Desse modo, dividir por <span class="math inline">\(n - 1\)</span> em vez de usar apenas <span class="math inline">\(n\)</span> dará a você uma melhor estimativa da variância de uma população maior, que é o que você está interessado em descobrir. Essa correção é tão comum que passou a ser a definição mais aceita da variância de uma amostra.</p>
+<ul>
+<li>Exemplo: há seis pontos de dados nessa amostra, de modo que <span class="math inline">\(n = 6\)</span>.<br />
+Variância da amostra = <span class="math inline">\(s^2 = \frac{166}{6-1} = 33,2\)</span></li>
+</ul>
+<p><strong>8. Entenda os conceitos de variância e desvio-padrão.</strong></p>
+<p>Observe que, como há um expoente na fórmula, a variância é medida na unidade quadrada do dado original. Isso pode dificultar um entendimento meramente intuitivo. Em vez dessa abordagem, é geralmente útil usar o desvio-padrão. Mesmo assim, você não desperdiçou esforços, já que ele é definido como raiz quadrada da variância. É por essa razão que a variância de uma amostra é escrita como <span class="math inline">\(s^2\)</span> e o desvio-padrão da amostra como <span class="math inline">\(s\)</span>.</p>
+<ul>
+<li>Por exemplo, o desvio-padrão da amostra anterior é <span class="math inline">\(s = \sqrt{33,2} = 5,76\)</span>.</li>
+</ul>
+</div>
+<div id="como-calcular-a-variância-de-uma-população" class="section level2">
+<h2><span class="header-section-number">1.2</span> COMO CALCULAR A VARIÂNCIA DE UMA POPULAÇÃO</h2>
+<p><strong>MÉTODO 2 de 2 - PASSOS:</strong></p>
+<p><strong>1. Comece com o conjunto de dados de uma população.</strong></p>
+<p>O termo “população” se refere ao conjunto total de observações relevantes. Por exemplo, se você está estudando a idade dos residentes em São Paulo, a população incluiria a idade de cada um dos cidadãos residindo nesse estado. Para um conjunto de dados extenso como esse, você normalmente deveria criar uma planilha, mas aqui está um conjunto de dados menor como exemplo:</p>
+<ul>
+<li><strong>Exemplo:</strong> Há exatamente seis aquários em uma sala do zoológico municipal. Os seis aquários contêm a seguinte quantidade de peixes:<br />
+<span class="math inline">\(\begin {equation} x_1 = 5 \\ x_2 = 5 \\ x_3 = 8 \\ x_4 = 12 \\ x_5 = 15 \\ x_6 = 18 \end {equation}\)</span></li>
+</ul>
+<p><strong>2. Escreva a fórmula para a variância da população:</strong></p>
+<p>Como uma população contém todos os dados de que você precisa, essa fórmula dá a você sua variância com precisão. Para distingui-la da variância da amostra (que é apenas uma estimativa), estatísticos usam variáveis diferentes:</p>
+<ul>
+<li><p><span class="math inline">\(\sigma^2 = \frac{(\sum(x_i - \mu)^2}{n}\)</span></p></li>
+<li><p><span class="math inline">\(\sigma^2\)</span> = variância da população. Aqui, temos um sigma minúsculo elevado ao quadrado, pois a variância é medida em unidades ao quadrado.</p></li>
+<li><p><span class="math inline">\(x_i\)</span> representa um termo de seu conjunto de dados.</p></li>
+<li><p>Os termos dentro de <span class="math inline">\(\sum\)</span> serão calculados para cada <span class="math inline">\(x_i\)</span> e, a seguir, somados.</p></li>
+<li><p><span class="math inline">\(\mu\)</span> representa a média da população.</p></li>
+<li><p><span class="math inline">\(n\)</span> representa a quantidade de pontos de dados na população.</p></li>
+</ul>
+<p><strong>3. Encontre a média aritmética da população:</strong></p>
+<p>Ao analisar uma população, o símbolo <span class="math inline">\(\mu\)</span> (“mu”) representa a média aritmética. Para encontrá-la, some todos os pontos de dados e divida o resultado por sua quantidade.</p>
+<ul>
+<li><p>Você pode pensar na média aritmética como sendo um ponto médio, mas lembre-se de que há muitas definições de média na matemática.</p></li>
+<li><p><strong>Exemplo:</strong> Média = <span class="math inline">\(\mu = \frac{5 + 5 + 8 + 12 + 15 + 18}{6} = 10,5\)</span></p></li>
+</ul>
+<p><strong>4. Subtraia a média de cada ponto de dados:</strong></p>
+<p>Os pontos de dados próximos à média resultarão em uma diferença próxima a zero. Refaça o problema de subtração com cada ponto de dados e você começará a entender a dispersão da amostra.</p>
+<ul>
+<li><strong>Exemplo:</strong><br />
+<span class="math inline">\(\begin{equation} x_1 - \mu = 5 - 10,5 = -5,5 \\ x_2 - \mu = 5 - 10,5 = -5,5 \\ x_3 - \mu = 8 - 10,5 = -2,5 \\ x_4 - \mu = 12 - 10,5 = 1,5 \\ x_5 - \mu = 15 - 10,5 = 4,5 \\ x_6 - \mu = 18 - 10,5 = 7,5 \end{equation}\)</span></li>
+</ul>
+<p><strong>5. Eleve cada resposta ao quadrado:</strong></p>
+<p>Agora, alguns dos números do último passo serão negativos e alguns, positivos. Se você visualizar os dados em uma linha numérica, essas duas categorias representarão os números à esquerda e à direita da média, respectivamente. Isso não é útil para o cálculo da variância, já que ambos os grupos cancelam um ao outro. Eleve cada valor ao quadrado para torná-los todos positivos.</p>
+<ul>
+<li>Exemplo:<br />
+<span class="math inline">\((x_1 - \mu)^2\)</span> para cada valor de i de 1 a 6:
+<span class="math inline">\(\begin{equation} (-5,5)^2 = 30,25 \\ (-5,5)^2 = 30,25 \\ (-2,5)^2 = 6,25 \\ (1,5)^2 = 2,25 \\ (4,5)^2 = 20,25 \\ (7,5)^2 = 56,25 \end{equation}\)</span></li>
+</ul>
+<p><strong>6. Encontre a média aritmética dos resultados:</strong></p>
+<p>Agora, você tem um valor para cada ponto de dados que está (indiretamente) relacionado com a distância à qual está da média aritmética. Para obter a média desses valores, some-os e divida-os por sua quantidade.</p>
+<ul>
+<li><strong>Exemplo:</strong><br />
+<span class="math display">\[\frac{30,25 + 30,25 + 6,25 + 2,25 + 20,25 + 56,25}{6} = \frac{145,5}{6} = 24,25\]</span>
+<strong>7. Use o resultado na fórmula:</strong></li>
+</ul>
+<p>Se você não sabe ao certo como isso se relaciona com a fórmula presente no início do método, tente escrever o problema de forma extensa:</p>
+<ul>
+<li><p>Depois de ter encontrado a diferença das médias e dos quadrados, você terá os valores <span class="math inline">\((x_1 - \mu)^2\)</span> , <span class="math inline">\((x_2 - \mu)^2\)</span> e assim por diante até chegar em <span class="math inline">\((x_n - \mu)^2\)</span> , onde <span class="math inline">\(x_n\)</span>, representa o último ponto de dados do conjunto.</p></li>
+<li><p>Para encontrar a média desses valores, some-os e divida o resultado por <span class="math inline">\(n\)</span>: <span class="math display">\[\frac{((x_1 - \mu)^2 + (x_2 - \mu)^2 + ... + (x_n - \mu)^2)}{n}\]</span></p></li>
+<li><p>Depois de reescrever o numerador na notação sigma, você terá a fórmula usada para o cálculo da variância:<br />
+<span class="math display">\[\frac{(\sum(x_i - \mu)^2)}{n}\]</span></p></li>
+</ul>
+</div>
+<div id="exemplos" class="section level2">
+<h2><span class="header-section-number">1.3</span> EXEMPLOS</h2>
+<p><strong>Exemplo 1:</strong></p>
+<p>Considere as notas <span class="math inline">\(2 – 8 – 5 – 6\)</span> obtidas por 4 alunos, numa avaliação de Biologia, distribuídas na tabela abaixo. Calcule a variância considerando-se uma população.</p>
+<p>Cálculo da média:</p>
+<p><span class="math display">\[\mu = \frac{2 + 8 + 5 + 6}{4} = 5,25\]</span></p>
+<p>Cálculo da variância populacional:</p>
+<p><span class="math display">\[\sigma^2 = \frac{(2 - 5,25)^2 + (8 - 5,25)^2 + (5 - 5,25)^2 + (6 - 5,25)^2}{4} = \frac{18,75}{4} = 4,6875.\]</span></p>
+<p><strong>Exemplo 2:</strong></p>
+<p>Calcule o desvio padrão da série abaixo, representativa de uma amostra.</p>
+<center>
+<img src="variancia_e_desvio_padrao_files/figura1_exemplos.png" />
+</center>
+<p>Cálculo da média:</p>
+<p><span class="math display">\[\overline x = \frac{(1 \times 2) + (3 \times 6) + (5 \times 10) + (1 \times 14) }{10} = 8,4.\]</span></p>
+<p>Cálculo da variância amostral:</p>
+<p><span class="math display">\[s^2 = \frac{1 \times (2 - 8,4)^2 + 3 \times (6 - 8,4)^2 + 5 \times (10 - 8,4)^2 + 1 \times (14 - 8,4)^2}{10 - 1} = \frac{102,4}{9} = 11,3778.\]</span></p>
+<p>O desvio padrão amostral corresponde à raiz quadrada da variância amostral:</p>
+<p><span class="math display">\[s = \sqrt{11,3778} = 3,37\]</span></p>
+<p>Assim, os dados variam, em média, <span class="math inline">\(\color{red}{\text{3,37 unidades}}\)</span> ao redor da <strong>média 8,4.</strong></p>
+</div>
+<div id="exercícios" class="section level2">
+<h2><span class="header-section-number">1.4</span> EXERCÍCIOS</h2>
+<ol style="list-style-type: decimal">
+<li><p>Considere as notas <span class="math inline">\(4, 7, 3, 6\)</span> obtidas por 4 alunos, numa avaliação de Português, calcule a variância considerando-se uma população.</p></li>
+<li><p>Calcule a Variância da série abaixo, representativa de uma amostra.</p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Classe</th>
+<th align="center">Intervalo de Classe</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(x_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">02 ├ 06</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">08 ├ 12</td>
+<td align="center">3</td>
+<td align="center">14</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">06 ├ 10</td>
+<td align="center">6</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">12 ├ 18</td>
+<td align="center">1</td>
+<td align="center">15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="desvio-padrão.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+---
+title: "Variância e Desvio Padrão"
+author: "Neydison Lucas, Gisele Ramos e Eddie Müller"
+date: "23/11/2019"
+output: html_document
+---
+
+# VARIÂNCIA
+Dado um conjunto de dados, a variância é uma medida de dispersão que mostra o quão distante cada valor desse conjunto está do valor central(médio).
+Na teoria da probabilidade e na estatística, a variância de uma variável aleatória é uma medida da sua dispersão estatística, expondo assim "a maior distância" em geral os seus valores se encontram do valor esperado. 
+Quanto menor é a variância, mais próximos os valores estão da média; mas quanto maior for ela, mais os valores estão distantes da média.
+A variância de uma variável aleatória real é o seu segundo momento central, e também o seu segundo cumulante (os cumulantes só diferem dos momentos centrais a partir do 4° grau). Sendo o seu valor o quadrado do desvio padrão.
+
+## COMO CALCULAR A VARIÂNCIA DE UMA AMOSTRA
+
+**MÉTODO 1 de 2 - PASSOS:**
+
+**1. Escreva o conjunto de dados de sua amostra:**  
+
+Na maioria dos casos, estatísticos têm acesso apenas a uma amostra, ou um subconjunto da população que estão estudando. Por exemplo, em vez de analisar a população "custo de todos os carros na Alemanha", um estatístico poderá analisar uma amostra aleatória de alguns milhares de carros. Ele pode usar essa amostra para obter uma estimativa dos custos de carros alemães, mas o resultado provavelmente não equivalerá aos valores reais com precisão.  
+Exemplo: ao analisar a quantidade de bolinhos vendidos diariamente em uma cafeteria, você pode amostrar seis dias aleatórios e obter os seguintes resultados: $17, 15, 23, 7, 9, 13$. Essa é uma amostra, e não uma uma população, já que não há dados relativos a todos os dias em que a cafeteria estava aberta. população, já que não há dados relativos a todos os dias em que a cafeteria estava aberta.
+
+**2. Escreva a fórmula de variância da amostra:**  
+
+A variância de um conjunto de dados diz a você quão espalhados eles estão. Quanto mais próxima de zero, mais próximos estarão uns dos outros. Ao trabalhar com conjuntos de dados amostrais, use a seguinte fórmula para calcular a variância:
+
+$$s^2 = \frac{\sum[(x_i - \overline x)^2]}{n-1} $$
+
+* $s^2$ representa a variância, que é sempre medida em unidades elevadas ao quadrado.
+* $x_i$ representa um termo de seu conjunto de dados.
+* $\sum$, que significa "somatória", leva você a calcular os seguintes termos para cada valor de $x_i$ e, a seguir, somá-los em conjunto.
+* $\overline x$  representa o valor médio da amostra.
+* $n$ é a quantidade de pontos de dados presentes na amostra.
+
+**3. Calcule a média da amostra:**  
+
+O símbolo $\overline x$ ou "x barra" se refere à média aritmética de uma amostra. Calcule-o como se ele fosse qualquer outro tipo de média: some todos os dados existentes e divida o resultado pela quantidade deles.
+
+* **Exemplo:** Inicialmente, some os pontos de dados: $17 + 15 + 23 + 7 + 9 + 13 = 84$.
+A seguir, divida a sua resposta por sua quantidade, ou seis, nesse caso: $84 ÷ 6 = 14$.  
+**Média aritmética da amostra = $\overline x$ = 14.**
+
+* Você pode pensar na média aritmética como se ela representasse o "ponto central" do conjunto de dados. Se eles estiverem aglomerados ao redor da média, isso indica que a variância é baixa. Caso estejam bem espalhados e distantes, a variância é alta.
+
+**4. Subtraia a média de cada um dos dados:**  
+
+Agora é o momento de calcular $x_i - \overline x$, onde $x_i$ representa cada número presente no conjunto de dados. Cada resposta indica o desvio existente entre o número e a média aritmética ou, em outras palavras, qual é a distância entre eles.  
+
+* **Exemplo:**  
+$\begin{equation}
+x_1 - \overline x = 17 - 14 = 3 \\
+x_2 - \overline x = 15 - 14 = 1 \\
+x_3 - \overline x = 23 - 14 = 9 \\
+x_4 - \overline x = 7 - 14 = -7 \\
+x_5 - \overline x = 9 - 14 = -5 \\
+x_6 - \overline x = 13 - 14 = -1
+\end{equation}$
+
+* É fácil revisar o trabalho feito, já que as respostas somadas devem resultar em zero. Isso acontece por conta da definição de média aritmética, uma vez que as respostas negativas (distância entre a média e os números menores) cancelam com precisão as respostas positivas (distância entre a média e os números maiores).
+
+**5. Eleve cada resultado ao quadrado:**  
+
+Como descrito acima, a lista atual de desvios $(x_i- \overline x)$ se soma para resultar em zero. Isso significa que o "desvio médio" também será sempre zero, o que nada nos diz sobre a dispersão dos dados. Para solucionar esse problema, encontre o quadrado de cada desvio. Isso transformará todos em números positivos, de modo que negativos e positivos não mais se cancelarão em zero.
+
+* **Exemplo:**  
+$\begin{equation}
+(x_1 - \overline x)^2 = 3^2 = 9 \\
+(x_2 - \overline x)^2 = 1^2 = 1 \\
+9^2 = 81 \\
+(-7)^2 = 49 \\
+(-5)^2 = 25 \\
+(-1)^2 = 1
+\end{equation}$
+ 
+* Você agora tem o valor  para cada ponto de dados da amostra.
+
+**6. Encontre a soma dos valores elevados ao quadrado:**  
+
+Agora, calcularemos todo o numerador da fórmula:  O sigma maiúsculo, $\sum(x_i - \overline x)^2$, leva-nos a somar o valor do seguinte termo para cada valor de $x_i$. Você já calculou  para cada valor de $x_i$ presente na amostra, e agora só falta somar os resultados.
+
+* Exemplo: $9 + 1 + 81 + 49 + 25 + 1 = 166$.
+
+**7. Divida por $n - 1$, onde $n$ representa a quantidade de pontos de dados.**  
+
+Há muito tempo, estatísticos dividiam por n ao calcular a variância de uma amostra. Isso dá a você o valor médio do desvio elevado ao quadrado, que se combina perfeitamente com a variância da amostra. Ainda assim, lembre-se de que uma amostra representa apenas uma estimativa de uma população maior. Se você tomar outra amostra aleatória e fizer os mesmos cálculos, obterá um resultado completamente diferente. Desse modo, dividir por $n - 1$ em vez de usar apenas $n$ dará a você uma melhor estimativa da variância de uma população maior, que é o que você está interessado em descobrir. Essa correção é tão comum que passou a ser a definição mais aceita da variância de uma amostra. 
+
+* Exemplo: há seis pontos de dados nessa amostra, de modo que $n = 6$.  
+Variância da amostra = $s^2 = \frac{166}{6-1} = 33,2$
+
+**8. Entenda os conceitos de variância e desvio-padrão.**  
+
+Observe que, como há um expoente na fórmula, a variância é medida na unidade quadrada do dado original. Isso pode dificultar um entendimento meramente intuitivo. Em vez dessa abordagem, é geralmente útil usar o desvio-padrão. Mesmo assim, você não desperdiçou esforços, já que ele é definido como raiz quadrada da variância. É por essa razão que a variância de uma amostra é escrita como $s^2$ e o desvio-padrão da amostra como $s$.
+
+* Por exemplo, o desvio-padrão da amostra anterior é $s = \sqrt{33,2} = 5,76$.
+
+## COMO CALCULAR A VARIÂNCIA DE UMA POPULAÇÃO
+
+**MÉTODO 2 de 2 - PASSOS:**
+
+**1. Comece com o conjunto de dados de uma população.**  
+
+O termo "população" se refere ao conjunto total de observações relevantes. Por exemplo, se você está estudando a idade dos residentes em São Paulo, a população incluiria a idade de cada um dos cidadãos residindo nesse estado. Para um conjunto de dados extenso como esse, você normalmente deveria criar uma planilha, mas aqui está um conjunto de dados menor como exemplo:
+
+* **Exemplo:** Há exatamente seis aquários em uma sala do zoológico municipal. Os seis aquários contêm a seguinte quantidade de peixes:  
+$\begin {equation}
+x_1 = 5 \\
+x_2 = 5 \\
+x_3 = 8 \\
+x_4 = 12 \\
+x_5 = 15 \\
+x_6 = 18
+\end {equation}$
+
+**2. Escreva a fórmula para a variância da população:**  
+
+Como uma população contém todos os dados de que você precisa, essa fórmula dá a você sua variância com precisão. Para distingui-la da variância da amostra (que é apenas uma estimativa), estatísticos usam variáveis diferentes: 
+
+* $\sigma^2 = \frac{(\sum(x_i - \mu)^2}{n}$
+
+* $\sigma^2$ = variância da população. Aqui, temos um sigma minúsculo elevado ao quadrado, pois a variância é medida em unidades ao quadrado.
+
+* $x_i$ representa um termo de seu conjunto de dados.
+
+* Os termos dentro de $\sum$ serão calculados para cada $x_i$ e, a seguir, somados.
+
+* $\mu$ representa a média da população.
+
+* $n$ representa a quantidade de pontos de dados na população.
+
+**3. Encontre a média aritmética da população:**  
+
+Ao analisar uma população, o símbolo $\mu$ ("mu") representa a média aritmética. Para encontrá-la, some todos os pontos de dados e divida o resultado por sua quantidade.
+
+* Você pode pensar na média aritmética como sendo um ponto médio, mas lembre-se de que há muitas definições de média na matemática.
+
+* **Exemplo:** Média = $\mu = \frac{5 + 5 + 8 + 12 + 15 + 18}{6} = 10,5$
+
+**4. Subtraia a média de cada ponto de dados:**  
+
+Os pontos de dados próximos à média resultarão em uma diferença próxima a zero. Refaça o problema de subtração com cada ponto de dados e você começará a entender a dispersão da amostra.
+
+* **Exemplo:**  
+$\begin{equation}
+x_1 - \mu = 5 - 10,5 = -5,5 \\
+x_2 - \mu = 5 - 10,5 = -5,5 \\
+x_3 - \mu = 8 - 10,5 = -2,5 \\
+x_4 - \mu = 12 - 10,5 = 1,5 \\
+x_5 - \mu = 15 - 10,5 = 4,5 \\
+x_6 - \mu = 18 - 10,5 = 7,5
+\end{equation}$
+
+**5. Eleve cada resposta ao quadrado:**  
+
+Agora, alguns dos números do último passo serão negativos e alguns, positivos. Se você visualizar os dados em uma linha numérica, essas duas categorias representarão os números à esquerda e à direita da média, respectivamente. Isso não é útil para o cálculo da variância, já que ambos os grupos cancelam um ao outro. Eleve cada valor ao quadrado para torná-los todos positivos.
+
+* Exemplo:  
+$(x_1 - \mu)^2$ para cada valor de i de 1 a 6: 
+$\begin{equation}
+(-5,5)^2 = 30,25 \\
+(-5,5)^2 = 30,25 \\
+(-2,5)^2 = 6,25 \\
+(1,5)^2 = 2,25 \\
+(4,5)^2 = 20,25 \\
+(7,5)^2 = 56,25
+\end{equation}$
+
+**6. Encontre a média aritmética dos resultados:**  
+
+Agora, você tem um valor para cada ponto de dados que está (indiretamente) relacionado com a distância à qual está da média aritmética. Para obter a média desses valores, some-os e divida-os por sua quantidade.
+
+* **Exemplo:**  
+$$\frac{30,25 + 30,25 + 6,25 + 2,25 + 20,25 + 56,25}{6} = \frac{145,5}{6} = 24,25$$
+**7. Use o resultado na fórmula:**  
+
+Se você não sabe ao certo como isso se relaciona com a fórmula presente no início do método, tente escrever o problema de forma extensa:
+
+* Depois de ter encontrado a diferença das médias e dos quadrados, você terá os valores $(x_1 - \mu)^2$ , $(x_2 - \mu)^2$ e assim por diante até chegar em $(x_n - \mu)^2$ , onde $x_n$, representa o último ponto de dados do conjunto.
+
+* Para encontrar a média desses valores, some-os e divida o resultado por $n$: $$\frac{((x_1 - \mu)^2 + (x_2 - \mu)^2 + ... + (x_n - \mu)^2)}{n}$$
+
+* Depois de reescrever o numerador na notação sigma, você terá a fórmula usada para o cálculo da variância:  
+$$\frac{(\sum(x_i - \mu)^2)}{n}$$
+
+## EXEMPLOS
+
+**Exemplo 1:**
+
+Considere as notas $2 – 8 – 5 – 6$ obtidas por 4 alunos, numa avaliação de Biologia, distribuídas na tabela abaixo. Calcule a variância considerando-se uma população.
+ 
+Cálculo da média: 
+
+$$\mu = \frac{2 + 8 + 5 + 6}{4} = 5,25$$
+
+Cálculo da variância populacional:
+
+$$\sigma^2 = \frac{(2 - 5,25)^2 + (8 - 5,25)^2 + (5 - 5,25)^2 + (6 - 5,25)^2}{4} = \frac{18,75}{4} = 4,6875.$$
+
+**Exemplo 2:**
+
+Calcule o desvio padrão da série abaixo, representativa de uma amostra.
+
+<center>![](G:\aula-estatistica_basica\variancia_e_desvio_padrao_files\figura1_exemplos.png)</center>
+
+Cálculo da média:
+
+$$\overline x = \frac{(1 \times 2) + (3 \times 6) + (5 \times 10) + (1 \times 14) }{10} = 8,4.$$
+
+Cálculo da variância amostral:
+
+$$s^2 = \frac{1 \times (2 - 8,4)^2 + 3 \times (6 - 8,4)^2 + 5 \times (10 - 8,4)^2 + 1 \times (14 - 8,4)^2}{10 - 1} = \frac{102,4}{9} = 11,3778.$$
+
+O desvio padrão amostral corresponde à raiz quadrada da variância amostral:
+
+$$s = \sqrt{11,3778} = 3,37$$
+ 
+Assim, os dados variam, em média, $\color{red}{\text{3,37 unidades}}$ ao redor da **média 8,4.**
+
+## EXERCÍCIOS
+
+1) Considere as notas $4, 7, 3, 6$ obtidas por 4 alunos, numa avaliação de Português, calcule a variância considerando-se uma população.
+
+2) Calcule a Variância da série abaixo, representativa de uma amostra.
+
+Classe | Intervalo de Classe | $f_i$ | $x_i$  
+:----: | :-----------------: | :---: | :---:  
+1      | 02 ├ 06             |   2   | 4  
+2      | 08 ├ 12             |   3   | 14
+3      | 06 ├ 10             |   6   | 8
+4      | 12 ├ 18             |   1   | 15
+
+# DESVIO PADRÃO
+<center>![](G:\aula-estatistica_basica\variancia_e_desvio_padrao_files\desvio_padrao_fig1.jpg)</center>
+
+<center>**Está pensando em viajar com seus amigos? Veremos que o conceito de desvio padrão está muito presente em nosso dia a dia, até mesmo quando vamos planejar o roteiro de uma viagem.**</center>
+
+Assim como a variância, o desvio padrão também fornece informações complementares à informação da média aritmética. Essas medidas têm a finalidade de avaliar a dispersão do conjunto de valores em análise. Para calcularmos o desvio padrão, devemos considerar os desvios de cada valor em relação à média aritmética. Depois, construímos uma espécie de média desses desvios. Vamos tomar o exemplo do planejamento de uma viagem.
+
+<center>![](G:\aula-estatistica_basica\variancia_e_desvio_padrao_files\desvio_padrao_fig2.jpg)</center>
+
+Imagine que nas férias da faculdade você e seus amigos decidem viajar. Vocês irão para João Pessoa e Maceió e precisam planejar a viagem para saber quanto irão gastar de gasolina. Isso envolve o desvio padrão. Se interpretarmos Recife como nossa média, temos uma estatística que mede o quanto nossos dados se afastam da média. Isso é exatamente o que nos diz um desvio padrão: o quanto meus dados estão distantes da minha média. Ou seja, o desvio padrão é um parâmetro muito usado em estatística que indica o grau de variação de um conjunto de elementos.
+
+>**$\color{red}{\text{TOME NOTA!}}$**  
+**O desvio padrão é a raíz quadrada da variância, de modo a ser uma medida de dispersão que seja um número não negativo e que use a mesma unidade de medida dos dados fornecidos.**
+
+## COMO CALCULAR O DESVIO PADRÃO POPULACIONAL
+
+**SUA FÓRMULA:**
+
+$$\sigma_x = \sqrt{\frac{\sum(x_i - \overline \mu)^2}{N}}$$
+Se os dados estão sendos considerados como uma população em si, dividimos pelo número de dados, $N$ e é assim que calculamos:  
+
+1. calcule a média dos dados - que está representada por $\overline \mu$ na fórmula.
+
+2. subtraia a média de cada dado. Essas diferenças são chamadas de desvios. Dados abaixo da média terão desvios negativos, e dados acima da média terão desvios positivos.
+
+3. eleve cada um dos desvios ao quadrado para torná-los positivos.
+
+4. some todos os desvios ao quadrado.
+
+5. divida a soma pelo número de dados na população. O resultado é chamado de variância.
+
+6. calcule a raiz quadrada da variância para obter o desvio-padrão.
+
+**EXEMPLOS**
+
+Quatro amigos estavam comparando as notas tiradas por eles em uma recente atividade de redação. **Calcule o desvio-padrão de suas notas:**
+$6, 2, 3, 1$
+
+**Etapa 1:** Calcule a média.
+
+$\overline x = \frac{6 + 2 + 3 + 1}{4} = \frac{12}{4} = 3$
+
+A média é **3**.
+
+**Etapa 2:** Subtraia a média de cada nota.
+
+**Nota:** $x_i$ | **Desvio:** $(x_i - \overline \mu)$  
+:---: | :---:  
+6 | $6-3 = 3$  
+2 | $2-3 = -1$  
+3 | $3-3 = 0$  
+1 | $1-3 = -2$  
+
+**Etapa 3:** Eleve ao quadrado cada desvio.
+
+**Nota:** $x_i$ | **Desvio:** $(x_i - \overline \mu)$ | **Desvio ao quadrado:** $(x_i - \overline \mu)^2$   
+:---: | :---: | :---:  
+6 | $6-3 = 3$ | $(3)^2 = 9$  
+2 | $2-3 = -1$ | $(-1)^2 = 1$  
+3 | $3-3 = 0$ | $(0)^2 = 0$  
+1 | $1-3 = -2$ | $(-2)^2 = 4$  
+
+**Etapa 4:** Some os desvios ao quadrado.
+
+$9 + 1 + 0 + 4 = 14$
+
+**Etapa 5:** Divida a soma pelo número de notas.
+
+$\frac{14}{4} = 3,5$
+
+**Etapa 6:** Calcule a raiz quadrada do resultado da etapa 5.  
+$\sqrt{3,5} \approx 1,87$
+
+O desvio padrão é de aproximadamente **1,87**
+
+## COMO CALCULAR O DESVIO PADRÃO AMOSTRAL
+
+**SUA FÓRMULA:**
+
+$$S_x = \sqrt{\frac{\sum(x_i - \overline x)^2}{n-1}}$$
+
+Se os dados forem uma amostra de uma população maior, dividimos pelo número de dados da amostra menos um, $n-1$ e é assim que calculamos:  
+
+1. calcule a média dos dados - que está representada por $\overline x$ na fórmula.
+
+2. subtraia a média de cada dado. Essas diferenças são chamadas de desvios. Dados abaixo da média terão desvios negativos, e dados acima da média terão desvios positivos.
+
+3. eleve cada um dos desvios ao quadrado para torná-los positivos.
+
+4. some todos os desvios ao quadrado.
+
+5. divida a soma pelo número de dados na população. O resultado é chamado de variância.
+
+6. calcule a raiz quadrada da variância para obter o desvio-padrão.
+
+**EXEMPLOS**
+
+Uma amostra de 4 alunos foi coletada para saber quantos lapis eles estavam carregando.  
+**Calcule o desvio padrão amostral de suas respostas:**
+$2, 2, 5, 7$
+
+**Etapa 1:** Calcule a média.
+
+$\overline x = \frac{2 + 2 + 5 + 7}{4} = \frac{16}{4} = 4$
+
+A média é **4**.
+
+**Etapa 2:** Subtraia a média de cada nota.
+
+**Nota:** $x_i$ | **Desvio:** $(x_i - \overline x)$  
+:---: | :---:  
+2 | $2-4 = -2$  
+2 | $2-4 = -2$  
+5 | $5-4 = 1$  
+7 | $7-4 = -3$  
+
+**Etapa 3:** Eleve ao quadrado cada desvio.
+
+**Nota:** $x_i$ | **Desvio:** $(x_i - \overline x)$ | **Desvio ao quadrado:** $(x_i - \overline x)^2$   
+:---: | :---: | :---:  
+2 | $2-4 = -2$ | $(-2)^2 = 4$  
+2 | $2-4 = -2$ | $(-2)^2 = 4$  
+5 | $5-4 = 1$ | $(1)^2 = 1$  
+7 | $7-4 = -3$ | $(-3)^2 = 9$  
+
+**Etapa 4:** Some os desvios ao quadrado.
+
+$4 + 4 + 1 + 9 = 18$
+
+**Etapa 5:** Divida a soma pelo número de notas.
+
+$\frac{18}{4-1} = \frac{18}{3} = 6$
+
+**Etapa 6:** Calcule a raiz quadrada do resultado da etapa 5.  
+$\sqrt{6} \approx 2,45$
+
+O desvio padrão é de aproximadamente **2,45**.
+
+## BÔNUS: COMO CALCULAR O DESVIO PADRÃO POPULACIONAL E AMOSTRAL NA CALCULADORA CIENTÍFICA
+
+$\color{red}{\text{OBS:}}$ **CALCULOS FEITOS NA CALCULADORA CASIO, MODELO $fx$-82MS.**
+
+**POPULACIONAL:** $\sigma_x$
+
+1. Ligue a calculadora e coloque em modo estatística, para isso aperte em: MODE e escolha a opção de número 2(**SD**), feito isso, comece a salvar os números fornecidos utilizando o botão **M+** e quando terminar de adicionar o último, aperte **AC**, para limpar a tela;
+
+2. Em seguida aperte o botão SHIFT e depois o número 2(**S-VAR**).
+
+3. Irá aparecer 3 opções, escolha a segunda $\sigma_x$, apertando o número 2 novamente e por fim, aperte o botão $=$.
+
+4. O resultado aparecerá no visor.
+
+**AMOSTRAL:** $S_x$
+
+1. Ligue a calculadora e coloque em modo estatística, para isso aperte em: MODE e escolha a opção de número 2(**SD**), feito isso, comece a salvar os números fornecidos utilizando o botão **M+** e quando terminar de adicionar o último, aperte **AC**, para limpar a tela;
+
+2. Em seguida aperte o botão SHIFT e depois o número 2(**S-VAR**).
+
+3. Irá aparecer 3 opções, escolha a terceira $S_x$, apertando o número 3 e por fim, aperte o botão $=$.
+
+4. O resultado aparecerá no visor.
+
+## EXERCÍCIOS
+
+1. Explique com suas palavras o que aprendeu sobre desvio padrão.
+
+2. (MPE/AP) Ao considerar uma curva de distribuição normal, com uma média como medida central, temos a variância e o desvio padrão referentes a esta média. Em relação a estes parâmetros:  
+**(a)** A variância é uma medida cujo significado é a metade do desvio padrão.  
+**(b)** A variância é calculada com base no dobro do desvio padrão.  
+**(c)** O desvio padrão é a raiz quadrada da variância.  
+**(d)** A média dividida pelo desvio padrão forma a variância.  
+**(e)** A variância elevada ao quadrado indica qual é o desvio padrão.  
+
+3. Em um exame final de Matemática, o grau médio de um grupo de 150 alunos foi 7,8 e o desvio padrão, 0,80. Em Estatística, entretanto, o grau médio final foi 7,3 e o desvio padrão, 0,76. Em que disciplina foi maior a dispersão?
+
+4. Medidas descritivas das notas finais dos alunos de três turmas.  
+
+**TURMA** | **NOTAS DOS ALUNOS** | **MÉDIA DA TURMA**  
+:---: | :---: | :---:  
+A | $4 - 5 - 5 - 6 - 6 - 7 - 7 - 8$ | $6,00$  
+B | $1 - 2 - 4 - 6 - 6 - 9 - 10 - 10$ | $6,00$  
+C | $0 - 6 - 7 - 7 - 7 - 7,5 - 7,5$ | $6,00$  
+Faça os cálculos de desvio padrão das turmas A, B e C.

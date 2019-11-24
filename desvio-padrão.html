@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 DESVIO PADRÃO | Variância e Desvio Padrão</title>
+  <meta name="description" content="Capítulo 2 DESVIO PADRÃO | Variância e Desvio Padrão" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 DESVIO PADRÃO | Variância e Desvio Padrão" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 DESVIO PADRÃO | Variância e Desvio Padrão" />
+  
+  
+  
+
+<meta name="author" content="Neydison Lucas, Gisele Ramos e Eddie Müller" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="variância.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="variância.html"><a href="variância.html"><i class="fa fa-check"></i><b>1</b> VARIÂNCIA</a><ul>
+<li class="chapter" data-level="1.1" data-path="variância.html"><a href="variância.html#como-calcular-a-variância-de-uma-amostra"><i class="fa fa-check"></i><b>1.1</b> COMO CALCULAR A VARIÂNCIA DE UMA AMOSTRA</a></li>
+<li class="chapter" data-level="1.2" data-path="variância.html"><a href="variância.html#como-calcular-a-variância-de-uma-população"><i class="fa fa-check"></i><b>1.2</b> COMO CALCULAR A VARIÂNCIA DE UMA POPULAÇÃO</a></li>
+<li class="chapter" data-level="1.3" data-path="variância.html"><a href="variância.html#exemplos"><i class="fa fa-check"></i><b>1.3</b> EXEMPLOS</a></li>
+<li class="chapter" data-level="1.4" data-path="variância.html"><a href="variância.html#exercícios"><i class="fa fa-check"></i><b>1.4</b> EXERCÍCIOS</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="desvio-padrão.html"><a href="desvio-padrão.html"><i class="fa fa-check"></i><b>2</b> DESVIO PADRÃO</a><ul>
+<li class="chapter" data-level="2.1" data-path="desvio-padrão.html"><a href="desvio-padrão.html#como-calcular-o-desvio-padrão-populacional"><i class="fa fa-check"></i><b>2.1</b> COMO CALCULAR O DESVIO PADRÃO POPULACIONAL</a></li>
+<li class="chapter" data-level="2.2" data-path="desvio-padrão.html"><a href="desvio-padrão.html#como-calcular-o-desvio-padrão-amostral"><i class="fa fa-check"></i><b>2.2</b> COMO CALCULAR O DESVIO PADRÃO AMOSTRAL</a></li>
+<li class="chapter" data-level="2.3" data-path="desvio-padrão.html"><a href="desvio-padrão.html#bônus-como-calcular-o-desvio-padrão-populacional-e-amostral-na-calculadora-científica"><i class="fa fa-check"></i><b>2.3</b> BÔNUS: COMO CALCULAR O DESVIO PADRÃO POPULACIONAL E AMOSTRAL NA CALCULADORA CIENTÍFICA</a></li>
+<li class="chapter" data-level="2.4" data-path="desvio-padrão.html"><a href="desvio-padrão.html#exercícios-1"><i class="fa fa-check"></i><b>2.4</b> EXERCÍCIOS</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Variância e Desvio Padrão</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="desvio-padrão" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> DESVIO PADRÃO</h1>
+<center>
+<img src="variancia_e_desvio_padrao_files/desvio_padrao_fig1.jpg" />
+</center>
+<center>
+<strong>Está pensando em viajar com seus amigos? Veremos que o conceito de desvio padrão está muito presente em nosso dia a dia, até mesmo quando vamos planejar o roteiro de uma viagem.</strong>
+</center>
+<p>Assim como a variância, o desvio padrão também fornece informações complementares à informação da média aritmética. Essas medidas têm a finalidade de avaliar a dispersão do conjunto de valores em análise. Para calcularmos o desvio padrão, devemos considerar os desvios de cada valor em relação à média aritmética. Depois, construímos uma espécie de média desses desvios. Vamos tomar o exemplo do planejamento de uma viagem.</p>
+<center>
+<img src="variancia_e_desvio_padrao_files/desvio_padrao_fig2.jpg" />
+</center>
+<p>Imagine que nas férias da faculdade você e seus amigos decidem viajar. Vocês irão para João Pessoa e Maceió e precisam planejar a viagem para saber quanto irão gastar de gasolina. Isso envolve o desvio padrão. Se interpretarmos Recife como nossa média, temos uma estatística que mede o quanto nossos dados se afastam da média. Isso é exatamente o que nos diz um desvio padrão: o quanto meus dados estão distantes da minha média. Ou seja, o desvio padrão é um parâmetro muito usado em estatística que indica o grau de variação de um conjunto de elementos.</p>
+<blockquote>
+<p><strong><span class="math inline">\(\color{red}{\text{TOME NOTA!}}\)</span></strong><br />
+<strong>O desvio padrão é a raíz quadrada da variância, de modo a ser uma medida de dispersão que seja um número não negativo e que use a mesma unidade de medida dos dados fornecidos.</strong></p>
+</blockquote>
+<div id="como-calcular-o-desvio-padrão-populacional" class="section level2">
+<h2><span class="header-section-number">2.1</span> COMO CALCULAR O DESVIO PADRÃO POPULACIONAL</h2>
+<p><strong>SUA FÓRMULA:</strong></p>
+<p><span class="math display">\[\sigma_x = \sqrt{\frac{\sum(x_i - \overline \mu)^2}{N}}\]</span>
+Se os dados estão sendos considerados como uma população em si, dividimos pelo número de dados, <span class="math inline">\(N\)</span> e é assim que calculamos:</p>
+<ol style="list-style-type: decimal">
+<li><p>calcule a média dos dados - que está representada por <span class="math inline">\(\overline \mu\)</span> na fórmula.</p></li>
+<li><p>subtraia a média de cada dado. Essas diferenças são chamadas de desvios. Dados abaixo da média terão desvios negativos, e dados acima da média terão desvios positivos.</p></li>
+<li><p>eleve cada um dos desvios ao quadrado para torná-los positivos.</p></li>
+<li><p>some todos os desvios ao quadrado.</p></li>
+<li><p>divida a soma pelo número de dados na população. O resultado é chamado de variância.</p></li>
+<li><p>calcule a raiz quadrada da variância para obter o desvio-padrão.</p></li>
+</ol>
+<p><strong>EXEMPLOS</strong></p>
+<p>Quatro amigos estavam comparando as notas tiradas por eles em uma recente atividade de redação. <strong>Calcule o desvio-padrão de suas notas:</strong>
+<span class="math inline">\(6, 2, 3, 1\)</span></p>
+<p><strong>Etapa 1:</strong> Calcule a média.</p>
+<p><span class="math inline">\(\overline x = \frac{6 + 2 + 3 + 1}{4} = \frac{12}{4} = 3\)</span></p>
+<p>A média é <strong>3</strong>.</p>
+<p><strong>Etapa 2:</strong> Subtraia a média de cada nota.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Nota:</strong> <span class="math inline">\(x_i\)</span></th>
+<th align="center"><strong>Desvio:</strong> <span class="math inline">\((x_i - \overline \mu)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center"><span class="math inline">\(6-3 = 3\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-3 = -1\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(3-3 = 0\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(1-3 = -2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Etapa 3:</strong> Eleve ao quadrado cada desvio.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Nota:</strong> <span class="math inline">\(x_i\)</span></th>
+<th align="center"><strong>Desvio:</strong> <span class="math inline">\((x_i - \overline \mu)\)</span></th>
+<th align="center"><strong>Desvio ao quadrado:</strong> <span class="math inline">\((x_i - \overline \mu)^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center"><span class="math inline">\(6-3 = 3\)</span></td>
+<td align="center"><span class="math inline">\((3)^2 = 9\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-3 = -1\)</span></td>
+<td align="center"><span class="math inline">\((-1)^2 = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(3-3 = 0\)</span></td>
+<td align="center"><span class="math inline">\((0)^2 = 0\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(1-3 = -2\)</span></td>
+<td align="center"><span class="math inline">\((-2)^2 = 4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Etapa 4:</strong> Some os desvios ao quadrado.</p>
+<p><span class="math inline">\(9 + 1 + 0 + 4 = 14\)</span></p>
+<p><strong>Etapa 5:</strong> Divida a soma pelo número de notas.</p>
+<p><span class="math inline">\(\frac{14}{4} = 3,5\)</span></p>
+<p><strong>Etapa 6:</strong> Calcule a raiz quadrada do resultado da etapa 5.<br />
+<span class="math inline">\(\sqrt{3,5} \approx 1,87\)</span></p>
+<p>O desvio padrão é de aproximadamente <strong>1,87</strong></p>
+</div>
+<div id="como-calcular-o-desvio-padrão-amostral" class="section level2">
+<h2><span class="header-section-number">2.2</span> COMO CALCULAR O DESVIO PADRÃO AMOSTRAL</h2>
+<p><strong>SUA FÓRMULA:</strong></p>
+<p><span class="math display">\[S_x = \sqrt{\frac{\sum(x_i - \overline x)^2}{n-1}}\]</span></p>
+<p>Se os dados forem uma amostra de uma população maior, dividimos pelo número de dados da amostra menos um, <span class="math inline">\(n-1\)</span> e é assim que calculamos:</p>
+<ol style="list-style-type: decimal">
+<li><p>calcule a média dos dados - que está representada por <span class="math inline">\(\overline x\)</span> na fórmula.</p></li>
+<li><p>subtraia a média de cada dado. Essas diferenças são chamadas de desvios. Dados abaixo da média terão desvios negativos, e dados acima da média terão desvios positivos.</p></li>
+<li><p>eleve cada um dos desvios ao quadrado para torná-los positivos.</p></li>
+<li><p>some todos os desvios ao quadrado.</p></li>
+<li><p>divida a soma pelo número de dados na população. O resultado é chamado de variância.</p></li>
+<li><p>calcule a raiz quadrada da variância para obter o desvio-padrão.</p></li>
+</ol>
+<p><strong>EXEMPLOS</strong></p>
+<p>Uma amostra de 4 alunos foi coletada para saber quantos lapis eles estavam carregando.<br />
+<strong>Calcule o desvio padrão amostral de suas respostas:</strong>
+<span class="math inline">\(2, 2, 5, 7\)</span></p>
+<p><strong>Etapa 1:</strong> Calcule a média.</p>
+<p><span class="math inline">\(\overline x = \frac{2 + 2 + 5 + 7}{4} = \frac{16}{4} = 4\)</span></p>
+<p>A média é <strong>4</strong>.</p>
+<p><strong>Etapa 2:</strong> Subtraia a média de cada nota.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Nota:</strong> <span class="math inline">\(x_i\)</span></th>
+<th align="center"><strong>Desvio:</strong> <span class="math inline">\((x_i - \overline x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-4 = -2\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-4 = -2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center"><span class="math inline">\(5-4 = 1\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center"><span class="math inline">\(7-4 = -3\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Etapa 3:</strong> Eleve ao quadrado cada desvio.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Nota:</strong> <span class="math inline">\(x_i\)</span></th>
+<th align="center"><strong>Desvio:</strong> <span class="math inline">\((x_i - \overline x)\)</span></th>
+<th align="center"><strong>Desvio ao quadrado:</strong> <span class="math inline">\((x_i - \overline x)^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-4 = -2\)</span></td>
+<td align="center"><span class="math inline">\((-2)^2 = 4\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(2-4 = -2\)</span></td>
+<td align="center"><span class="math inline">\((-2)^2 = 4\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center"><span class="math inline">\(5-4 = 1\)</span></td>
+<td align="center"><span class="math inline">\((1)^2 = 1\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center"><span class="math inline">\(7-4 = -3\)</span></td>
+<td align="center"><span class="math inline">\((-3)^2 = 9\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Etapa 4:</strong> Some os desvios ao quadrado.</p>
+<p><span class="math inline">\(4 + 4 + 1 + 9 = 18\)</span></p>
+<p><strong>Etapa 5:</strong> Divida a soma pelo número de notas.</p>
+<p><span class="math inline">\(\frac{18}{4-1} = \frac{18}{3} = 6\)</span></p>
+<p><strong>Etapa 6:</strong> Calcule a raiz quadrada do resultado da etapa 5.<br />
+<span class="math inline">\(\sqrt{6} \approx 2,45\)</span></p>
+<p>O desvio padrão é de aproximadamente <strong>2,45</strong>.</p>
+</div>
+<div id="bônus-como-calcular-o-desvio-padrão-populacional-e-amostral-na-calculadora-científica" class="section level2">
+<h2><span class="header-section-number">2.3</span> BÔNUS: COMO CALCULAR O DESVIO PADRÃO POPULACIONAL E AMOSTRAL NA CALCULADORA CIENTÍFICA</h2>
+<p><span class="math inline">\(\color{red}{\text{OBS:}}\)</span> <strong>CALCULOS FEITOS NA CALCULADORA CASIO, MODELO <span class="math inline">\(fx\)</span>-82MS.</strong></p>
+<p><strong>POPULACIONAL:</strong> <span class="math inline">\(\sigma_x\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Ligue a calculadora e coloque em modo estatística, para isso aperte em: MODE e escolha a opção de número 2(<strong>SD</strong>), feito isso, comece a salvar os números fornecidos utilizando o botão <strong>M+</strong> e quando terminar de adicionar o último, aperte <strong>AC</strong>, para limpar a tela;</p></li>
+<li><p>Em seguida aperte o botão SHIFT e depois o número 2(<strong>S-VAR</strong>).</p></li>
+<li><p>Irá aparecer 3 opções, escolha a segunda <span class="math inline">\(\sigma_x\)</span>, apertando o número 2 novamente e por fim, aperte o botão <span class="math inline">\(=\)</span>.</p></li>
+<li><p>O resultado aparecerá no visor.</p></li>
+</ol>
+<p><strong>AMOSTRAL:</strong> <span class="math inline">\(S_x\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Ligue a calculadora e coloque em modo estatística, para isso aperte em: MODE e escolha a opção de número 2(<strong>SD</strong>), feito isso, comece a salvar os números fornecidos utilizando o botão <strong>M+</strong> e quando terminar de adicionar o último, aperte <strong>AC</strong>, para limpar a tela;</p></li>
+<li><p>Em seguida aperte o botão SHIFT e depois o número 2(<strong>S-VAR</strong>).</p></li>
+<li><p>Irá aparecer 3 opções, escolha a terceira <span class="math inline">\(S_x\)</span>, apertando o número 3 e por fim, aperte o botão <span class="math inline">\(=\)</span>.</p></li>
+<li><p>O resultado aparecerá no visor.</p></li>
+</ol>
+</div>
+<div id="exercícios-1" class="section level2">
+<h2><span class="header-section-number">2.4</span> EXERCÍCIOS</h2>
+<ol style="list-style-type: decimal">
+<li><p>Explique com suas palavras o que aprendeu sobre desvio padrão.</p></li>
+<li><p>(MPE/AP) Ao considerar uma curva de distribuição normal, com uma média como medida central, temos a variância e o desvio padrão referentes a esta média. Em relação a estes parâmetros:<br />
+<strong>(a)</strong> A variância é uma medida cujo significado é a metade do desvio padrão.<br />
+<strong>(b)</strong> A variância é calculada com base no dobro do desvio padrão.<br />
+<strong>(c)</strong> O desvio padrão é a raiz quadrada da variância.<br />
+<strong>(d)</strong> A média dividida pelo desvio padrão forma a variância.<br />
+<strong>(e)</strong> A variância elevada ao quadrado indica qual é o desvio padrão.</p></li>
+<li><p>Em um exame final de Matemática, o grau médio de um grupo de 150 alunos foi 7,8 e o desvio padrão, 0,80. Em Estatística, entretanto, o grau médio final foi 7,3 e o desvio padrão, 0,76. Em que disciplina foi maior a dispersão?</p></li>
+<li><p>Medidas descritivas das notas finais dos alunos de três turmas.</p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>TURMA</strong></th>
+<th align="center"><strong>NOTAS DOS ALUNOS</strong></th>
+<th align="center"><strong>MÉDIA DA TURMA</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center"><span class="math inline">\(4 - 5 - 5 - 6 - 6 - 7 - 7 - 8\)</span></td>
+<td align="center"><span class="math inline">\(6,00\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center"><span class="math inline">\(1 - 2 - 4 - 6 - 6 - 9 - 10 - 10\)</span></td>
+<td align="center"><span class="math inline">\(6,00\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center"><span class="math inline">\(0 - 6 - 7 - 7 - 7 - 7,5 - 7,5\)</span></td>
+<td align="center"><span class="math inline">\(6,00\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Faça os cálculos de desvio padrão das turmas A, B e C.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="variância.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
