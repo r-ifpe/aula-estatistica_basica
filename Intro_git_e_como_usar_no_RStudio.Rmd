@@ -67,7 +67,9 @@ Para emitir um Pull Request:
 4. Quando o código estiver no seu repositório, você poderá emitir Pull Request para que o proprietário original do código **(upstream)** possa revisar, comentar, aceitar (ou rejeitar) as modificações propostas;
 5. Em algum momento, você precisará **extrair** alterações que ocorram upstream para o seu próprio repositório, se desejar continuar contribuindo para o projeto.
 
-## Como fazer isso usando o RStudio e o GitHub?
+## Como fazer isso usando o RStudio e o GitHub?  
+>$\color{red}{\text{PS.}}$ Antes de tudo, [**clique aqui**](https://git-scm.com/downloads) para baixar o GIT, escolha a opção correspondente ao seu **sistema operacional** e no momento da instalação siga as **opções recomendadas** pelo instalador do cliente.
+
 1. Vá para a página do repositório no GitHub do projeto que você gostaria de melhorar e clique no botão "Fork" no canto superior direito.
 <center>![](G:\aula-estatistica_basica\Intro_git_e_como_usar_no_RStudio_files\figure-html\fork.png)</center>
 Isso criará uma cópia do repositório na sua conta do GitHub. Por exemplo, se eu bifurcar https://github.com/r-bio/challenges-francois, ele criará uma cópia em https://github.com/fmichonneau/challenges-francois.
