@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ASSIMETRIA</title>
+  <meta name="description" content="ASSIMETRIA" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="ASSIMETRIA" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ASSIMETRIA" />
+  
+  
+  
+
+<meta name="author" content="Mariana Cavalcanti e Italo Cordeiro Neto" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#assimetria"><i class="fa fa-check"></i><b>1</b> ASSIMETRIA</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#coeficiente-de-assimetria-de-pearson"><i class="fa fa-check"></i><b>1.1</b> COEFICIENTE DE ASSIMETRIA DE PEARSON</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#exercícios-resolvidos"><i class="fa fa-check"></i><b>1.2</b> EXERCÍCIOS RESOLVIDOS:</a></li>
+<li class="chapter" data-level="1.3" data-path=""><a href="#exercícios"><i class="fa fa-check"></i><b>1.3</b> EXERCÍCIOS</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ASSIMETRIA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">ASSIMETRIA</h1>
+<p class="author"><em>Mariana Cavalcanti e Italo Cordeiro Neto</em></p>
+<p class="date"><em>24/11/2019</em></p>
+</div>
+<div id="assimetria" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> ASSIMETRIA</h1>
+<p>Em Estatística, a assimetria, também conhecida como obliquidade é uma medida da falta de simetria de uma determinada distribuição de frequência. É definida por:</p>
+<p><span class="math display">\[v = \frac{m_3(\mu)}{\sigma^3}\]</span></p>
+<p>Onde <span class="math inline">\(m_3(\mu)\)</span> é o terceiro Momento central e <span class="math inline">\(\sigma\)</span> é o desvio-padrão.</p>
+<p>Uma Distribuição ou uma curva é simétrica quando existe uma exata repartição de valores em torno do ponto central, ou seja, a média, a mediana e a moda coincidem. Os valores se agrupam mais acima ou mais abaixo do ponto central, e este “desvio” (ou viés) da simetria denomina-se assimetria.</p>
+<p><strong>Exemplo:</strong>
+O coeficiente de assimetria é um valor da estatística que permite verificar o quanto a curva normal está inclinada para um lado ou para o outro. Normalmente, a curva normal é simétrica, ou seja, tem a mesma área para um lado e para o outro da média:</p>
+<center>
+<img src="assimetria_files/fig1.png" />
+</center>
+<p>A fórmula da assimetria vai então calcular o número das amostras em relação à média:</p>
+<p><span class="math display">\[b_1 = \frac{1}{n}\sum\left[\frac{X_i - \overline X}{s}\right]^3\]</span></p>
+<p>A relação é ao cubo porque assim se mantém o sinal da assimetria. Se b for positivo, a curva está inclinada para a esquerda, e se for negativa, para a direita:</p>
+<center>
+<img src="assimetria_files/fig2.png" /><br />
+<strong>Assimetria Positiva</strong>
+</center>
+<center>
+<img src="assimetria_files/fig3.png" /><br />
+<strong>Assimetria Negativa</strong>
+</center>
+<p>Existem várias fórmulas para o cálculo do coeficiente de assimetria, dentre elas, destacam-se:</p>
+<div id="coeficiente-de-assimetria-de-pearson" class="section level2">
+<h2><span class="header-section-number">1.1</span> COEFICIENTE DE ASSIMETRIA DE PEARSON</h2>
+<p>Para Distribuições Assimétricas, a Média (<span class="math inline">\(\overline X\)</span>) tende a situar-se do mesmo lado da “cauda”. Uma Medida de Assimetria é proporcionada pela diferença entre a Média (<span class="math inline">\(\overline X\)</span>) e a Moda (<span class="math inline">\(M_o\)</span>), podendo ser tomada sem dimensão (adimensional) mediante a divisão por uma <strong>Medida de Dispersão (Desvio Padrão)</strong>.</p>
+<p>Assim, temos:</p>
+<ul>
+<li><p><strong>1º - Coeficiente de Assimetria de PEARSON:</strong><br />
+<span class="math display">\[A = \frac{\overline X - M_o \left(P\right)}{S} \qquad \qquad (1)\]</span><br />
+em que, para uma Distribuição Simétrica <span class="math inline">\(\overline X = M_o \left(Pearson \right) \to A = 0\)</span></p></li>
+<li><p><strong>2º – Coeficiente de Assimetria de PEARSON:</strong><br />
+É obtido substituindo o valor da Moda de PEARSON na expressão anterior (1) para evitar o emprego da mesma.<br />
+Assim,<br />
+<span class="math display">\[A = \frac{\overline X - M_o(P)}{S} = \frac{\overline X - \left(3Md - 2\overline X \right)}{S} \qquad \qquad (2)\]</span><br />
+Então,<br />
+<span class="math display">\[A = \frac{3 \left(\overline X - Md \right)}{S} \qquad \qquad (3)\]</span><br />
+Quando os valores de “<strong>A</strong>” obtidos através de <span class="math inline">\((1)\)</span> e <span class="math inline">\((3)\)</span> variam entre <span class="math inline">\(\pm1\)</span>, então se diz que a assimetria é fraca e o fenômeno em estudo é considerado não muito assimétrico, podendo ser aplicado, neste caso, o <strong>Modelo Estatístico da Curva Normal</strong>.</p></li>
+</ul>
+</div>
+<div id="exercícios-resolvidos" class="section level2">
+<h2><span class="header-section-number">1.2</span> EXERCÍCIOS RESOLVIDOS:</h2>
+<ol style="list-style-type: decimal">
+<li>Considere os seguintes resultados relativos a três distribuições de frequência:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Distribuição</th>
+<th align="center">Média</th>
+<th align="center"><span class="math inline">\(M_o\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">52</td>
+<td align="center">52</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">45</td>
+<td align="center">50</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">48</td>
+<td align="center">46</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Determine o tipo de assimetria de cada uma delas:</strong><br />
+<span class="math inline">\(\begin {equation} A: 52 - 52 = 0 \qquad (Simétrica) \\ B: 45 - 50 = -5 \qquad (Assimétrica \; negativa) \\ C: 48 - 46 = 2 \qquad (Assimétrica \; positiva) \end {equation}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Uma distribuição de frequência apresenta as seguintes medidas:<br />
+<span class="math inline">\(\overline X = 48,1\)</span>, <span class="math inline">\(Mo = 47,9\)</span> e <span class="math inline">\(S = 2,12\)</span>.<br />
+<strong>Calcule o coeficiente da assimetria.</strong><br />
+<span class="math inline">\(\begin {equation} A = \frac{3 (\overline X - Md)}{S} \\ A = \frac{3 (48,1 - 47,9)}{2,12} \\ A = \frac{3 (0,2)}{2,12} \\ A = \frac{0,6}{2,12} \\ A \approx 0,28 \qquad (Assimetria \; positiva) \end {equation}\)</span></li>
+</ol>
+</div>
+<div id="exercícios" class="section level2">
+<h2><span class="header-section-number">1.3</span> EXERCÍCIOS</h2>
+<ol style="list-style-type: decimal">
+<li><p>Em uma distribuição de frequência foram encontradas as seguintes medidas:<br />
+<span class="math inline">\(\overline X = 33,18\)</span>, <span class="math inline">\(Mo = 27,50\)</span>, <span class="math inline">\(Md = 31,67\)</span> e <span class="math inline">\(S = 12,45\)</span>.<br />
+<strong>A)</strong> Classifique o tipo de assimetria.<br />
+<strong>B)</strong> Calculo o coeficiente da assimetria.</p></li>
+<li><p>Foram obtidos os seguintes dados para a idade dos filhos de uma amostra aleatória de 50 pessoas:
+<span class="math inline">\(4 - 5 - 5 - 6 - 6 - 6 - 6 - 7 - 7 - 7 - 7 - 7 - 7 - 8 \\ 8 - 8 - 8 - 8 - 8 - 8 - 8 - 8 - 9 - 9 - 9 - 9 - 9 - 9 \\ 10 - 10 - 10 - 10 - 10 - 10 - 10 - 10 - 11 - 11 - 12 \\ 12 - 13 - 13 - 14 - 15 - 15 - 15 - 16 - 16 - 18 - 23\)</span><br />
+<strong>Dessa amostra, conclui-se que a distribuição:</strong><br />
+<strong>A)</strong> Tem assimetria negativa.<br />
+<strong>B)</strong> Indica subpopulações com assimetria negativa.<br />
+<strong>C)</strong> É simétrica.<br />
+<strong>D)</strong> Tem assimetria positiva.<br />
+<strong>E)</strong> É parte assimétrica positiva e parte simétrica.</p></li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

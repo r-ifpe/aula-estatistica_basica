@@ -1,0 +1,95 @@
+---
+title: "ASSIMETRIA"
+author: "Mariana Cavalcanti e Italo Cordeiro Neto"
+date: "24/11/2019"
+output: html_document
+---
+
+# ASSIMETRIA
+
+Em Estatística, a assimetria, também conhecida como obliquidade é uma medida da falta de simetria de uma determinada distribuição de frequência. É definida por:
+
+$$v = \frac{m_3(\mu)}{\sigma^3}$$
+
+Onde $m_3(\mu)$ é o terceiro Momento central e $\sigma$ é o desvio-padrão.
+
+Uma Distribuição ou uma curva é simétrica quando existe uma exata repartição de valores em torno do ponto central, ou seja, a média, a mediana e a moda coincidem. Os valores se agrupam mais acima ou mais abaixo do ponto central, e este “desvio” (ou viés) da simetria denomina-se assimetria.
+
+**Exemplo:**
+O coeficiente de assimetria é um valor da estatística que permite verificar o quanto a curva normal está inclinada para um lado ou para o outro. Normalmente, a curva normal é simétrica, ou seja, tem a mesma área para um lado e para o outro da média:
+
+<center>![](G:\aula-estatistica_basica\assimetria_files\fig1.png)</center>
+
+A fórmula da assimetria vai então calcular o número das amostras em relação à média:
+
+$$b_1 = \frac{1}{n}\sum\left[\frac{X_i - \overline X}{s}\right]^3$$
+
+A relação é ao cubo porque assim se mantém o sinal da assimetria. Se b for positivo, a curva está inclinada para a esquerda, e se for negativa, para a direita:
+
+<center>![](G:\aula-estatistica_basica\assimetria_files\fig2.png)  
+**Assimetria Positiva**</center>  
+
+<center>![](G:\aula-estatistica_basica\assimetria_files\fig3.png)  
+**Assimetria Negativa**</center>  
+Existem várias fórmulas para o cálculo do coeficiente de assimetria, dentre elas, destacam-se:
+
+## COEFICIENTE DE ASSIMETRIA DE PEARSON
+
+Para Distribuições Assimétricas, a Média ($\overline X$) tende a situar-se do mesmo lado da “cauda”. Uma Medida de Assimetria é proporcionada pela diferença entre a Média ($\overline X$) e a Moda ($M_o$), podendo ser tomada sem dimensão (adimensional) mediante a divisão por uma **Medida de Dispersão (Desvio Padrão)**.
+
+Assim, temos:
+
+* **1º - Coeficiente de Assimetria de PEARSON:**  
+$$A = \frac{\overline X - M_o \left(P\right)}{S} \qquad \qquad (1)$$  
+em que, para uma Distribuição Simétrica $\overline X = M_o \left(Pearson \right) \to A = 0$
+
+* **2º – Coeficiente de Assimetria de PEARSON:**  
+É obtido substituindo o valor da Moda de PEARSON na expressão anterior (1) para evitar o emprego da mesma.  
+Assim,  
+$$A = \frac{\overline X - M_o(P)}{S} = \frac{\overline X - \left(3Md - 2\overline X \right)}{S} \qquad \qquad (2)$$  
+Então,  
+$$A = \frac{3 \left(\overline X - Md \right)}{S} \qquad \qquad (3)$$  
+Quando os valores de “**A**” obtidos através de $(1)$ e $(3)$ variam entre $\pm1$, então se diz que a assimetria é fraca e o fenômeno em estudo é considerado não muito assimétrico, podendo ser aplicado, neste caso, o **Modelo Estatístico da Curva Normal**.
+
+## EXERCÍCIOS RESOLVIDOS: 
+
+1. Considere os seguintes resultados relativos a três distribuições de frequência:  
+
+Distribuição | Média | $M_o$  
+:----------: | :---: | :---:  
+A | 52 | 52  
+B | 45 | 50  
+C | 48 | 46  
+* **Determine o tipo de assimetria de cada uma delas:**  
+$\begin {equation}
+A: 52 - 52 = 0 \qquad (Simétrica) \\
+B: 45 - 50 = -5 \qquad (Assimétrica \; negativa) \\
+C: 48 - 46 = 2 \qquad (Assimétrica \; positiva)
+\end {equation}$
+
+2. Uma distribuição de frequência apresenta as seguintes medidas:  
+$\overline X = 48,1$, $Mo = 47,9$ e $S = 2,12$.  
+**Calcule o coeficiente da assimetria.**  
+$\begin {equation}
+A = \frac{3 (\overline X - Md)}{S}  \\
+A = \frac{3 (48,1 - 47,9)}{2,12}  \\
+A = \frac{3 (0,2)}{2,12}  \\
+A = \frac{0,6}{2,12}  \\
+A \approx 0,28 \qquad (Assimetria \; positiva)  
+\end {equation}$
+
+## EXERCÍCIOS
+
+1. Em uma distribuição de frequência foram encontradas as seguintes medidas:  
+$\overline X = 33,18$, $Mo = 27,50$, $Md = 31,67$ e $S = 12,45$.  
+**A)** Classifique o tipo de assimetria.  
+**B)** Calculo o coeficiente da assimetria.
+
+2. Foram obtidos os seguintes dados para a idade dos filhos de uma amostra aleatória de 50 pessoas:
+$4 - 5 - 5 - 6 - 6 - 6 - 6 - 7 - 7 - 7 - 7 - 7 - 7 - 8 \\ 8 - 8 - 8 - 8 - 8 - 8 - 8 - 8 - 9 - 9 - 9 - 9 - 9 - 9 \\ 10 - 10 - 10 - 10 - 10 -  10 - 10 - 10 - 11 - 11 - 12 \\  12 -  13 -  13 -  14 - 15 - 15 - 15 - 16 -  16 -  18 -  23$  
+**Dessa amostra, conclui-se que a distribuição:**  
+**A)** Tem assimetria negativa.  
+**B)** Indica subpopulações com assimetria negativa.  
+**C)** É simétrica.  
+**D)** Tem assimetria positiva.  
+**E)** É parte assimétrica positiva e parte simétrica.
