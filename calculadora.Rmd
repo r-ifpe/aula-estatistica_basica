@@ -1,0 +1,406 @@
+---
+title: "Estatística"
+author: "Kevyn Gonçalves dos Santos"
+date: "04/11/2019"
+output: html_document
+---
+
+
+## Calculadoras Científicas
+
+   É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
+
+
+### Teclas básicas
+
+•Ligar: Botão **ON**.
+
+•	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
+
+•	Tecla **AC**: apaga tudo que está na tela.
+
+• Tecla **DEL**: apaga o último Termo digitado.
+
+•	Botão **SHIFT** ou **2ND**: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.
+
+•	**As setas (direcionais)**: aperte-a para movimentar pelo visor. Da **esquerda** para a **direita**, com o intuito de conferir, apagar ou até mesmo redigitar. De **cima** para **baixo**, com a intenção de para conferir as contas feitas.
+
+•	**MODE**: Ao pressiona-lo, serão mostrados os modos da sua calculadora.
+
+***
+
+#### **ATENÇÃO!**
+
+**A calculadora científica tem como base a língua inglesa, então o ponto (**.**) separa decimal e a vírgula (**,**) milhar.**
+
+***
+
+### Modos
+
+No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:
+
+#### ***CASIO fx-82MS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **SD**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***CASIO fx-82ES PLUS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***NWAY  SC991EP***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no mod de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***HP 10S + Scientific calculator***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número 2 que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***Kenko kk-83MS-5***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo no de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3**  que corresponde a **REG**.
+
+***
+
+## Curtose
+
+   É uma medida de dispersão, que tem como função apontar o achatamento da curvatura de uma distribuição de frequências.Para calcula-la será necessário encontrar 1º e o 3º quartil, assim com o 1º e o 9º decil.
+
+### **Calculando Quartil e Decil**
+
+Ambos têm como finalidade dividir os dados(ordenados) em partes iguais.
+
+•	**Quartil**
+
+Quatro partes iguais, cada uma representa1/4  da amostra.
+
+--->	Primeiro quartil(1/4)= 25% da amostra
+
+--->	Segundo quartil ou mediana(2/4) =  50% da amostra
+
+---> 	Terceiro quartil (3/4)= 75% da amostra
+
+•	**Decil**
+
+ Dez partes iguais, cada uma representa  1/10  da amostra.
+
+---> 	Primeiro decil(1/10) = 10% da amostra
+
+--->  Quinto decil  (5/10) = 50% da amostra
+
+--->  Nono decil (9/10) = 90% da amostra
+
+Para calculá-los, conte a quantidade de números presente na amostra e multiplique pelo quartil ou decil pedido. O resultado informará **a posição** do quartil ou decil na amostra, o número que se encontrar na posição será a resposta. **Atenção**, quando o resultado for decimal faça uma media aritmética com o número antecessor e posterior na posição na qual se refere.
+
+**Exemplo**: Dada a amostra { 2 2 $\color{red}{\text{3}}$ 4 5 5 6 7 $\color{red}{\text{7}}$ 9 10 11} encontre:
+
+Q1: 12x1/4=12/4=3 ---> O número que se encontra na terceira posição é o número 3, então $\color{red}{\text{Q1 = 3}}$.
+
+Q3: 12x3/4=36/4=9 ---> O número que se encontra na nona posição é o número 7, então $\color{red}{\text{Q3 = 7}}$.
+
+D1: 12x1/10=12/10=1,2 ---> A posição 1,2 está entre os números 2 e 2, logo a resposta será a média aritmética entre eles, **D1 = 2**.
+
+D9: 12X9/10=108/10=10,8 ---> A posição 10,8 está entre os números 9 e 10, logo a resposta será a média aritmética entre eles, **D9 = 9,5**.
+
+**Fórmula:**
+
+Manualmente: *K*= Q3-Q1/2(D9-D1)
+
+Calculadora: *K*= (Q3-Q1)/2/(D9-D1) ou (Q3-Q1)/(2(D9-D1))
+
+***ATENÇÃO!***
+
+•	Os números não podem ser negativos.
+
+•	O número não pode ser 1.
+
+•	Tem estar entre 0 e 1.
+
+### Classificação
+
+Mesorcúrtica: 0,25 ≤ k ≤ 0,27/  Leptocúrtica: K < 0,25/ Platicúrtica: K > 0,27
+
+![](C:\Users\kevyn santos\Desktop\download.png)
+
+## **EXERCÍCIOS**
+
+1º)Dada às sequencias de números abaixo ache a **curtose** (***K***) e classifique-a.
+
+a)
+  7 8 8 8 8 8 8 8
+  
+  9 9 9 9 9 9 10 10
+  
+  10 10 11 12 13 15 17 20
+
+
+
+b)	10 11 11 12 12 13 13 14
+
+    14 14 14 14 14 14 14 14
+    
+    14 15 15 15 16 16 17 17             
+
+
+c)	5 5 5 6 6 6 7 9 12 15
+
+    16 17 18 18 19 19 19 20 20 20
+    
+    20 20 20 20 20 20 20 21 21 21 
+
+
+d)	1 1 1 1 1 1 1 1
+
+    1 2 3 4 4 4 5 5
+    
+    6 7 8 9 9 10 11 11
+
+
+e)	10 11 11 12 12 12 12
+
+    13 13 13 13 13 13 14
+    
+    15 15 15 16 16 17 17
+    
+    18 18 19 20 21 22 23
+
+
+f)	10 10 12 12 12 12 12 12 12 12
+
+    13 14 15 15 16 16 17 18 20 20
+    
+    20 22 22 23 23 23 23 23 25 25
+
+
+g)	7 7 7 7 7 7 9 9 9 9
+
+    10 10 10 10 11 11 11 13 13 13
+    
+    14 14 15 15 15 15 17 17 17 17
+    
+    18 19 20 20 21 21 21 22 22 23
+
+
+h)	30 30 30 31 32 33 33
+
+    34 35 36 37 38 38 38
+    
+    40 40 40 40 41 42 43
+
+i)	3 3 3 3 3 4 4 4 4 4
+
+    5 5 5 5 5 5 5 6 7 8
+    
+    9 9 9 10 10 10 12 12 13 13
+
+
+j)	10 11 12 13 14 15 16 16 16
+
+    16 16 16 16 16 16 17 17 17
+    
+    17 18 19 20 20 20 21 21 22
+    
+***    
+
+## **Resolução e Gabarito**
+
+
+a)	7 8 8 8 8 8 8 8
+
+    9 9 9 9 9 9 10 10
+    
+    10 10 11 12 13 15 17 20 
+    
+Q1:24x1/4=24/4=6 **Q1=8**
+
+Q3:24x3/4=72/4=18 **Q3=10**
+
+D1: 24 x  1/10=24/10=2,4= (8+8)/2=16/2=8 **D1=8**
+
+D9: 24x 9/10=216/10=21,6= (13+15)/2=28/2=14 **D9=14**
+
+$\color{red}{\text{K = O,16 L (Leptocúrtica)}}$
+
+b)	10 11 11 12 12 13 13 14
+
+    14 14 14 14 14 14 14 14
+    
+    14 15 15 15 16 16 17 17
+    
+Q1:24x  1/4=24/4=6 **Q1=13**
+
+Q3: 24 x 3/4=72/4=18 **Q3=15**
+
+D1: 24 x 1/10=24/10=2,4= (11+11)/2=22/2=11 **D1=11**
+
+D9: 24 x 9/10=216/10=21,6  **D9=16**
+
+$\color{red}{\text{K=O,2  L (Leptocúrtica)}}$
+
+
+
+c)	5 5 5 6 6 6 7 9 12 15
+
+    16 17 18 18 19 19 19 20 20 20
+    
+    20 20 20 20 20 20 20 21 21 21 
+    
+Q1:30x 1/4=30/4=7,5=(12+12)/2=  24/2=12 **Q1=12**
+
+Q3: 30 x 3/4=90/4=22,5=(22+22)/2=44/2=22 **Q3=22**
+
+D1: 30 x 1/10=30/10=3 **D1=12**
+
+D9: 30x 9/10=270/10=27 **D9=23**
+
+$\color{red}{\text{K=O,20 L (Leptocúrtica)}}$
+    
+
+
+d)	1 1 1 1 1 1 1 1
+
+    1 2 3 4 4 4 5 5
+    
+    6 7 8 9 9 10 11 11
+    
+Q1:24x 1/4=24/4=6 **Q1=1**
+
+Q3: 24 x 3/4=72/4=18 **Q3=7**
+
+D1: 24 x 1/10=24/10=2,4= (1+1)/2=2/2=1 **D1=1**
+
+D9: 24 x 9/10=216/10=21,6= (9+10)/2=19/2=9,5 **D9=9,5**
+
+$\color{red}{\text{K=O,35 P (Platicúrtica)}}$
+    
+
+
+e)	10 11 11 12 12 12 12
+
+    13 13 13 13 13 13 14
+    
+    15 15 15 16 16 17 17
+    
+    18 18 19 20 21 22 23
+    
+Q1:28x 1/4=28/4=7 **Q1=12**
+
+Q3: 28 x 3/4=84/4=21 **Q3=17**
+
+D1: 28 x 1/10=28/10=2,8= (11+11)/2=22/2=11                             **D1=11**
+
+D9: 28 x 9/10=252/10=25,2= (20+21)/2=41/2=20,5                           **D9=20,5**
+
+$\color{red}{\text{K=O,26  M (Mesorcúrtica)}}$
+    
+
+
+f)	10 10 12 12 12 12 12 12 12 12
+
+    13 14 15 15 16 16 17 18 20 20
+    
+    20 22 22 23 23 23 23 23 25 25
+    
+Q1:30x 1/4=30/4=7,5=(12+12)/2=  24/2=12 **Q1=12**
+
+Q3: 30 x 3/4=90/4=22,5=(22+22)/2=44/2=22 **Q3=22**
+
+D1: 30 x 1/10=30/10=3 **D1=12**
+
+D9: 30x 9/10=270/10=27 **D9=23**
+
+$\color{red}{\text{K=O,20 L (Leptocúrtica)}}$
+    
+
+
+g)	7 7 7 7 7 7 9 9 9 9
+
+    10 10 10 10 11 11 11 13 13 13
+    
+    14 14 15 15 15 15 17 17 17 17
+    
+    18 19 20 20 21 21 21 22 22 23
+    
+Q1:40x 1/4=40/4=10 **Q1=9**
+
+Q3: 40x3/4=120/4=30 **Q3=17**
+
+D1: 40 x 1/10=40/10=4 **D1=7**
+
+D9: 40x 9/10=360/10=36 **D9=21**
+
+$\color{red}{\text{K=O,23 L (Leptocúrtica)}}$
+    
+
+
+h)	30 30 30 31 32 33 33
+
+    34 35 36 37 38 38 38
+    
+    40 40 40 40 41 42 43
+    
+Q1:21x 1/4=21/4=5,25=(32+33)/2=  65/2=32,5 Q1 = 32,5
+
+Q3: 21x 3/4=63/4=15,75=(40+40)/2=80/2=40 Q3 = 40
+
+D1: 21x 1/10=21/10=2,1=(30+30)/2=60/2=30 D1 = 30
+
+D9: 21 x 9/10=189/10=18,9=(40+41)/2=81/2=40,5 D9 = 40,5
+
+$\color{red}{\text{K=O,35  P (Platicúrtica)}}$
+
+
+i)	3 3 3 3 3 4 4 4 4 4
+
+    5 5 5 5 5 5 5 6 7 8
+    
+    9 9 9 10 10 10 12 12 13 13
+    
+Q1:30x 1/4=30/4=7,5=(4+4)/2=  8/2=4 **Q1=4**
+
+Q3: 30 x 3/4=90/4=22,5=(9+9)/2=18/2=9 **Q3=9**
+
+D1: 30 x 1/10=30/10=3 **D1=3**
+
+D9: 30x 9/10=270/10=27 **D9=12**
+
+$\color{red}{\text{K=O,27 M (Mesorcúrtica)}}$
+    
+
+
+j)	10 11 12 13 14 15 16 16 16
+
+    16 16 16 16 16 16 17 17 17
+    
+    17 18 19 20 20 20 21 21 22
+
+Q1:27x 1/4=27/4=6,75=(15+16)/2=  31/2=15,5 **Q1=15,5**
+
+Q3: 27x 3/4=81/4=20,25=(18+19)/2=37/2=18,5 **Q3=18,5**
+
+D1: 27x∙1/10=27/10=2,7=(11+12)/2=23/2=11,5 **D1=11,5**
+
+D9: 27 x 9/10=243/10=24,3=(20+21)/2=41/2=20,5 **D9=20,5**
+
+$\color{red}{\text{K=O,16 L  (Leptocúrtica)}}$
+
+
+
+
+
+
+
+
+
+
+
+
