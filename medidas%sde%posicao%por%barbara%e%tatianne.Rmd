@@ -1,0 +1,191 @@
+---
+title: "ebook de estatistica da turma de radiologia: medidas de posição"
+author: "Barbara Myllena e Tatiane Marques"
+date: "20/11/2019"
+output: html_document
+---
+
+### $\color{blue}{\text{Quartis}}$
+
+Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em
+
+quatro partes iguais para facilitar a localização de um determinado valor. Essas partes
+
+serão chamadas de quartis.
+
+Esses quartis gerarão uma ordenada que representa a posição de determinado número
+
+Segue o líder:
+
+#### $\color{blue}{\text{1° quartil}}$
+
+Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados
+
+Ou ainda, ao número que fecha 25% do conjunto numérico;
+
+#### $\frac{1}{4} x n$
+
+(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)
+
+#### $\color{blue}{\text{2° quartil}}$
+
+É igual á mediana, e equivale à ordenada que divide em 50%.
+
+$\color{red}{\text{Lembrando bença; Mediana é o número que se encontra exatamente no meio da sequência numérica.}}$
+
+#### $\color{blue}{\text{3° quartil}}$
+
+Seria a ultima parte, representando os últimos 25% do conjunto numérico
+
+Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à 75%. 
+
+$\frac{3}{4}xn$
+
+(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)
+
+PARA! PARA! PARA!
+
+Ainda com dúvida?
+
+Toma aqui um exemplo pra relaxar o cabeção:
+
+*	#### Pegue como exemplo a sequencias abaixo:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$
+
+*	#### Vamos calcular o $\color{red}{\text{1° Quartil}}$
+
+   1. Conte a quantidade de elementos do conjunto e retire $\frac{1}{4}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$ = 12 elementos
+
+
+$\frac{1}{4}xn=\frac{1}{4}x12=\frac{12}{4}=\color{red}{\text{3}}$
+
+  2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg1.png)
+
+  3. Logo;
+  
+  $\color{red}{\text{1º Q= 13}}$
+
+* #### Agora vamos calcular o $\color{purple}{\text{2° Quartil (Mediana)}}$:
+
+  1.	Conte a quantidade de elementos do conjunto e retire o número que está no meio
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$ = 12 elementos
+
+$\color{purple}{\text{Lembrando bença! Quando a quantidade de elementos é impar, só pegue o número do meio}}$
+
+$\color{purple}{\text{Porém, quando for par, você retira a média dos dois números que se encontram no meio.}}$
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg2.png)
+
+  2. Logo,
+
+$\color{purple}{\text{2º $Q=\frac{(16 + 17)}{2}=16,5$ ≡ 2° Q = 16,5}}$
+
+* ####	Por ultimo, vamos calcular o $\color{green}{\text{3° Quartil}}$:
+
+	1. Conte a quantidade de elementos do conjunto e retire $\frac{3}{4}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}$ = 12 elementos
+
+$\frac{3}{4} x n = \frac{3}{4} x 12= \frac{36}{4} = \color{green}{\text{9}}$
+
+  2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg3.png)
+
+a.	Logo;
+
+$\color{green}{\text{3° Q= 19}}$
+
+### $\color{blue}{\text{Decis}}$
+
+Partindo da mesma lógica do quartil Decil seria uma forma de dividir o banco
+
+de dados, porém, seria em 10 pedaços iguais. 
+
+Para fins didáticos vamos nos concentrar nos Decis mais utilizados.
+
+Segue o líder:
+
+$\color{blue}{\text{1° Decil}}$
+
+Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados
+
+Ou ainda, ao número que fecha 10% do conjunto numérico;
+
+$\frac{( 1 )}{10} x n$
+
+(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)
+
+$\color{blue}{\text{9° Decil}}$
+
+Seria a ultima parte, representando os últimos 10% do conjunto numérico;
+
+Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à  90%
+
+$\frac{9}{10} x n$
+
+(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)
+
+PARA! PARA! PARA!
+
+Ainda com dúvida?
+
+Toma aqui um exemplo pra relaxar o cabeção:
+
+* Pegue como exemplo a sequencias abaixo:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$
+
+   + Vamos calcular o $\color{red}{\text{1° Decil}}$:
+
+  1. Conte a quantidade de elementos do conjunto e retire $\frac{1}{10}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}$ = 12 elementos
+
+$\frac{1}{10}  x n=   \frac{1}{10}  x 12=  \frac{12}{10}=\color{red}{\text{1,2}}$
+
+2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg4.png)
+
+$\color{red}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}$
+
+3.	Logo;
+
+$\color{red}{\text{1° $D= \frac{(11+12)}{2} =11,5 ≡1° D=11,5$}}$
+
+*	Vamos calcular o $\color{purple}{\text{9° Decil}}$:
+
+1. Conte a quantidade de elementos do conjunto e retire $\frac{9}{10}$ do valor:
+
+$\frac{9}{10}  x n=   \frac{9}{10}  x 12=  \frac{108}{10}=\color{purple}{\text{10,8}}$
+
+2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg5.png)
+
+$\color{purple}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}$
+
+3. Logo;
+
+$\color{purple}{\text{1° $D=  \frac{(20+21)}{2}=20,5 ≡1° D=20,5$}}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
