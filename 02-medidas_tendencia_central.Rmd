@@ -4,6 +4,7 @@ Neste capítulo veremos as três principais medidas de tendência central:
 média, mediana e moda. 
 
 ## Média
+
 É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por $\overline{X}$. A fórmula é dada por:
 
  $$\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}$$
@@ -14,6 +15,14 @@ Onde x corresponde a cada elemento do conjunto de dados, $x_n$ corresponde ao
 Exemplo: 1-1-2-2-2-2-3-4-5-6  
 
 $$\overline{X} = \frac{1+1+2+2+2+2+3+4+5+6}{10} = \frac{30}{10} = 3$$
+Como você pode perceber, a cálculo da média é igual ao que você aprendeu na escola. A diferença aqui é a interpretação dela. Para nós estatísticos, a média significa, literalmente, um centro. Você deve ter visto em física algo sobre centro de massa, um ponto em um objeto que é como se todo seu peso estivesse concentrado neste único ponto, sabe como calcula isso? usando médias. 
+
+Para a estatística, a média também significa um centro e é como se todos os elementos daquela amostra fossem representados por aquele único número. Por exemplo, quando se entra numa sala e pergunta a idade da turma, não se diz a idade de cada um dos alunos, tira-se uma média das idades. Se, por exemplo, na sua sala a média de idade é 20, isso é um ponto central e tem-se a ideia de todos naquela sala tem 20 anos, ou pelo menos próximo a isso.    
+
+Mas, as vezes pode acontecer o caso de um elemento apresentar um valor muito maior (ou muito menor) que os demais. Por exemplo, imagine um jogo em que todos marcam 50 pontos e de repente alguem vem e marca 500. A esses elementos cujo o valor é muito longe da média chamamos  eles de pontos aberrantes ou *outliers*.
+Isso pode prejudicar a avaliação da medida de tendência central. Suponha a sequência 1-2-3-4-5, a média é 3, certo? Mas se alterarmos um único elemento da sequência, por exemplo 1-2-3-4-500, a média agora é 102. Percebe que o valor 102 não representa essa sequencia como medida de centro? O elemento de valor 500 é claramente um *outlier* e isso faz com que a média se "perca" como medida de centro.
+
+Quando temos *outliers* na amostra e não temos como retirar, precisamos de uma segunda medida de centro: a mediana.
 
 ## Mediana 
 
@@ -46,5 +55,4 @@ Amodal (nenhum elemento se repete)
 
 #### OUTLIER
 
-É o valor aberrante ou valor atípico, é uma observação que apresenta um grande afastamento dos demais elementos da série (que está "fora" dela), ou que é inconsistente. A existência de outliers implica, tipicamente, em prejuízos a interpretação dos resultados dos testes estatísticos aplicados às amostras.
 
