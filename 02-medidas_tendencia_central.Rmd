@@ -1,0 +1,50 @@
+# Medidas de Tendência Central
+
+Neste capítulo veremos as três principais medidas de tendência central: 
+média, mediana e moda. 
+
+## Média
+É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por $\overline{X}$. A fórmula é dada por:
+
+ $$\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}$$
+
+Onde x corresponde a cada elemento do conjunto de dados, $x_n$ corresponde ao
+último elemento do conjunto de dados e $n$ é o número total de elementos do conjunto de dados. 
+
+Exemplo: 1-1-2-2-2-2-3-4-5-6  
+
+$$\overline{X} = \frac{1+1+2+2+2+2+3+4+5+6}{10} = \frac{30}{10} = 3$$
+
+## Mediana 
+
+É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como $\widetilde{X}$. Para calcular a mediana siga o esquema abaixo.
+
+* Se a quantidade de elementos for impar, use $\frac{n + 1}{2}$
+* Se a quantidade de elementos for par, tire a média entre o elemento $\frac{n}{2}$ e $\frac{n}{2} + 1$
+
+Exemplo: 1-1-2-2-2-2-2-3-4-5 (quantidade de elementos impar)
+Aqui são 9 elementos então $\frac{9 + 1}{2} = 5$. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.
+
+Exemplo: 1-1-2-2-3-4-5-6-7-7 (quantidade de elementos par)
+Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição $\frac{10}{2} = 5$ e posição $\frac{10}{2} + 1 = 6$. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então $\frac{3 + 4}{2} = 3,5$, logo o valor da mediana para este conjunto de números é 3,5. 
+
+## Moda
+
+É o valo do elemento que ocorre com maior frequência. Em estatística representamos por $M_o$. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita. 
+
+Exemplo: 1-1-2-2-2-2-2-3-4-5-6  
+$M_o = 2$
+
+Exemplo: 1-1-2-3-4-5-5  
+$M_o =  1 \space e \space 5$ (bi-modal)
+
+Exemplo: 1-2-3-4-5  
+Amodal (nenhum elemento se repete)
+
+## Quando utilizar média e mediana
+
+
+#### OUTLIER
+
+É o valor aberrante ou valor atípico, é uma observação que apresenta um grande afastamento dos demais elementos da série (que está "fora" dela), ou que é inconsistente. A existência de outliers implica, tipicamente, em prejuízos a interpretação dos resultados dos testes estatísticos aplicados às amostras.
+
