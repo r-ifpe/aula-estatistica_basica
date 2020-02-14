@@ -1,11 +1,4 @@
----
-title: "ebook parte de boxplot da turma de radiologia"
-author: "Barbara Myllena e Tatiane Marques"
-date: "21/11/2019"
-output: html_document
----
-
-### $\color{blue}{\text{BoxPlot}}$
+# $\color{blue}{\text{BoxPlot}}$
 
   O BoxPlot é um gráfico para a percepção de valores discrepantes (outliers), que são
 

@@ -1,10 +1,3 @@
----
-title: "Distribuição de Frequência"
-author: "Kevyn Gonçalves dos Santos"
-date: "26/11/2019"
-output: html_document
----
-
 # Distribuição de frequência
 
   A distribuição de frequência é um agrupamento de dados distribuídos em classes, frequências e frequências acumuladas. Esses dados podem ser representados em tabelas ou gráficos, chamados de histogramas.
