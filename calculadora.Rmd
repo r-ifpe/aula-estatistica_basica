@@ -1,12 +1,4 @@
----
-title: "Estatística"
-author: "Kevyn Gonçalves dos Santos"
-date: "04/11/2019"
-output: html_document
----
-
-
-## Calculadoras Científicas
+# Calculadoras Científicas
 
    É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
 
