@@ -1,0 +1,12 @@
+# Introdução 
+
+## CONCEITO
+
+Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.
+
+A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.
+
+## IMPORTÂNCIA
+
+O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados. 
+	

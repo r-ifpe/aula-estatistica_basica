@@ -1,11 +1,4 @@
----
-title: "ebook de estatistica da turma de radiologia: medidas de posição"
-author: "Barbara Myllena e Tatiane Marques"
-date: "20/11/2019"
-output: html_document
----
-
-### $\color{blue}{\text{Quartis}}$
+# $\color{blue}{\text{Quartis}}$
 
 Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em
 

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 6 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 6 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 6 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introducao.html"/>
+<link rel="prev" href="distribuicao-de-frequencia.html"/>
+<link rel="next" href="quantis.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -210,20 +210,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Edelson Varela, Samuel Macêdo, …</em></p>
-<p class="date"><em>2020-02-17</em></p>
-</div>
-<div id="tenso" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> tenso</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># or the development version</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></a></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="colorbluetextboxplot" class="section level1">
+<h1><span class="header-section-number">Capítulo 6</span> <span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></h1>
+<p>O BoxPlot é um gráfico para a percepção de valores discrepantes (outliers), que são</p>
+<p>os valores muito diferentes do restante de conjunto de dados.</p>
+<p>Esses valores discrepantes podem representar erros no processo de coleta ou de
+dados, nesse caso devem ser corrigidos ou até excluídos do banco de dados.</p>
+<p>Um exemplo nítido disso seria sobre a idade média de uma sala.</p>
+<p>Vamos pegar uma sala do primeiro ano do ensino médio, onde normalmente a idade
+média é de 15 anos. Se adicionarmos uma pessoa de 60 anos, a idade média pode subir para</p>
+<p>até 20 anos. Ou ao contrário, se adicionarmos uma criança de um ano.</p>
+<p>Na construção do gráfico BoxPlot, utilizamos apenas algumas das medidas de posição, como:</p>
+<ul>
+<li><p>Quartis (Q1 e Q3);</p></li>
+<li><p>Mediana;</p></li>
+<li><p>E a distância interquartílica 1,5 x DIQ= Q3-Q1.</p></li>
+</ul>
+<p>ainda não entendeu?</p>
+<p>Falendo de maneira leiga, a função do BoxPlot é literalmente uma forma de “excluir”</p>
+<p>os números ou dados que atrapalhariam uma melhor dedução de uma problemática.</p>
+<p><span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></p>
+<p>(gráfico)</p>
+<p>O BoxPlot é constituído por uma caixa, a caixa é delimitada pelo valor do primeiro</p>
+<p>quartil (Q1) a margem da esquerda e pelo valor do terceiro quartil Q3 a margem da direita.</p>
+<p>Uma linha é traçada dentro da caixa caracterizando o valor do segundo quartil Q2 (mediana).</p>
+<p>Entre o primeiro e o terceiro quartil, temos 50% dos dados. Pode-se pensar então, que a caixa</p>
+<p>contém metade dos dados do conjunto. A largura da caixa é dada por (Q3-Q1), que é chamada</p>
+<p>de distância interquartílica (1,5 x DIQ=Q3-Q1).</p>
+<p>Traça-se uma linha horizontal a partir do Q1 até o menor valor não discrepante e outra</p>
+<p>a partir de Q3 até o maior valor não discrepante.</p>
+<p>Os valores que são considerados discrepantes (outliers):</p>
+<ul>
+<li><p>São menores que (Q1 - 1,5D)</p></li>
+<li><p>São maiores que (Q3 + 1,5D)</p></li>
+</ul>
+<p>Os valores discrepantes são representados no gráfico por asterisco, ‘’ * ‘’</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg1.png" /></p>
+<p><span class="math inline">\(\color{red}{\text{LEMBRANDO BENÇA QUE O GRÁFICO TEM QUE FICAR EM PÉ}}\)</span></p>
+<p>Aqui vai um bizú: é só comparar o boxplot com o eixo “ y ” do plano cartesiano.</p>
+<p>Ainda perdido bença?</p>
+<p>Bora praticar!</p>
+<ul>
+<li>Exemplo 1:</li>
+</ul>
+<p><span class="math inline">\(\color{blue}{\text{1 8 9 10 11 12 12 12 12 12 12 13 14 15 16 54}}\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Calcule os quartis:</li>
+</ol>
+<p><span class="math inline">\(\color{red}{\text{1º $Q=\frac{1}{4} x n≡$}}\)</span> <span class="math inline">\(\frac{1}{4} x 16= \frac{16}{4}\)</span> <span class="math inline">\(\color{red}{\text{≡ 1º $Q=4$}}\)</span></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg2.png" /></p>
+<p><span class="math inline">\(\color{red}{\text{1º Q = 10}}\)</span></p>
+<p><span class="math inline">\(\color{purple}{\text{3º $Q=\frac{3}{4} x n≡$}}\)</span> <span class="math inline">\(\frac{3}{4} x 16= \frac{48}{4}\)</span> <span class="math inline">\(\color{purple}{\text{≡ 3º $Q=12$}}\)</span></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg3.png" /></p>
+<p><span class="math inline">\(\color{purple}{\text{3º Q = 13}}\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Calcule agora a Distancia Interquartil:</li>
+</ol>
+<p>1,5 x D = (<span class="math inline">\(\color{purple}{\text{3º Q}}\)</span> – <span class="math inline">\(\color{red}{\text{1º Q}}\)</span>)</p>
+<p>1,5 x D= ( <span class="math inline">\(\color{purple}{\text{13}}\)</span> – <span class="math inline">\(\color{red}{\text{10}}\)</span>)</p>
+<p>1,5 x <span class="math inline">\(\color{green}{\text{3}}\)</span></p>
+<p><span class="math inline">\(\color{green}{\text{DIQ= 4,5}}\)</span></p>
+<p><span class="math inline">\(\color{red}{\text{1º Q= 10 ↔10}}\)</span> <span class="math inline">\(\color{green}{\text{-4,5}}\)</span> <span class="math inline">\(\color{red}{\text{=}}\)</span> 5,5</p>
+<p><span class="math inline">\(\color{purple}{\text{3º=13 ↔13}}\)</span> <span class="math inline">\(\color{green}{\text{+ 4,5}}\)</span> <span class="math inline">\(\color{purple}{\text{=}}\)</span> 17,5</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Faça o BoxPlot:</li>
+</ol>
 
 </div>
             </section>
@@ -231,8 +282,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introducao.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="distribuicao-de-frequencia.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quantis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

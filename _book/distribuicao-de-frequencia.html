@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 5 Distribuição de frequência | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 5 Distribuição de frequência | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 5 Distribuição de frequência | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introducao.html"/>
+<link rel="prev" href="calculadoras-cientificas.html"/>
+<link rel="next" href="colorbluetextboxplot.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -210,29 +210,404 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Edelson Varela, Samuel Macêdo, …</em></p>
-<p class="date"><em>2020-02-17</em></p>
-</div>
-<div id="tenso" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> tenso</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># or the development version</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></a></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="distribuicao-de-frequencia" class="section level1">
+<h1><span class="header-section-number">Capítulo 5</span> Distribuição de frequência</h1>
+<p>A distribuição de frequência é um agrupamento de dados distribuídos em classes, frequências e frequências acumuladas. Esses dados podem ser representados em tabelas ou gráficos, chamados de histogramas.</p>
+<p><strong>Classes</strong>: são os principais dados da tabela. Possuem intervalos entre o número inferior e o número superior, onde o superior não pertence ao intervalo. Para acharmos o ponto médio, tiramos a média entre a soma dos intervalos de cada classe.</p>
+<p><strong>Frequências</strong>: São as ocorrências dos valores dos intervalos de cada classe.</p>
+<p><strong>Frequência Acumulada</strong>: É a soma de todas as classes anteriores até a ultima classe.</p>
+<p><span class="math inline">\(\color{green}{\text{(Exemplo 1)}}\)</span>: De acordo com os passos, descubra a média, mediana, o desvio de padrão e a assimetria.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Classe</strong></th>
+<th><strong>Frequência</strong></th>
+<th><strong>F.Acumulada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>60-70</strong></td>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td><strong>70-80</strong></td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td><strong>80-90</strong></td>
+<td>2</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td><strong>90-100</strong></td>
+<td>8</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td><strong>100-110</strong></td>
+<td>6</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td><strong>110-120</strong></td>
+<td>14</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td><strong>120-130</strong></td>
+<td>10</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td><strong>130-140</strong></td>
+<td>12</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 1</strong>: descobrir os pontos médios e adicionar à calculadora no modo SD (Ex:65;75;85;95;105;115;125;135) editando suas respectivas frequências.</p>
+<p><strong>Passo 2</strong>: Descobrir a média <strong><span class="math inline">\(\overline x\)</span> = 102.5</strong></p>
+<p><strong>Passo 3</strong>: Descobrir a mediana (a posição da média das frequências dividida pela frequência multiplicado pelo tamanho da classe somado ao inicio dela) <strong><span class="math inline">\(\tilde{x}\)</span>=105</strong></p>
+<p><strong>Passo 4</strong>: Descobrir o desvio de padrão <strong>σ=25.42</strong></p>
+<p><strong>Passo 5</strong>: Descobrir a assimetria <strong>A= -0.2</strong></p>
+<p><strong>Passo 6</strong>: Desenhar o <span class="math inline">\(\color{yellow}{\text{Histograma}}\)</span></p>
+<p><span class="math inline">\(\color{green}{\text{(Exemplo 2)}}\)</span>:Seguindo os mesmos passos anteriores.Descubra a média, mediana, o desvio de padrão e a assimetria.Descobrindo também o 1º e 3º quartil, o 1º e 9º decil e a curtose.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Classe</strong></th>
+<th><strong>Frequência</strong></th>
+<th><strong>F.Acumulada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>15-25</strong></td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><strong>25-35</strong></td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td><strong>35-45</strong></td>
+<td>15</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td><strong>45-55</strong></td>
+<td>10</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td><strong>55-65</strong></td>
+<td>5</td>
+<td>45</td>
+</tr>
+<tr class="even">
+<td><strong>65-75</strong></td>
+<td>14</td>
+<td>59</td>
+</tr>
+<tr class="odd">
+<td><strong>75-85</strong></td>
+<td>0</td>
+<td>59</td>
+</tr>
+<tr class="even">
+<td><strong>85-95</strong></td>
+<td>1</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\overline x\)</span>=47.83…
+<span class="math inline">\(\tilde{x}\)</span>=55
+σ=17.03…
+Q1=25 ,Q3=55
+D1=26 ,D9=71.42
+A=-1.26
+K=0.3</p>
+<p><strong>OBS</strong>: Antes de calcular a curtose, deverá descobrir a posição dos quartis e decis.(a posição do quantil, dividida pela frequência multiplicadapelo tamanho da classe somado ao inicio dela).</p>
+<hr />
+<div id="exercicios-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Exercícios</h2>
+<p>1.Qual gráfico é o mais adequado para se fazer a representaçao gráfica de uma distribuição de frequências?</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Diagrama de Barras</p></li>
+<li><p>Pictograma</p></li>
+<li><p>Polígono de Frenquência</p></li>
+<li><p>Histograma</p></li>
+</ol>
+<p>2.Em 20 dias um professor anotou o número de alunos ausentes, e fez a tabela de frequências abaixo:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Aulos Ausentes</th>
+<th>Frequências</th>
+<th>Percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-3</td>
+<td>5</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>4-7</td>
+<td><strong>B</strong></td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>8-12</td>
+<td>C</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td>12-16</td>
+<td>2</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<p>Qual o número que a letra <strong>B</strong> corresponde?</p>
+<pre><code>A) 5
 
+B) 6
+
+C) 7
+
+D) 8
+
+E) 9</code></pre>
+<p>3.A tabela abaixo indica a frequência relativa de 4 produtos (A,B,C,D) encontrados em 30 lojas.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Produtos</th>
+<th>Frenquência Absoluta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0,3</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>0,4</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>0,1</td>
+</tr>
+</tbody>
+</table>
+<p>O número de lojas que os produtos <strong>B</strong> ou <strong>D</strong> foram encontrados foi de?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>7</p></li>
+<li><p>9</p></li>
+<li><p>12</p></li>
+<li><p>15</p></li>
+<li><p>18</p></li>
+</ol>
+<p>4.Foi realizada uma pesquisa para se saber qual o número de Tv’s em cada casa, 200 residências participaram da pesquisa.</p>
+<table>
+<thead>
+<tr class="header">
+<th>N°de TV’s</th>
+<th>Frequência Absoluta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>118</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>48</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Qual a porcentagem de casas que têm mais de uma TV?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>12%</p></li>
+<li><p>37%</p></li>
+<li><p>63%</p></li>
+<li><p>46%</p></li>
+<li><p>74%</p></li>
+</ol>
+<p>5.O máximo de um gráfico de frequência absoluta acumulada de uma variável discreta é?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Decil</p></li>
+<li><p>Amplitude</p></li>
+<li><p>Moda</p></li>
+<li><p>Cumulativo</p></li>
+<li><p>Número total de observações</p></li>
+</ol>
+<p>6.Polígonos de frequência e Histogramas são representacões gráficas de distribuições:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>não uniformes</p></li>
+<li><p>de acumulações</p></li>
+<li><p>uniformes</p></li>
+<li><p>assimétricas</p></li>
+<li><p>de Frequências</p></li>
+</ol>
+<p>7.A tabela a seguir mostra uma entrevista feita com 50 clientes e está dividida por faixa etária.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Ordem de faixa etária</th>
+<th>Faixa etária</th>
+<th>Número de Clientes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1°</td>
+<td>18-25</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>2°</td>
+<td>25-32</td>
+<td>24</td>
+</tr>
+<tr class="odd">
+<td>3°</td>
+<td>32-40</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>4°</td>
+<td>40-48</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>É correto afirmar que:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Pelo menos 1 , na terceira faixa etária, têm 32 anos.</p></li>
+<li><p>Há, na primeira faixa etária, ao menos 1 têm 25 anos.</p></li>
+<li><p>12% tem mais 18 anos.</p></li>
+<li><p>48% tem entre 18 e 32 anos.</p></li>
+<li><p>88% têm menos de 40 anos.</p></li>
+</ol>
+<p>8.Considere a tabela a seguir</p>
+<table>
+<thead>
+<tr class="header">
+<th>Classes</th>
+<th>Frequências Acumuladas(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400-500</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>500-600</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>600-700</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>700-800</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>800-900</td>
+<td>55</td>
+</tr>
+<tr class="even">
+<td>900-1000</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>A estimativa da distribuição que não é superada em 60% das observações é?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>890.88</p></li>
+<li><p>911.11</p></li>
+<li><p>890,66</p></li>
+<li><p>915,67</p></li>
+<li><p>987,98</p></li>
+</ol>
+<p>9.Dos 110 empregados de uma empresa, 80 são casados, 70 possuem casa própria e 30 são solteiros e possuem casa própria. julgue o item a seguir.</p>
+<p>Dos empregados que possuem casa própria há mais solteiros que casados.</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Certo</p></li>
+<li><p>Errado</p></li>
+</ol>
+<p>10.Foram entrevistados 800 telespectadores sobre o programa de televisão de sua preferência e se obteve a seguinte tabela:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Programas de TV</th>
+<th>Número de Telespectadores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Novelas</td>
+<td>300</td>
+</tr>
+<tr class="even">
+<td>Esportes</td>
+<td>128</td>
+</tr>
+<tr class="odd">
+<td>Filmes</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>Noticiários</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td>Shows</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p>Construa um quadro com a distibuição de frequência relativa.</p>
+<hr />
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introducao.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="calculadoras-cientificas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="colorbluetextboxplot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

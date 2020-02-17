@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="o-que-e-o-git.html"/>
 
-<link rel="next" href="introducao.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -210,29 +210,153 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Edelson Varela, Samuel Macêdo, …</em></p>
-<p class="date"><em>2020-02-17</em></p>
+<div id="colorbluetextquartis" class="section level1">
+<h1><span class="header-section-number">Capítulo 10</span> <span class="math inline">\(\color{blue}{\text{Quartis}}\)</span></h1>
+<p>Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em</p>
+<p>quatro partes iguais para facilitar a localização de um determinado valor. Essas partes</p>
+<p>serão chamadas de quartis.</p>
+<p>Esses quartis gerarão uma ordenada que representa a posição de determinado número</p>
+<p>Segue o líder:</p>
+<div id="colorbluetext1-quartil" class="section level4">
+<h4><span class="header-section-number">10.0.0.1</span> <span class="math inline">\(\color{blue}{\text{1° quartil}}\)</span></h4>
+<p>Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados</p>
+<p>Ou ainda, ao número que fecha 25% do conjunto numérico;</p>
 </div>
-<div id="tenso" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> tenso</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># or the development version</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></a></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="frac14-x-n" class="section level4">
+<h4><span class="header-section-number">10.0.0.2</span> <span class="math inline">\(\frac{1}{4} x n\)</span></h4>
+<p>(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)</p>
+</div>
+<div id="colorbluetext2-quartil" class="section level4">
+<h4><span class="header-section-number">10.0.0.3</span> <span class="math inline">\(\color{blue}{\text{2° quartil}}\)</span></h4>
+<p>É igual á mediana, e equivale à ordenada que divide em 50%.</p>
+<p><span class="math inline">\(\color{red}{\text{Lembrando bença; Mediana é o número que se encontra exatamente no meio da sequência numérica.}}\)</span></p>
+</div>
+<div id="colorbluetext3-quartil" class="section level4">
+<h4><span class="header-section-number">10.0.0.4</span> <span class="math inline">\(\color{blue}{\text{3° quartil}}\)</span></h4>
+<p>Seria a ultima parte, representando os últimos 25% do conjunto numérico</p>
+<p>Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à 75%.</p>
+<p><span class="math inline">\(\frac{3}{4}xn\)</span></p>
+<p>(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)</p>
+<p>PARA! PARA! PARA!</p>
+<p>Ainda com dúvida?</p>
+<p>Toma aqui um exemplo pra relaxar o cabeção:</p>
+<ul>
+<li><h4 id="pegue-como-exemplo-a-sequencias-abaixo"><span class="header-section-number">10.0.0.4</span> Pegue como exemplo a sequencias abaixo:</h4></li>
+</ul>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}\)</span></p>
+<ul>
+<li><h4 id="vamos-calcular-o-colorredtext1-quartil"><span class="header-section-number">10.0.0.4</span> Vamos calcular o <span class="math inline">\(\color{red}{\text{1° Quartil}}\)</span></h4></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{1}{4}\)</span> do valor:</li>
+</ol>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}\)</span> = 12 elementos</p>
+<p><span class="math inline">\(\frac{1}{4}xn=\frac{1}{4}x12=\frac{12}{4}=\color{red}{\text{3}}\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Depois de achar a ordenada, conte e diga qual número representa a ordenada:</li>
+</ol>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\mdpimg1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Logo;</li>
+</ol>
+<p><span class="math inline">\(\color{red}{\text{1º Q= 13}}\)</span></p>
+<ul>
+<li><h4 id="agora-vamos-calcular-o-colorpurpletext2-quartil-mediana"><span class="header-section-number">10.0.0.4</span> Agora vamos calcular o <span class="math inline">\(\color{purple}{\text{2° Quartil (Mediana)}}\)</span>:</h4>
+<ol style="list-style-type: decimal">
+<li>Conte a quantidade de elementos do conjunto e retire o número que está no meio</li>
+</ol></li>
+</ul>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}\)</span> = 12 elementos</p>
+<p><span class="math inline">\(\color{purple}{\text{Lembrando bença! Quando a quantidade de elementos é impar, só pegue o número do meio}}\)</span></p>
+<p><span class="math inline">\(\color{purple}{\text{Porém, quando for par, você retira a média dos dois números que se encontram no meio.}}\)</span></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\mdpimg2.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Logo,</li>
+</ol>
+<p><span class="math inline">\(\color{purple}{\text{2º $Q=\frac{(16 + 17)}{2}=16,5$ ≡ 2° Q = 16,5}}\)</span></p>
+<ul>
+<li><h4 id="por-ultimo-vamos-calcular-o-colorgreentext3-quartil"><span class="header-section-number">10.0.0.4</span> Por ultimo, vamos calcular o <span class="math inline">\(\color{green}{\text{3° Quartil}}\)</span>:</h4>
+<ol style="list-style-type: decimal">
+<li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{3}{4}\)</span> do valor:</li>
+</ol></li>
+</ul>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}\)</span> = 12 elementos</p>
+<p><span class="math inline">\(\frac{3}{4} x n = \frac{3}{4} x 12= \frac{36}{4} = \color{green}{\text{9}}\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Depois de achar a ordenada, conte e diga qual número representa a ordenada:</li>
+</ol>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\mdpimg3.png" /></p>
+<ol style="list-style-type: lower-alpha">
+<li>Logo;</li>
+</ol>
+<p><span class="math inline">\(\color{green}{\text{3° Q= 19}}\)</span></p>
+</div>
+<div id="colorbluetextdecis" class="section level3">
+<h3><span class="header-section-number">10.0.1</span> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></h3>
+<p>Partindo da mesma lógica do quartil Decil seria uma forma de dividir o banco</p>
+<p>de dados, porém, seria em 10 pedaços iguais.</p>
+<p>Para fins didáticos vamos nos concentrar nos Decis mais utilizados.</p>
+<p>Segue o líder:</p>
+<p><span class="math inline">\(\color{blue}{\text{1° Decil}}\)</span></p>
+<p>Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados</p>
+<p>Ou ainda, ao número que fecha 10% do conjunto numérico;</p>
+<p><span class="math inline">\(\frac{( 1 )}{10} x n\)</span></p>
+<p>(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)</p>
+<p><span class="math inline">\(\color{blue}{\text{9° Decil}}\)</span></p>
+<p>Seria a ultima parte, representando os últimos 10% do conjunto numérico;</p>
+<p>Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à 90%</p>
+<p><span class="math inline">\(\frac{9}{10} x n\)</span></p>
+<p>(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)</p>
+<p>PARA! PARA! PARA!</p>
+<p>Ainda com dúvida?</p>
+<p>Toma aqui um exemplo pra relaxar o cabeção:</p>
+<ul>
+<li>Pegue como exemplo a sequencias abaixo:</li>
+</ul>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}\)</span></p>
+<ul>
+<li>Vamos calcular o <span class="math inline">\(\color{red}{\text{1° Decil}}\)</span>:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{1}{10}\)</span> do valor:</li>
+</ol>
+<p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}\)</span> = 12 elementos</p>
+<p><span class="math inline">\(\frac{1}{10} x n= \frac{1}{10} x 12= \frac{12}{10}=\color{red}{\text{1,2}}\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Depois de achar a ordenada, conte e diga qual número representa a ordenada:</li>
+</ol>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\mdpimg4.png" /></p>
+<p><span class="math inline">\(\color{red}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Logo;</li>
+</ol>
+<p><span class="math inline">\(\color{red}{\text{1° $D= \frac{(11+12)}{2} =11,5 ≡1° D=11,5$}}\)</span></p>
+<ul>
+<li>Vamos calcular o <span class="math inline">\(\color{purple}{\text{9° Decil}}\)</span>:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{9}{10}\)</span> do valor:</li>
+</ol>
+<p><span class="math inline">\(\frac{9}{10} x n= \frac{9}{10} x 12= \frac{108}{10}=\color{purple}{\text{10,8}}\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Depois de achar a ordenada, conte e diga qual número representa a ordenada:</li>
+</ol>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\mdpimg5.png" /></p>
+<p><span class="math inline">\(\color{purple}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Logo;</li>
+</ol>
+<p><span class="math inline">\(\color{purple}{\text{1° $D=  \frac{(20+21)}{2}=20,5 ≡1° D=20,5$}}\)</span></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="o-que-e-o-git.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="introducao.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

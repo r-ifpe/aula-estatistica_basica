@@ -1,79 +1,8 @@
----
-title: "Ebook -  estatistica"
-author: "Edelson Varela"
-date: "02/11/2019"
-output: html_document
----
-
-#### CONCEITO
-
-Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.
-
-A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.
-
-#### IMPORTÂNCIA
-
-O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados. 
-	
-### MEDIDAS ESTATÍSTICAS
-
-
-
-#### MEDIDAS DE POSIÇÃO
-
-Média, Mediana, Moda, Percentis, Decis, Quartis.
-
-#### MEDIDAS DE DISPERSÃO
-
-Variância, Desvio Padrão, Amplitude, Intervalo-Interquantil, Coeficiente de Variação.
-
-#### Moda (Mo)
-
-É o valor, elemento ou dado que ocorre com maior frequência. 
-
-Exemplo: 1-1-2-2-2-2-2-3-4-5-6  
-
-Mo = 2
-
-#### Média
-É o valor médio entre todos os valores de um conjunto de dados.
-
-#### Fórmula x̅ = (x1 + x2+...+ xn)/N
-
-Onde x corresponde a cada elemento do conjunto de dados, xn corresponde ao
-último elemento do conjunto de dados e N é o número total de elementos do conjunto de dados. 
-
-Exemplo: 1-1-2-2-2-2-2-3-4-5-6  
-
-x̅ = (1+1+2+2+2+2+2+3+4+5+6)/10 = 30/10 = 3, portanto x̅ = 3
-
-#### Mediana (x ̃):
-
-É o elemento ou variável que ocupa a posição central do conjunto de dados. 
-
-#### Fórmula: posição de  x ̃ = (N+1)/2
-
-Exemplo: 1-1-2-2-2-2-2-3-4-5-6
-
-Posição da mediana (N+1)/2, no exemplo, N= 10, portanto (10+1)/2= 11/2 = 5,5
-
-![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem1.png)
-
-Neste caso a Mediana é 2.
-
-Caso sejam diferentes
-
-
-![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem2.png)
-
-#### OUTLIER
-
-É o valor aberrante ou valor atípico, é uma observação que apresenta um grande afastamento dos demais elementos da série (que está "fora" dela), ou que é inconsistente. A existência de outliers implica, tipicamente, em prejuízos a interpretação dos resultados dos testes estatísticos aplicados às amostras.
-
-#### QUANTIS
+# QUANTIS
 
 Quantis são pontos estabelecidos em intervalos regulares a partir da função de distribuição acumulada, de uma variável aleatória. Os quantis dividem os dados ordenados em subconjuntos de dados de dimensões essencialmente iguais.
 
+`sdfs`
 
 #### Percentil
 
@@ -157,6 +86,10 @@ Q(3)= 40(3/4)=30. A posição $\color{green}{\text{30}}$ corresponde ao dado $\c
 ![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem10.png)
 
 ### MEDIDAS DE DISPERÇÃO
+
+#### MEDIDAS DE DISPERSÃO
+
+Variância, Desvio Padrão, Amplitude, Intervalo-Interquantil, Coeficiente de Variação.
 
 
 #### Variância

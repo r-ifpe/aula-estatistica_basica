@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 3 Medidas de Tendência Central | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 3 Medidas de Tendência Central | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 3 Medidas de Tendência Central | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introducao.html"/>
+<link rel="prev" href="introducao.html"/>
+<link rel="next" href="calculadoras-cientificas.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -210,29 +210,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Edelson Varela, Samuel Macêdo, …</em></p>
-<p class="date"><em>2020-02-17</em></p>
+<div id="medidas-de-tendencia-central" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Medidas de Tendência Central</h1>
+<p>Neste capítulo veremos as três principais medidas de tendência central:
+média, mediana e moda.</p>
+<div id="media" class="section level2">
+<h2><span class="header-section-number">3.1</span> Média</h2>
+<p>É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por <span class="math inline">\(\overline{X}\)</span>. A fórmula é dada por:</p>
+<p><span class="math display">\[\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}\]</span></p>
+<p>Onde x corresponde a cada elemento do conjunto de dados, <span class="math inline">\(x_n\)</span> corresponde ao
+último elemento do conjunto de dados e <span class="math inline">\(n\)</span> é o número total de elementos do conjunto de dados.</p>
+<p>Exemplo: 1-1-2-2-2-2-3-4-5-6</p>
+<p><span class="math display">\[\overline{X} = \frac{1+1+2+2+2+2+3+4+5+6}{10} = \frac{30}{10} = 3\]</span>
+Como você pode perceber, a cálculo da média é igual ao que você aprendeu na escola. A diferença aqui é a interpretação dela. Para nós estatísticos, a média significa, literalmente, um centro. Você deve ter visto em física algo sobre centro de massa, um ponto em um objeto que é como se todo seu peso estivesse concentrado neste único ponto, sabe como calcula isso? usando médias.</p>
+<p>Para a estatística, a média também significa um centro e é como se todos os elementos daquela amostra fossem representados por aquele único número. Por exemplo, quando se entra numa sala e pergunta a idade da turma, não se diz a idade de cada um dos alunos, tira-se uma média das idades. Se, por exemplo, na sua sala a média de idade é 20, isso é um ponto central e tem-se a ideia de todos naquela sala tem 20 anos, ou pelo menos próximo a isso.</p>
+<p>Mas, as vezes pode acontecer o caso de um elemento apresentar um valor muito maior (ou muito menor) que os demais. Por exemplo, imagine um jogo em que todos marcam 50 pontos e de repente alguem vem e marca 500. A esses elementos cujo o valor é muito longe da média chamamos eles de pontos aberrantes ou <em>outliers</em>.
+Isso pode prejudicar a avaliação da medida de tendência central. Suponha a sequência 1-2-3-4-5, a média é 3, certo? Mas se alterarmos um único elemento da sequência, por exemplo 1-2-3-4-500, a média agora é 102. Percebe que o valor 102 não representa essa sequencia como medida de centro? O elemento de valor 500 é claramente um <em>outlier</em> e isso faz com que a média se “perca” como medida de centro.</p>
+<p>Quando temos <em>outliers</em> na amostra e não temos como retirar, precisamos de uma segunda medida de centro: a mediana.</p>
 </div>
-<div id="tenso" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> tenso</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># or the development version</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></a></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="mediana" class="section level2">
+<h2><span class="header-section-number">3.2</span> Mediana</h2>
+<p>É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como <span class="math inline">\(\widetilde{X}\)</span>. Para calcular a mediana siga o esquema abaixo.</p>
+<ul>
+<li>Se a quantidade de elementos for impar, use <span class="math inline">\(\frac{n + 1}{2}\)</span></li>
+<li>Se a quantidade de elementos for par, tire a média entre o elemento <span class="math inline">\(\frac{n}{2}\)</span> e <span class="math inline">\(\frac{n}{2} + 1\)</span></li>
+</ul>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5 (quantidade de elementos impar)
+Aqui são 9 elementos então <span class="math inline">\(\frac{9 + 1}{2} = 5\)</span>. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.</p>
+<p>Exemplo: 1-1-2-2-3-4-5-6-7-7 (quantidade de elementos par)
+Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição <span class="math inline">\(\frac{10}{2} = 5\)</span> e posição <span class="math inline">\(\frac{10}{2} + 1 = 6\)</span>. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então <span class="math inline">\(\frac{3 + 4}{2} = 3,5\)</span>, logo o valor da mediana para este conjunto de números é 3,5.</p>
+</div>
+<div id="moda" class="section level2">
+<h2><span class="header-section-number">3.3</span> Moda</h2>
+<p>É o valo do elemento que ocorre com maior frequência. Em estatística representamos por <span class="math inline">\(M_o\)</span>. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita.</p>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5-6<br />
+<span class="math inline">\(M_o = 2\)</span></p>
+<p>Exemplo: 1-1-2-3-4-5-5<br />
+<span class="math inline">\(M_o = 1 \space e \space 5\)</span> (bi-modal)</p>
+<p>Exemplo: 1-2-3-4-5<br />
+Amodal (nenhum elemento se repete)</p>
+</div>
+<div id="quando-utilizar-media-e-mediana" class="section level2">
+<h2><span class="header-section-number">3.4</span> Quando utilizar média e mediana</h2>
+<div id="outlier" class="section level4">
+<h4><span class="header-section-number">3.4.0.1</span> OUTLIER</h4>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introducao.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introducao.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="calculadoras-cientificas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
