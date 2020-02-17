@@ -5,7 +5,7 @@ média, mediana e moda.
 
 ## Média
 
-É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por $\overline{X}$. A fórmula é dada por:
+É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por $$\overline{X}$$. A fórmula é dada por:
 
  $$\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}$$
 
