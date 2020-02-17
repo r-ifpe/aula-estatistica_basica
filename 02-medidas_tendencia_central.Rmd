@@ -26,7 +26,7 @@ Quando temos *outliers* na amostra e não temos como retirar, precisamos de uma 
 
 ## Mediana 
 
-É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como $\widetilde{X}$. Para calcular a mediana siga o esquema abaixo.
+É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como $$\widetilde{X}$$. Para calcular a mediana siga o esquema abaixo.
 
 * Se a quantidade de elementos for impar, use $\frac{n + 1}{2}$
 * Se a quantidade de elementos for par, tire a média entre o elemento $\frac{n}{2}$ e $\frac{n}{2} + 1$
