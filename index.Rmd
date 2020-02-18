@@ -1,6 +1,6 @@
 --- 
 title: "Estatística Básica"
-author: "Edelson Varela, Samuel Macêdo, ..."
+author: "Samuel Macêdo,  Edelson Varela..."
 date: "`r Sys.Date()`"
 bibliography:
 - book.bib
