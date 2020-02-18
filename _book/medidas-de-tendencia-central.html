@@ -140,7 +140,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media"><i class="fa fa-check"></i><b>3.1</b> Média</a></li>
 <li class="chapter" data-level="3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana"><i class="fa fa-check"></i><b>3.2</b> Mediana</a></li>
 <li class="chapter" data-level="3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda"><i class="fa fa-check"></i><b>3.3</b> Moda</a></li>
-<li class="chapter" data-level="3.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#quando-utilizar-media-e-mediana"><i class="fa fa-check"></i><b>3.4</b> Quando utilizar média e mediana</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html"><i class="fa fa-check"></i><b>4</b> Calculadoras Científicas</a><ul>
 <li class="chapter" data-level="4.0.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#teclas-basicas"><i class="fa fa-check"></i><b>4.0.1</b> Teclas básicas</a></li>
@@ -232,30 +231,24 @@ Isso pode prejudicar a avaliação da medida de tendência central. Suponha a se
 <h2><span class="header-section-number">3.2</span> Mediana</h2>
 <p>É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como <span class="math display">\[\widetilde{X}\]</span>. Para calcular a mediana siga o esquema abaixo.</p>
 <ul>
-<li>Se a quantidade de elementos for impar, use <span class="math inline">\(\frac{n + 1}{2}\)</span></li>
-<li>Se a quantidade de elementos for par, tire a média entre o elemento <span class="math inline">\(\frac{n}{2}\)</span> e <span class="math inline">\(\frac{n}{2} + 1\)</span></li>
+<li>Se a quantidade de elementos for impar, use <span class="math display">\[\frac{n + 1}{2}\]</span></li>
+<li>Se a quantidade de elementos for par, tire a média entre o elemento <span class="math display">\[\frac{n}{2}\]</span> e <span class="math display">\[\frac{n}{2} + 1\]</span></li>
 </ul>
 <p>Exemplo: 1-1-2-2-2-2-2-3-4-5 (quantidade de elementos impar)
-Aqui são 9 elementos então <span class="math inline">\(\frac{9 + 1}{2} = 5\)</span>. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.</p>
+Aqui são 9 elementos então <span class="math display">\[\frac{9 + 1}{2} = 5\]</span>. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.</p>
 <p>Exemplo: 1-1-2-2-3-4-5-6-7-7 (quantidade de elementos par)
-Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição <span class="math inline">\(\frac{10}{2} = 5\)</span> e posição <span class="math inline">\(\frac{10}{2} + 1 = 6\)</span>. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então <span class="math inline">\(\frac{3 + 4}{2} = 3,5\)</span>, logo o valor da mediana para este conjunto de números é 3,5.</p>
+Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição <span class="math display">\[\frac{10}{2} = 5\]</span> e posição <span class="math display">\[\frac{10}{2} + 1 = 6\]</span>. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então <span class="math display">\[\frac{3 + 4}{2} = 3,5\]</span>, logo o valor da mediana para este conjunto de números é 3,5.</p>
 </div>
 <div id="moda" class="section level2">
 <h2><span class="header-section-number">3.3</span> Moda</h2>
-<p>É o valo do elemento que ocorre com maior frequência. Em estatística representamos por <span class="math inline">\(M_o\)</span>. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita.</p>
+<p>É o valo do elemento que ocorre com maior frequência. Em estatística representamos por <span class="math display">\[M_o\]</span>. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita.</p>
 <p>Exemplo: 1-1-2-2-2-2-2-3-4-5-6<br />
-<span class="math inline">\(M_o = 2\)</span></p>
+<span class="math display">\[M_o = 2\]</span></p>
 <p>Exemplo: 1-1-2-3-4-5-5<br />
-<span class="math inline">\(M_o = 1 \space e \space 5\)</span> (bi-modal)</p>
+<span class="math display">\[M_o =  1 \space e \space 5\]</span> (bi-modal)</p>
 <p>Exemplo: 1-2-3-4-5<br />
 Amodal (nenhum elemento se repete)</p>
-</div>
-<div id="quando-utilizar-media-e-mediana" class="section level2">
-<h2><span class="header-section-number">3.4</span> Quando utilizar média e mediana</h2>
-<div id="outlier" class="section level4">
-<h4><span class="header-section-number">3.4.0.1</span> OUTLIER</h4>
 
-</div>
 </div>
 </div>
             </section>
