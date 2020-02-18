@@ -49,7 +49,3 @@ $$M_o =  1 \space e \space 5$$ (bi-modal)
 
 Exemplo: 1-2-3-4-5  
 Amodal (nenhum elemento se repete)
-
-
-
-
