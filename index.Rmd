@@ -5,31 +5,91 @@ date: "`r Sys.Date()`"
 bibliography:
 - book.bib
 - packages.bib
-description: Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook.
+description: Referencia para o curso de estatistica basica feito em R usando bookdown.
 documentclass: book
 link-citations: yes
 site: bookdown::bookdown_site
 biblio-style: apalike
 ---
 
-# tenso 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+# Introdução 
 
-The **bookdown** package can be installed from CRAN or Github:
+Olá, seja bem vindo :)
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+Este material se refere ao curso de estatística básica ministrado aqui no IFPE e contém tanto a teoria quanto a prática. Para o fazer os exercícios será necessário possuir uma calculadora científica (não vamos fazer contas na mão, ne? ninguém merece). 
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+## Conceito
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.
+
+## Importância
+
+O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados. 
+
+## Calculadoras Científicas
+
+   É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
+
+
+### Teclas básicas
+
+•Ligar: Botão **ON**.
+
+•	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
+
+•	Tecla **AC**: apaga tudo que está na tela.
+
+• Tecla **DEL**: apaga o último Termo digitado.
+
+•	Botão **SHIFT** ou **2ND**: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.
+
+•	**As setas (direcionais)**: aperte-a para movimentar pelo visor. Da **esquerda** para a **direita**, com o intuito de conferir, apagar ou até mesmo redigitar. De **cima** para **baixo**, com a intenção de para conferir as contas feitas.
+
+•	**MODE**: Ao pressiona-lo, serão mostrados os modos da sua calculadora.
+
+***
+
+#### **ATENÇÃO!**
+
+**A calculadora científica tem como base a língua inglesa, então o ponto (**.**) separa decimal e a vírgula (**,**) milhar.**
+
+***
+
+### Modos
+
+No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:
+
+#### ***CASIO fx-82MS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **SD**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***CASIO fx-82ES PLUS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***NWAY  SC991EP***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no mod de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***HP 10S + Scientific calculator***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número 2 que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***Kenko kk-83MS-5***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo no de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3**  que corresponde a **REG**.
+
+
+	
