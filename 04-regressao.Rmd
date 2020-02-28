@@ -1,0 +1,63 @@
+# Calculadoras Científicas
+
+   É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
+
+
+### Teclas básicas
+
+•Ligar: Botão **ON**.
+
+•	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
+
+•	Tecla **AC**: apaga tudo que está na tela.
+
+• Tecla **DEL**: apaga o último Termo digitado.
+
+•	Botão **SHIFT** ou **2ND**: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.
+
+•	**As setas (direcionais)**: aperte-a para movimentar pelo visor. Da **esquerda** para a **direita**, com o intuito de conferir, apagar ou até mesmo redigitar. De **cima** para **baixo**, com a intenção de para conferir as contas feitas.
+
+•	**MODE**: Ao pressiona-lo, serão mostrados os modos da sua calculadora.
+
+***
+
+#### **ATENÇÃO!**
+
+**A calculadora científica tem como base a língua inglesa, então o ponto (**.**) separa decimal e a vírgula (**,**) milhar.**
+
+***
+
+### Modos
+
+No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:
+
+#### ***CASIO fx-82MS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **SD**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***CASIO fx-82ES PLUS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***NWAY  SC991EP***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no mod de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***HP 10S + Scientific calculator***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número 2 que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***Kenko kk-83MS-5***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo no de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3**  que corresponde a **REG**.
+
