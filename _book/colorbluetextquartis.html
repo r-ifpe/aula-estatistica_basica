@@ -4,34 +4,34 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica</title>
-  <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
+  <title>Capítulo 8 \(\color{blue}{\text{Quartis}}\) | Estatística Básica</title>
+  <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
+  <meta property="og:title" content="Capítulo 8 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
+  <meta property="og:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 10 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 8 \(\color{blue}{\text{Quartis}}\) | Estatística Básica" />
   
-  <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown::gitbook." />
+  <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   
 
 <meta name="author" content="Samuel Macêdo, Edelson Varela…" />
 
 
-<meta name="date" content="2020-02-18" />
+<meta name="date" content="2020-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="o-que-e-o-git.html"/>
+<link rel="prev" href="o-que-e-controle-de-versao.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,68 +52,6 @@
 
 
 
-<style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -131,63 +69,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> tenso</a></li>
-<li class="chapter" data-level="2" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>2</b> Introdução</a><ul>
-<li class="chapter" data-level="2.1" data-path="introducao.html"><a href="introducao.html#conceito"><i class="fa fa-check"></i><b>2.1</b> CONCEITO</a></li>
-<li class="chapter" data-level="2.2" data-path="introducao.html"><a href="introducao.html#importancia"><i class="fa fa-check"></i><b>2.2</b> IMPORTÂNCIA</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#conceito"><i class="fa fa-check"></i><b>1.1</b> Conceito</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#importancia"><i class="fa fa-check"></i><b>1.2</b> Importância</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#calculadoras-cientificas"><i class="fa fa-check"></i><b>1.3</b> Calculadoras Científicas</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#teclas-basicas"><i class="fa fa-check"></i><b>1.3.1</b> Teclas básicas</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#modos"><i class="fa fa-check"></i><b>1.3.2</b> Modos</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i><b>3</b> Medidas de Tendência Central</a><ul>
-<li class="chapter" data-level="3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media"><i class="fa fa-check"></i><b>3.1</b> Média</a></li>
-<li class="chapter" data-level="3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana"><i class="fa fa-check"></i><b>3.2</b> Mediana</a></li>
-<li class="chapter" data-level="3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda"><i class="fa fa-check"></i><b>3.3</b> Moda</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html"><i class="fa fa-check"></i><b>4</b> Calculadoras Científicas</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#teclas-basicas"><i class="fa fa-check"></i><b>4.0.1</b> Teclas básicas</a></li>
-<li class="chapter" data-level="4.0.2" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#modos"><i class="fa fa-check"></i><b>4.0.2</b> Modos</a></li>
-<li class="chapter" data-level="4.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#curtose"><i class="fa fa-check"></i><b>4.1</b> Curtose</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#calculando-quartil-e-decil"><i class="fa fa-check"></i><b>4.1.1</b> <strong>Calculando Quartil e Decil</strong></a></li>
-<li class="chapter" data-level="4.1.2" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#classificacao"><i class="fa fa-check"></i><b>4.1.2</b> Classificação</a></li>
+<li class="chapter" data-level="2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html"><i class="fa fa-check"></i><b>2</b> Estatística Descritiva</a><ul>
+<li class="chapter" data-level="2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-tendencia-central"><i class="fa fa-check"></i><b>2.1</b> Medidas de Tendência Central</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#media"><i class="fa fa-check"></i><b>2.1.1</b> Média</a></li>
+<li class="chapter" data-level="2.1.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#mediana"><i class="fa fa-check"></i><b>2.1.2</b> Mediana</a></li>
+<li class="chapter" data-level="2.1.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#moda"><i class="fa fa-check"></i><b>2.1.3</b> Moda</a></li>
+<li class="chapter" data-level="2.1.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios"><i class="fa fa-check"></i><b>2.1.4</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#exercicios"><i class="fa fa-check"></i><b>4.2</b> <strong>EXERCÍCIOS</strong></a></li>
-<li class="chapter" data-level="4.3" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#resolucao-e-gabarito"><i class="fa fa-check"></i><b>4.3</b> <strong>Resolução e Gabarito</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-dispersao"><i class="fa fa-check"></i><b>2.2</b> Medidas de Dispersão</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#variancia"><i class="fa fa-check"></i><b>2.2.1</b> Variância</a></li>
+<li class="chapter" data-level="2.2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#distancia-interquartilica"><i class="fa fa-check"></i><b>2.2.2</b> Distância Interquartílica</a></li>
+<li class="chapter" data-level="2.2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-1"><i class="fa fa-check"></i><b>2.2.3</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html"><i class="fa fa-check"></i><b>5</b> Distribuição de frequência</a><ul>
-<li class="chapter" data-level="5.1" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#exercicios-1"><i class="fa fa-check"></i><b>5.1</b> Exercícios</a></li>
+<li class="chapter" data-level="2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#assimetria"><i class="fa fa-check"></i><b>2.3</b> Assimetria</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-2"><i class="fa fa-check"></i><b>2.3.1</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="colorbluetextboxplot.html"><a href="colorbluetextboxplot.html"><i class="fa fa-check"></i><b>6</b> <span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></a></li>
-<li class="chapter" data-level="7" data-path="quantis.html"><a href="quantis.html"><i class="fa fa-check"></i><b>7</b> QUANTIS</a><ul>
-<li class="chapter" data-level="7.0.1" data-path="quantis.html"><a href="quantis.html#medidas-de-dispercao"><i class="fa fa-check"></i><b>7.0.1</b> MEDIDAS DE DISPERÇÃO</a></li>
-<li class="chapter" data-level="7.0.2" data-path="quantis.html"><a href="quantis.html#corte"><i class="fa fa-check"></i><b>7.0.2</b> CORTE</a></li>
-<li class="chapter" data-level="7.0.3" data-path="quantis.html"><a href="quantis.html#curtose-1"><i class="fa fa-check"></i><b>7.0.3</b> CURTOSE</a></li>
-<li class="chapter" data-level="7.0.4" data-path="quantis.html"><a href="quantis.html#calculo-da-curtose"><i class="fa fa-check"></i><b>7.0.4</b> CÁLCULO DA CURTOSE</a></li>
-<li class="chapter" data-level="7.0.5" data-path="quantis.html"><a href="quantis.html#limites-superior-e-inferior"><i class="fa fa-check"></i><b>7.0.5</b> Limites superior e inferior</a></li>
-<li class="chapter" data-level="7.0.6" data-path="quantis.html"><a href="quantis.html#usando-a-calculadora-modelo-casio-fx-991esplus"><i class="fa fa-check"></i><b>7.0.6</b> USANDO A CALCULADORA – MODELO (CASIO fx 991ESplus)</a></li>
-<li class="chapter" data-level="7.0.7" data-path="quantis.html"><a href="quantis.html#selecionando-o-modo-de-calculo"><i class="fa fa-check"></i><b>7.0.7</b> SELECIONANDO O MODO DE CÁLCULO</a></li>
-<li class="chapter" data-level="7.0.8" data-path="quantis.html"><a href="quantis.html#calculando-a-assimetria-1"><i class="fa fa-check"></i><b>7.0.8</b> CALCULANDO A ASSIMETRIA</a></li>
-<li class="chapter" data-level="7.0.9" data-path="quantis.html"><a href="quantis.html#roteiro"><i class="fa fa-check"></i><b>7.0.9</b> ROTEIRO:</a></li>
-<li class="chapter" data-level="7.0.10" data-path="quantis.html"><a href="quantis.html#distribuicao-de-frequencia-1"><i class="fa fa-check"></i><b>7.0.10</b> DISTRIBUIÇÃO DE FREQUÊNCIA</a></li>
-<li class="chapter" data-level="7.0.11" data-path="quantis.html"><a href="quantis.html#exemplo"><i class="fa fa-check"></i><b>7.0.11</b> Exemplo:</a></li>
-<li class="chapter" data-level="7.0.12" data-path="quantis.html"><a href="quantis.html#inserindo-os-valores-na-calculadora"><i class="fa fa-check"></i><b>7.0.12</b> INSERINDO OS VALORES NA CALCULADORA</a></li>
-<li class="chapter" data-level="7.0.13" data-path="quantis.html"><a href="quantis.html#mediana-1"><i class="fa fa-check"></i><b>7.0.13</b> MEDIANA</a></li>
-<li class="chapter" data-level="7.0.14" data-path="quantis.html"><a href="quantis.html#calculando-a-posicao-da-mediana"><i class="fa fa-check"></i><b>7.0.14</b> CALCULANDO A POSIÇÃO DA MEDIANA</a></li>
-<li class="chapter" data-level="7.0.15" data-path="quantis.html"><a href="quantis.html#calculando-o-valor-da-mediana"><i class="fa fa-check"></i><b>7.0.15</b> CALCULANDO O VALOR DA MEDIANA</a></li>
-<li class="chapter" data-level="7.0.16" data-path="quantis.html"><a href="quantis.html#calculando-a-assimetria-2"><i class="fa fa-check"></i><b>7.0.16</b> CALCULANDO A ASSIMETRIA</a></li>
-<li class="chapter" data-level="7.0.17" data-path="quantis.html"><a href="quantis.html#calculando-os-quartis-e-decis"><i class="fa fa-check"></i><b>7.0.17</b> CALCULANDO OS QUARTIS E DECIS</a></li>
-<li class="chapter" data-level="7.0.18" data-path="quantis.html"><a href="quantis.html#curtose-2"><i class="fa fa-check"></i><b>7.0.18</b> CURTOSE</a></li>
-<li class="chapter" data-level="7.0.19" data-path="quantis.html"><a href="quantis.html#regressao"><i class="fa fa-check"></i><b>7.0.19</b> REGRESSÃO</a></li>
+<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#quantis"><i class="fa fa-check"></i><b>2.4</b> Quantis</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-3"><i class="fa fa-check"></i><b>2.4.1</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html"><i class="fa fa-check"></i><b>8</b> O que é controle de versão?</a></li>
-<li class="chapter" data-level="9" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html"><i class="fa fa-check"></i><b>9</b> O que é o Git?</a><ul>
-<li class="chapter" data-level="9.1" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#o-que-e-o-github"><i class="fa fa-check"></i><b>9.1</b> O que é o GitHub?</a></li>
-<li class="chapter" data-level="9.2" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#o-fluxo-de-trabalho-git-the-git-workflow"><i class="fa fa-check"></i><b>9.2</b> O fluxo de trabalho Git (The Git workflow)</a></li>
-<li class="chapter" data-level="9.3" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#ramificacoes-branching"><i class="fa fa-check"></i><b>9.3</b> Ramificações (Branching)</a></li>
-<li class="chapter" data-level="9.4" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#solicitacao-de-recebimento-pull-request"><i class="fa fa-check"></i><b>9.4</b> Solicitação de recebimento (Pull Request)</a></li>
-<li class="chapter" data-level="9.5" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#como-fazer-isso-usando-o-rstudio-e-o-github"><i class="fa fa-check"></i><b>9.5</b> Como fazer isso usando o RStudio e o GitHub?</a></li>
-<li class="chapter" data-level="9.6" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#o-que-fazer-se-voce-receber-uma-solicitacao-de-recebimento-pull-request"><i class="fa fa-check"></i><b>9.6</b> O que fazer se você receber uma solicitação de recebimento (Pull Request)?</a></li>
-<li class="chapter" data-level="9.7" data-path="o-que-e-o-git.html"><a href="o-que-e-o-git.html#explorando-mais"><i class="fa fa-check"></i><b>9.7</b> Explorando mais</a></li>
+<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#curtose"><i class="fa fa-check"></i><b>2.5</b> Curtose</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#calculando-quartil-e-decil"><i class="fa fa-check"></i><b>2.5.1</b> <strong>Calculando Quartil e Decil</strong></a></li>
+<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#classificacao"><i class="fa fa-check"></i><b>2.5.2</b> Classificação</a></li>
+<li class="chapter" data-level="2.5.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-4"><i class="fa fa-check"></i><b>2.5.3</b> Exercícios</a></li>
+<li class="chapter" data-level="2.5.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#resolucao-e-gabarito"><i class="fa fa-check"></i><b>2.5.4</b> <strong>Resolução e Gabarito</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="colorbluetextquartis.html"><a href="colorbluetextquartis.html"><i class="fa fa-check"></i><b>10</b> <span class="math inline">\(\color{blue}{\text{Quartis}}\)</span></a><ul>
-<li class="chapter" data-level="10.0.1" data-path="colorbluetextquartis.html"><a href="colorbluetextquartis.html#colorbluetextdecis"><i class="fa fa-check"></i><b>10.0.1</b> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></a></li>
+<li class="chapter" data-level="2.6" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#boxplot"><i class="fa fa-check"></i><b>2.6</b> Boxplot</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-5"><i class="fa fa-check"></i><b>2.6.1</b> Exercícios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html"><i class="fa fa-check"></i><b>3</b> Distribuição de frequência</a><ul>
+<li class="chapter" data-level="3.1" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#exercicios-6"><i class="fa fa-check"></i><b>3.1</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="calculadoras-cientificas-1.html"><a href="calculadoras-cientificas-1.html"><i class="fa fa-check"></i><b>4</b> Calculadoras Científicas</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="calculadoras-cientificas-1.html"><a href="calculadoras-cientificas-1.html#teclas-basicas-1"><i class="fa fa-check"></i><b>4.0.1</b> Teclas básicas</a></li>
+<li class="chapter" data-level="4.0.2" data-path="calculadoras-cientificas-1.html"><a href="calculadoras-cientificas-1.html#modos-1"><i class="fa fa-check"></i><b>4.0.2</b> Modos</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="colorbluetextboxplot.html"><a href="colorbluetextboxplot.html"><i class="fa fa-check"></i><b>5</b> <span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></a></li>
+<li class="chapter" data-level="6" data-path="quantis-1.html"><a href="quantis-1.html"><i class="fa fa-check"></i><b>6</b> QUANTIS</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="quantis-1.html"><a href="quantis-1.html#medidas-de-dispercao"><i class="fa fa-check"></i><b>6.0.1</b> MEDIDAS DE DISPERÇÃO</a></li>
+<li class="chapter" data-level="6.0.2" data-path="quantis-1.html"><a href="quantis-1.html#corte"><i class="fa fa-check"></i><b>6.0.2</b> CORTE</a></li>
+<li class="chapter" data-level="6.0.3" data-path="quantis-1.html"><a href="quantis-1.html#curtose-1"><i class="fa fa-check"></i><b>6.0.3</b> CURTOSE</a></li>
+<li class="chapter" data-level="6.0.4" data-path="quantis-1.html"><a href="quantis-1.html#calculo-da-curtose"><i class="fa fa-check"></i><b>6.0.4</b> CÁLCULO DA CURTOSE</a></li>
+<li class="chapter" data-level="6.0.5" data-path="quantis-1.html"><a href="quantis-1.html#limites-superior-e-inferior"><i class="fa fa-check"></i><b>6.0.5</b> Limites superior e inferior</a></li>
+<li class="chapter" data-level="6.0.6" data-path="quantis-1.html"><a href="quantis-1.html#usando-a-calculadora-modelo-casio-fx-991esplus"><i class="fa fa-check"></i><b>6.0.6</b> USANDO A CALCULADORA – MODELO (CASIO fx 991ESplus)</a></li>
+<li class="chapter" data-level="6.0.7" data-path="quantis-1.html"><a href="quantis-1.html#selecionando-o-modo-de-calculo"><i class="fa fa-check"></i><b>6.0.7</b> SELECIONANDO O MODO DE CÁLCULO</a></li>
+<li class="chapter" data-level="6.0.8" data-path="quantis-1.html"><a href="quantis-1.html#calculando-a-assimetria-1"><i class="fa fa-check"></i><b>6.0.8</b> CALCULANDO A ASSIMETRIA</a></li>
+<li class="chapter" data-level="6.0.9" data-path="quantis-1.html"><a href="quantis-1.html#roteiro"><i class="fa fa-check"></i><b>6.0.9</b> ROTEIRO:</a></li>
+<li class="chapter" data-level="6.0.10" data-path="quantis-1.html"><a href="quantis-1.html#distribuicao-de-frequencia-1"><i class="fa fa-check"></i><b>6.0.10</b> DISTRIBUIÇÃO DE FREQUÊNCIA</a></li>
+<li class="chapter" data-level="6.0.11" data-path="quantis-1.html"><a href="quantis-1.html#exemplo"><i class="fa fa-check"></i><b>6.0.11</b> Exemplo:</a></li>
+<li class="chapter" data-level="6.0.12" data-path="quantis-1.html"><a href="quantis-1.html#inserindo-os-valores-na-calculadora"><i class="fa fa-check"></i><b>6.0.12</b> INSERINDO OS VALORES NA CALCULADORA</a></li>
+<li class="chapter" data-level="6.0.13" data-path="quantis-1.html"><a href="quantis-1.html#mediana-1"><i class="fa fa-check"></i><b>6.0.13</b> MEDIANA</a></li>
+<li class="chapter" data-level="6.0.14" data-path="quantis-1.html"><a href="quantis-1.html#calculando-a-posicao-da-mediana"><i class="fa fa-check"></i><b>6.0.14</b> CALCULANDO A POSIÇÃO DA MEDIANA</a></li>
+<li class="chapter" data-level="6.0.15" data-path="quantis-1.html"><a href="quantis-1.html#calculando-o-valor-da-mediana"><i class="fa fa-check"></i><b>6.0.15</b> CALCULANDO O VALOR DA MEDIANA</a></li>
+<li class="chapter" data-level="6.0.16" data-path="quantis-1.html"><a href="quantis-1.html#calculando-a-assimetria-2"><i class="fa fa-check"></i><b>6.0.16</b> CALCULANDO A ASSIMETRIA</a></li>
+<li class="chapter" data-level="6.0.17" data-path="quantis-1.html"><a href="quantis-1.html#calculando-os-quartis-e-decis"><i class="fa fa-check"></i><b>6.0.17</b> CALCULANDO OS QUARTIS E DECIS</a></li>
+<li class="chapter" data-level="6.0.18" data-path="quantis-1.html"><a href="quantis-1.html#curtose-2"><i class="fa fa-check"></i><b>6.0.18</b> CURTOSE</a></li>
+<li class="chapter" data-level="6.0.19" data-path="quantis-1.html"><a href="quantis-1.html#regressao"><i class="fa fa-check"></i><b>6.0.19</b> REGRESSÃO</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html"><i class="fa fa-check"></i><b>7</b> O que é controle de versão?</a><ul>
+<li class="chapter" data-level="7.1" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#o-que-e-o-github"><i class="fa fa-check"></i><b>7.1</b> O que é o GitHub?</a></li>
+<li class="chapter" data-level="7.2" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#o-fluxo-de-trabalho-git-the-git-workflow"><i class="fa fa-check"></i><b>7.2</b> O fluxo de trabalho Git (The Git workflow)</a></li>
+<li class="chapter" data-level="7.3" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#ramificacoes-branching"><i class="fa fa-check"></i><b>7.3</b> Ramificações (Branching)</a></li>
+<li class="chapter" data-level="7.4" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#solicitacao-de-recebimento-pull-request"><i class="fa fa-check"></i><b>7.4</b> Solicitação de recebimento (Pull Request)</a></li>
+<li class="chapter" data-level="7.5" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#como-fazer-isso-usando-o-rstudio-e-o-github"><i class="fa fa-check"></i><b>7.5</b> Como fazer isso usando o RStudio e o GitHub?</a></li>
+<li class="chapter" data-level="7.6" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#o-que-fazer-se-voce-receber-uma-solicitacao-de-recebimento-pull-request"><i class="fa fa-check"></i><b>7.6</b> O que fazer se você receber uma solicitação de recebimento (Pull Request)?</a></li>
+<li class="chapter" data-level="7.7" data-path="o-que-e-controle-de-versao.html"><a href="o-que-e-controle-de-versao.html#explorando-mais"><i class="fa fa-check"></i><b>7.7</b> Explorando mais</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="colorbluetextquartis.html"><a href="colorbluetextquartis.html"><i class="fa fa-check"></i><b>8</b> <span class="math inline">\(\color{blue}{\text{Quartis}}\)</span></a><ul>
+<li class="chapter" data-level="8.0.1" data-path="colorbluetextquartis.html"><a href="colorbluetextquartis.html#colorbluetextdecis"><i class="fa fa-check"></i><b>8.0.1</b> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -210,28 +167,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="colorbluetextquartis" class="section level1">
-<h1><span class="header-section-number">Capítulo 10</span> <span class="math inline">\(\color{blue}{\text{Quartis}}\)</span></h1>
+<h1><span class="header-section-number">Capítulo 8</span> <span class="math inline">\(\color{blue}{\text{Quartis}}\)</span></h1>
 <p>Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em</p>
 <p>quatro partes iguais para facilitar a localização de um determinado valor. Essas partes</p>
 <p>serão chamadas de quartis.</p>
 <p>Esses quartis gerarão uma ordenada que representa a posição de determinado número</p>
 <p>Segue o líder:</p>
 <div id="colorbluetext1-quartil" class="section level4">
-<h4><span class="header-section-number">10.0.0.1</span> <span class="math inline">\(\color{blue}{\text{1° quartil}}\)</span></h4>
+<h4><span class="header-section-number">8.0.0.1</span> <span class="math inline">\(\color{blue}{\text{1° quartil}}\)</span></h4>
 <p>Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados</p>
 <p>Ou ainda, ao número que fecha 25% do conjunto numérico;</p>
 </div>
 <div id="frac14-x-n" class="section level4">
-<h4><span class="header-section-number">10.0.0.2</span> <span class="math inline">\(\frac{1}{4} x n\)</span></h4>
+<h4><span class="header-section-number">8.0.0.2</span> <span class="math inline">\(\frac{1}{4} x n\)</span></h4>
 <p>(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)</p>
 </div>
 <div id="colorbluetext2-quartil" class="section level4">
-<h4><span class="header-section-number">10.0.0.3</span> <span class="math inline">\(\color{blue}{\text{2° quartil}}\)</span></h4>
+<h4><span class="header-section-number">8.0.0.3</span> <span class="math inline">\(\color{blue}{\text{2° quartil}}\)</span></h4>
 <p>É igual á mediana, e equivale à ordenada que divide em 50%.</p>
 <p><span class="math inline">\(\color{red}{\text{Lembrando bença; Mediana é o número que se encontra exatamente no meio da sequência numérica.}}\)</span></p>
 </div>
 <div id="colorbluetext3-quartil" class="section level4">
-<h4><span class="header-section-number">10.0.0.4</span> <span class="math inline">\(\color{blue}{\text{3° quartil}}\)</span></h4>
+<h4><span class="header-section-number">8.0.0.4</span> <span class="math inline">\(\color{blue}{\text{3° quartil}}\)</span></h4>
 <p>Seria a ultima parte, representando os últimos 25% do conjunto numérico</p>
 <p>Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à 75%.</p>
 <p><span class="math inline">\(\frac{3}{4}xn\)</span></p>
@@ -240,11 +197,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ainda com dúvida?</p>
 <p>Toma aqui um exemplo pra relaxar o cabeção:</p>
 <ul>
-<li><h4 id="pegue-como-exemplo-a-sequencias-abaixo"><span class="header-section-number">10.0.0.4</span> Pegue como exemplo a sequencias abaixo:</h4></li>
+<li><h4 id="pegue-como-exemplo-a-sequencias-abaixo"><span class="header-section-number">8.0.0.4</span> Pegue como exemplo a sequencias abaixo:</h4></li>
 </ul>
 <p><span class="math inline">\(\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}\)</span></p>
 <ul>
-<li><h4 id="vamos-calcular-o-colorredtext1-quartil"><span class="header-section-number">10.0.0.4</span> Vamos calcular o <span class="math inline">\(\color{red}{\text{1° Quartil}}\)</span></h4></li>
+<li><h4 id="vamos-calcular-o-colorredtext1-quartil"><span class="header-section-number">8.0.0.4</span> Vamos calcular o <span class="math inline">\(\color{red}{\text{1° Quartil}}\)</span></h4></li>
 </ul>
 <ol style="list-style-type: decimal">
 <li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{1}{4}\)</span> do valor:</li>
@@ -260,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><span class="math inline">\(\color{red}{\text{1º Q= 13}}\)</span></p>
 <ul>
-<li><h4 id="agora-vamos-calcular-o-colorpurpletext2-quartil-mediana"><span class="header-section-number">10.0.0.4</span> Agora vamos calcular o <span class="math inline">\(\color{purple}{\text{2° Quartil (Mediana)}}\)</span>:</h4>
+<li><h4 id="agora-vamos-calcular-o-colorpurpletext2-quartil-mediana"><span class="header-section-number">8.0.0.4</span> Agora vamos calcular o <span class="math inline">\(\color{purple}{\text{2° Quartil (Mediana)}}\)</span>:</h4>
 <ol style="list-style-type: decimal">
 <li>Conte a quantidade de elementos do conjunto e retire o número que está no meio</li>
 </ol></li>
@@ -274,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><span class="math inline">\(\color{purple}{\text{2º $Q=\frac{(16 + 17)}{2}=16,5$ ≡ 2° Q = 16,5}}\)</span></p>
 <ul>
-<li><h4 id="por-ultimo-vamos-calcular-o-colorgreentext3-quartil"><span class="header-section-number">10.0.0.4</span> Por ultimo, vamos calcular o <span class="math inline">\(\color{green}{\text{3° Quartil}}\)</span>:</h4>
+<li><h4 id="por-ultimo-vamos-calcular-o-colorgreentext3-quartil"><span class="header-section-number">8.0.0.4</span> Por ultimo, vamos calcular o <span class="math inline">\(\color{green}{\text{3° Quartil}}\)</span>:</h4>
 <ol style="list-style-type: decimal">
 <li>Conte a quantidade de elementos do conjunto e retire <span class="math inline">\(\frac{3}{4}\)</span> do valor:</li>
 </ol></li>
@@ -291,7 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(\color{green}{\text{3° Q= 19}}\)</span></p>
 </div>
 <div id="colorbluetextdecis" class="section level3">
-<h3><span class="header-section-number">10.0.1</span> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></h3>
+<h3><span class="header-section-number">8.0.1</span> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></h3>
 <p>Partindo da mesma lógica do quartil Decil seria uma forma de dividir o banco</p>
 <p>de dados, porém, seria em 10 pedaços iguais.</p>
 <p>Para fins didáticos vamos nos concentrar nos Decis mais utilizados.</p>
@@ -354,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="o-que-e-o-git.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="o-que-e-controle-de-versao.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
