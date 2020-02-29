@@ -329,7 +329,7 @@ C=tamanho da classe=0,1
 ci=valor inicial da classe correspondente=1,60
 
 f=frequência da classe correspondente
-
+ 
 Temos:
 
 ![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem44.png)
