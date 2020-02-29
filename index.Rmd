@@ -1,6 +1,6 @@
 --- 
 title: "Estatística Básica"
-author: "Samuel Macêdo,  Edelson Varela..."
+author: "Samuel Macêdo,  Edelson Varela, Eduardo Henrique, Eddie Muller e Kevyn Santos"
 date: "`r Sys.Date()`"
 bibliography:
 - book.bib
