@@ -12,6 +12,16 @@ Outras marcas disponíveis com o preço mais acessível são a Kenko e NWAY. Cas
 
 ## Teclas básicas
 
+Essas teclas são logo as primeiras instruções que vamos aprender e servirá para qualquer modelo que você venha a utlizar. Lembre-se que nossas calculadoras estão em inglês, mas não se preocupe que não é muita coisa. 
+
+Para ligar sua calculadora é fácil, apenas aperte a tecla **ON** no canto superior direito. Para desligar você precisa apertar em **OFF**, que está logo em cima da tecla **AC**. Para acessar esses comandos que estão loga acima das teclas você precisa apertar antes a tecla **SHIFT** que está no canto superior esquerdo. Não é necessário apertar e segurar o **SHIFT** como no seu computador, apenas aperte uma vez (perceba que na tela, no canto superior esquerdo, irá aparecer um `S`) e depois aperte **AC**, isto desligará sua calculadora.
+
+Diferentes das calculadoras normais, a científica precisa que você aperte **=** para que uma operação seja exibida na tela. Exemplo, digite na sua calculadora $2 + 2$, perceba que a operação aparece em cima da tela, mas embaixo continua $0$. Para que qualquer operação seja concluída você precisa apertar a tecla **=**.
+
+Muitas vezes digitamos algo errado, é normal. Caso precise apagar algo use **DEL** para a última coisa que você digitou ou apague tudo usando **AC**.
+
+## Tecla **MODE**
+
 •Ligar: Botão **ON**.
 
 •	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
