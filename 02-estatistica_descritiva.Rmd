@@ -56,6 +56,27 @@ Amodal (nenhum elemento se repete)
 
 ## Medidas de Dispersão
 
+Variância, Desvio Padrão, Amplitude, Intervalo-Interquantil, Coeficiente de Variação.
+
+
+#### Variância
+
+Mede a sua dispersão estatística, indicando "o quão longe" em geral os seus
+
+valores se encontram do valor esperado.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem11.png)
+
+#### Desvio Médio Padrão
+
+Indica o quanto o conjunto de dados é uniforme. Quando o desvio é baixo, quer
+
+dizer que os dados do conjunto estão mais próximos da média.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem12.png)
+
+
+
 ### Variância
 
 ### Distância Interquartílica
@@ -64,9 +85,320 @@ Amodal (nenhum elemento se repete)
 
 ## Assimetria
 
+#### SIMETRIA
+
+Uma curva (ou distribuição) é simétrica quando os valores em torno do ponto
+
+central, ou seja, a média, a mediana e a moda coincidem. Os valores se agrupam
+
+acima ou abaixo do ponto central, e este “desvio” da simetria denomina-se
+
+assimetria.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem13.png)
+
+#### ASSIMETRIA
+
+1 - Diz-se que uma assimetria é do tipo positiva quando os valores mais altos das
+
+observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à
+
+direita da ordenada (frequência) máxima do que à esquerda. Também chamada de 
+
+#### assimétrica à direita.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem14.png)
+
+2 - Diz-se que uma assimetria é do tipo negativa quando os valores mais altos
+
+das observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à
+
+esquerda da ordenada (frequência) máxima do que à direita. Também chamada de 
+
+#### assimétrica á esquerda.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem15.png)
+
+#### CALCULANDO A ASSIMETRIA 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem16.png)
+
+x̅= (1+1+2+2+2+2+3+4+5+6)/10 = 30/10 = 3
+
+σ2=Σ[ (x1 -x̅)2 + (x2 -x̅)2 + (x3 -x̅)2 + (x4 -x̅)2 + (x5 -x̅)2 + (x6 -x̅)2 + (x7 -x̅)2 + (x8 -x̅)2 + (x9 -x̅)2 + (x10 -x̅)2 ] /n
+
+σ2= (1-3)2 + (1-3)2 + (2-3)2 +(2-3)2 +(2-3)2 +(2-3)2 +(3-3)2 +(4-3)2 + (5-3)2 +(6-3)2 / 10=
+
+σ2 = (4+4+1+1+1+1+0+1+4+9)/10= 2,6 (Variância)
+
+σ = √2,6 = 1,61 (Desvio médio)
+
+A= 3(x̅ -x ̃)/ σ = 3(3-2)/2,6 = 1,15 Assimétrico à direita.
+
+### CORTE
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem17.png)
+
+
 ### Exercícios
 
+# $\color{blue}{\text{Quartis}}$
+
+Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em
+
+quatro partes iguais para facilitar a localização de um determinado valor. Essas partes
+
+serão chamadas de quartis.
+
+Esses quartis gerarão uma ordenada que representa a posição de determinado número
+
+Segue o líder:
+
+#### $\color{blue}{\text{1° quartil}}$
+
+Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados
+
+Ou ainda, ao número que fecha 25% do conjunto numérico;
+
+#### $\frac{1}{4} x n$
+
+(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)
+
+#### $\color{blue}{\text{2° quartil}}$
+
+É igual á mediana, e equivale à ordenada que divide em 50%.
+
+$\color{red}{\text{Lembrando bença; Mediana é o número que se encontra exatamente no meio da sequência numérica.}}$
+
+#### $\color{blue}{\text{3° quartil}}$
+
+Seria a ultima parte, representando os últimos 25% do conjunto numérico
+
+Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à 75%. 
+
+$\frac{3}{4}xn$
+
+(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)
+
+PARA! PARA! PARA!
+
+Ainda com dúvida?
+
+Toma aqui um exemplo pra relaxar o cabeção:
+
+*	#### Pegue como exemplo a sequencias abaixo:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$
+
+*	#### Vamos calcular o $\color{red}{\text{1° Quartil}}$
+
+   1. Conte a quantidade de elementos do conjunto e retire $\frac{1}{4}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$ = 12 elementos
+
+
+$\frac{1}{4}xn=\frac{1}{4}x12=\frac{12}{4}=\color{red}{\text{3}}$
+
+  2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg1.png)
+
+  3. Logo;
+  
+  $\color{red}{\text{1º Q= 13}}$
+
+* #### Agora vamos calcular o $\color{purple}{\text{2° Quartil (Mediana)}}$:
+
+  1.	Conte a quantidade de elementos do conjunto e retire o número que está no meio
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$ = 12 elementos
+
+$\color{purple}{\text{Lembrando bença! Quando a quantidade de elementos é impar, só pegue o número do meio}}$
+
+$\color{purple}{\text{Porém, quando for par, você retira a média dos dois números que se encontram no meio.}}$
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg2.png)
+
+  2. Logo,
+
+$\color{purple}{\text{2º $Q=\frac{(16 + 17)}{2}=16,5$ ≡ 2° Q = 16,5}}$
+
+* ####	Por ultimo, vamos calcular o $\color{green}{\text{3° Quartil}}$:
+
+	1. Conte a quantidade de elementos do conjunto e retire $\frac{3}{4}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}$ = 12 elementos
+
+$\frac{3}{4} x n = \frac{3}{4} x 12= \frac{36}{4} = \color{green}{\text{9}}$
+
+  2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg3.png)
+
+a.	Logo;
+
+$\color{green}{\text{3° Q= 19}}$
+
+### $\color{blue}{\text{Decis}}$
+
+Partindo da mesma lógica do quartil Decil seria uma forma de dividir o banco
+
+de dados, porém, seria em 10 pedaços iguais. 
+
+Para fins didáticos vamos nos concentrar nos Decis mais utilizados.
+
+Segue o líder:
+
+$\color{blue}{\text{1° Decil}}$
+
+Equivale ordenadas que representa o número que dividirá a primeira parte do banco de dados
+
+Ou ainda, ao número que fecha 10% do conjunto numérico;
+
+$\frac{( 1 )}{10} x n$
+
+(Equação genérica, onde “n” é o número a quantos elementos existem no conjunto)
+
+$\color{blue}{\text{9° Decil}}$
+
+Seria a ultima parte, representando os últimos 10% do conjunto numérico;
+
+Ou ainda, a ultima ordenada, onde os valores abaixo dele equivalem à  90%
+
+$\frac{9}{10} x n$
+
+(Equação genérica, onde “n” é o número de quantos elementos existem no conjunto)
+
+PARA! PARA! PARA!
+
+Ainda com dúvida?
+
+Toma aqui um exemplo pra relaxar o cabeção:
+
+* Pegue como exemplo a sequencias abaixo:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13}}$
+
+   + Vamos calcular o $\color{red}{\text{1° Decil}}$:
+
+  1. Conte a quantidade de elementos do conjunto e retire $\frac{1}{10}$ do valor:
+
+$\color{blue}{\text{11 12 13 14 15 16 17 18 19 11 12 13 }}$ = 12 elementos
+
+$\frac{1}{10}  x n=   \frac{1}{10}  x 12=  \frac{12}{10}=\color{red}{\text{1,2}}$
+
+2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg4.png)
+
+$\color{red}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}$
+
+3.	Logo;
+
+$\color{red}{\text{1° $D= \frac{(11+12)}{2} =11,5 ≡1° D=11,5$}}$
+
+*	Vamos calcular o $\color{purple}{\text{9° Decil}}$:
+
+1. Conte a quantidade de elementos do conjunto e retire $\frac{9}{10}$ do valor:
+
+$\frac{9}{10}  x n=   \frac{9}{10}  x 12=  \frac{108}{10}=\color{purple}{\text{10,8}}$
+
+2.	Depois de achar a ordenada, conte e diga qual número representa a ordenada:
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\mdpimg5.png)
+
+$\color{purple}{\text{Lembrando bença! Quando o número dá quebrado, tiramos a média do número onde a ordenada se encontra}}$
+
+3. Logo;
+
+$\color{purple}{\text{1° $D=  \frac{(20+21)}{2}=20,5 ≡1° D=20,5$}}$
+
 ## Quantis
+
+Quantis são pontos estabelecidos em intervalos regulares a partir da função de distribuição acumulada, de uma variável aleatória. Os quantis dividem os dados ordenados em subconjuntos de dados de dimensões essencialmente iguais.
+
+#### Percentil
+
+Divide a amostra em 100 partes (px/100).
+
+Exemplo: 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem3.png)
+
+Para calcularmos um percentil, devemos saber qual dos cem percentis queremos calcular.
+
+Primeiramente devemos achar a posição do percentil, seguindo o exemplo acima:
+
+P(1)= N(p/100), onde p representa a posição do percentil;
+
+P(1)= 40(1/100)= 0,4. Como a posição 0,4 não existe, tomamos a 1ª posição como P(1) que corresponde ao valor $\color{green}{\text{1}}$.
+
+P(30)= 40(30/100)=12. A posição 12 corresponde ao valor $\color{red}{\text{07}}$, conforme no exemplo.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem4.png)
+
+#### Decil
+
+Divide a amostra em 10 partes (px/10).
+
+Exemplo:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem5.png)
+
+Para calcularmos um decil, devemos saber qual dos dez decis queremos calcular.
+
+Primeiramente devemos achar a posição do decil, seguindo o exemplo acima:
+
+D(1)= N(d/10), onde d representa a posição do decil;
+
+D(1)= 40(1/10)= 4. A posição $\color{red}{\text{4}}$ corresponde ao dado $\color{red}{\text{02}}$, portanto D(1)= 02
+
+D(8)= 40(8/10)=32. A posição $\color{green}{\text{32}}$ corresponde ao dado $\color{green}{\text{14}}$, conforme no exemplo.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem6.png)
+
+
+#### Octil
+
+Divide a amostra em 8 partes (px8)
+
+Exemplo:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem7.png)
+
+Para calcularmos um decil, devemos saber qual dos dez decis queremos calcular.
+
+Primeiramente devemos achar a posição do decil, seguindo o exemplo acima:
+
+O(1)= n(o/10), onde d representa a posição do decil;
+
+O(1)= 40(1/8)= 5. A posição $\color{red}{\text{5}}$ corresponde ao dado $\color{red}{\text{03}}$, portanto O(1)= 03
+
+O(8)= 40(8/8)=40. A posição $\color{green}{\text{40}}$ corresponde ao dado $\color{green}{\text{18}}$, conforme no exemplo.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem8.png)
+
+#### Quartil
+
+Divide a amostra em 4 partes (qx4)
+
+Exemplo: 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem9.png)
+
+Para calcularmos um quartil, devemos saber qual dos quatro quartis queremos calcular.
+
+Primeiramente devemos achar a posição do quartil, seguindo o exemplo acima:
+
+Q(1)= n(q/4), onde q representa a posição do quartil;
+
+Q(1)= 40(1/4)= 4. A posição $\color{red}{\text{10}}$ corresponde ao dado $\color{red}{\text{06}}$, portanto Q(1)= 06
+
+Q(3)= 40(3/4)=30. A posição $\color{green}{\text{30}}$ corresponde ao dado $\color{green}{\text{14}}$, conforme no exemplo.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem10.png)
+
+
 
 ### Exercícios
 
@@ -394,7 +726,205 @@ D9: 27 x 9/10=243/10=24,3=(20+21)/2=41/2=20,5 **D9=20,5**
 
 $\color{red}{\text{K=O,16 L  (Leptocúrtica)}}$
 
+
+
+### CURTOSE 
+
+Curtose é o maior ou menor grau de "achatamento” da Curva de Frequência em
+
+relação a uma Curva Normal representativa da Distribuição.
+
+#### Tipos de curtose
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem18.png)
+
+### CÁLCULO DA CURTOSE 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem19.png)
+
+Exemplo:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem20.png)
+
+Q(1)= 40(1/4)= 4. A posição $\color{red}{\text{10}}$ corresponde ao dado $\color{red}{\text{06}}$, portanto Q(1)= 06
+
+Q(3)= 40(3/4)=30. A posição $\color{green}{\text{30}}$ corresponde ao dado $\color{green}{\text{14}}$, portanto Q(3)= 14.
+
+D(1)= 40(1/10)= 4. A posição $\color{red}{\text{4}}$ corresponde ao dado $\color{red}{\text{02}}$, portanto D(1)= 02
+
+D(9)= 40(9/10)=36. A posição $\color{green}{\text{36}}$ corresponde ao dado $\color{green}{\text{16}}$, portanto D(9)= 16.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem21.png)
+
+
 ## Boxplot
+
+# $\color{blue}{\text{BoxPlot}}$
+
+  O BoxPlot é um gráfico para a percepção de valores discrepantes (outliers), que são
+
+os valores muito diferentes do restante de conjunto de dados.
+
+
+Esses valores discrepantes podem representar erros no processo de coleta ou de 
+dados, nesse caso devem ser corrigidos ou até excluídos do banco de dados.
+
+Um exemplo nítido disso seria sobre a idade média de uma sala.
+
+Vamos pegar uma sala do primeiro ano do ensino médio, onde normalmente a idade 
+média é de 15 anos. Se adicionarmos uma pessoa de 60 anos, a idade média pode subir para 
+
+até 20 anos. Ou ao contrário, se adicionarmos uma criança de um ano.
+
+Na construção do gráfico BoxPlot, utilizamos apenas algumas das medidas de posição, como:
+
+*	Quartis (Q1 e Q3);
+
+* Mediana;
+
+* E a distância interquartílica 1,5 x DIQ= Q3-Q1.
+
+ainda não entendeu?
+
+ Falendo de maneira leiga, a função do BoxPlot é literalmente uma forma de “excluir” 
+
+os números ou dados que atrapalhariam uma melhor dedução de uma problemática.
+
+$\color{blue}{\text{BoxPlot}}$
+
+(gráfico)
+
+O BoxPlot é constituído por uma caixa, a caixa é delimitada pelo valor do primeiro 
+
+quartil (Q1) a margem da esquerda e pelo valor do terceiro quartil Q3 a margem da direita. 
+
+Uma linha é traçada dentro da caixa caracterizando o valor do segundo quartil Q2 (mediana). 
+
+Entre o primeiro e o terceiro quartil, temos 50% dos dados. Pode-se pensar então, que a caixa 
+
+contém metade dos dados do conjunto. A largura da caixa é dada por (Q3-Q1), que é chamada 
+
+de distância interquartílica (1,5 x DIQ=Q3-Q1).
+
+  Traça-se uma linha horizontal a partir do Q1 até o menor valor não discrepante e outra 
+
+a partir de Q3 até o maior valor não discrepante. 
+
+Os valores que são considerados discrepantes (outliers):
+
+* São menores que (Q1 - 1,5D)
+
+*	São maiores que (Q3 + 1,5D)
+
+Os valores discrepantes são representados no gráfico por asterisco, ‘’ * ‘’
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\boximg1.png)
+
+$\color{red}{\text{LEMBRANDO BENÇA QUE O GRÁFICO TEM QUE FICAR EM PÉ}}$
+
+Aqui vai um bizú: é só comparar o boxplot com o eixo “ y ” do plano cartesiano.
+
+Ainda perdido bença?
+
+Bora praticar!
+
+* Exemplo 1:
+
+$\color{blue}{\text{1 8 9 10 11 12 12 12 12 12 12 13 14 15 16 54}}$
+
+1.	Calcule os quartis:
+
+$\color{red}{\text{1º $Q=\frac{1}{4} x n≡$}}$  $\frac{1}{4}  x 16=  \frac{16}{4}$ $\color{red}{\text{≡ 1º $Q=4$}}$
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\boximg2.png)
+
+$\color{red}{\text{1º Q = 10}}$
+
+$\color{purple}{\text{3º $Q=\frac{3}{4} x n≡$}}$  $\frac{3}{4}  x 16=  \frac{48}{4}$ $\color{purple}{\text{≡ 3º $Q=12$}}$
+
+![](C:\Users\EHS\Desktop\ebook estatistica radiologia\imagens\boximg3.png)
+
+$\color{purple}{\text{3º Q = 13}}$
+
+2.	Calcule agora a Distancia Interquartil:
+
+1,5 x D = ($\color{purple}{\text{3º Q}}$ – $\color{red}{\text{1º Q}}$)
+
+1,5 x D= ( $\color{purple}{\text{13}}$ – $\color{red}{\text{10}}$)
+
+1,5 x $\color{green}{\text{3}}$
+
+$\color{green}{\text{DIQ= 4,5}}$
+
+$\color{red}{\text{1º Q= 10 ↔10}}$ $\color{green}{\text{-4,5}}$ $\color{red}{\text{=}}$ 5,5   
+
+$\color{purple}{\text{3º=13 ↔13}}$ $\color{green}{\text{+ 4,5}}$ $\color{purple}{\text{=}}$ 17,5
+
+3. Faça o BoxPlot:
+
+
+#### GRÁFICO BOXPLOT
+
+A dispersão é representada pela amplitude do gráfico, que pode ser calculada
+
+como valor máximo – valor mínimo. Quanto maior for a amplitude, maior será a
+
+variação nos dados. A posição da linha mediana no retângulo informa sobre a
+
+assimetria da distribuição.
+
+Em primeiro lugar, calcularemos o intervalo interquartil
+
+“O intervalo interquartil é a diferença entre o primeiro quartil e o terceiro
+
+quartil. O intervalo interquartil é uma medida de variabilidade baseada na
+
+divisão de um conjunto de dados em quartis.
+
+#### DIQ= Q3-Q1
+
+### Limites superior e inferior
+
+Numa coleta de dados podem ocorrer erros de arredondamentos ou erros de
+
+observação. São considerados discrepantes dentro de uma mesma amostra e
+
+podem levar a erros nas análises sobre a distribuição dos dados. Portanto,
+
+estabelece-se o critério de limite inferior e de limite superior nos quartis
+
+(os dados que estiverem além destes limites são considerados discrepantes).
+
+Então:
+
+#### Li=Q1-c  e Ls= Q3+c 
+
+
+Embora c seja uma constante que pertence aos números reais (R) e pode assumir
+
+qualquer valor, é preferível usar o valor c=1,5 que é capaz de captar mais de 99%
+
+dos dados embaixo de uma curva normal para mais e para menos do limite superior e do limite
+
+inferior, mas não é capaz de captar 100% dos dados deixando uma margem para a
+
+visualização dos dados discrepantes. Portanto ao calcularmos o Intervalo interquartil 
+
+teremos: 
+
+#### DIQ= (Q3-Q1)x 1,5 
+
+Tomando o exemplo anterior:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem20.png)
+
+Q(1)= 40(1/4)= 4. A posição $\color{red}{\text{10}}$ corresponde ao dado $\color{red}{\text{06}}$, portanto Q(1)= 06
+
+Q(3)= 40(3/4)=30. A posição $\color{green}{\text{30}}$ corresponde ao dado $\color{green}{\text{14}}$, portanto Q(3)= 14.
+
+DIQ= (Q3-Q1)x 1,5 = (14-6) x1,5 = 12
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem24.png)
 
 ### Exercícios
 

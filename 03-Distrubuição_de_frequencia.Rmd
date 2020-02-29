@@ -234,7 +234,124 @@ d) Histograma
  
  
  
- 
+ ### DISTRIBUIÇÃO DE FREQUÊNCIA
+
+Agrupamento de dados, distribuídos em classes, de modo que podemos
+
+contabilizar o número de ocorrências (frequência) em cada classe. O número de
+
+ocorrências de uma determinada classe recebe o nome de frequência absoluta.
+
+Também podemos dizer que é um arranjo de valores que uma ou mais variáveis
+
+tomam em uma amostra. Cada entrada na tabela contém a frequência ou a 
+
+
+contagem de ocorrências de valores dentro de um grupo ou intervalo específico, e
+
+deste modo, a tabela resume a distribuição dos valores da amostra. 
+
+### Exemplo:
+
+Num exame biomédico foram obtidos os seguintes dados de altura:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem38.png)
+
+Observamos que a amostra é formada por grupos e não por dados absolutos, então como incluiremos esses grupos nos cálculos?
+
+
+- Usando o valor médio desses intervalos como valores de amostra.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem39.png)
+
+Agora temos uma amostra onde podemos distribuir linearmente da seguinte forma:
+
+1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,55 - 1,55 - 1,55 - 1,55 - 1,55 - 1,55 -
+
+ 1,55 - 1,55 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 -
+
+ 1,65- 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 -
+
+ 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 -1,85 -1,85 -1,85 -1,85 -1,95
+
+Onde temos  n=50
+
+### INSERINDO OS VALORES NA CALCULADORA 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem40.png)
+
+Para obtermos o resultado do desvio médio padrão pressionamos
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem41.png)
+
+### MEDIANA
+
+A amostra original é formada por classes. Cada classe corresponde a um intervalo
+
+de valores e a esse intervalo podemos denomina-lo de tamanho da classe.
+
+Exemplo: 
+
+CLASSE 1- corresponde ao intervalo [1,40 - 1,50], portanto o tamanho da classe será...
+
+1,50 – 1,40 = 0,10
+
+### CALCULANDO A POSIÇÃO DA MEDIANA
+
+#### posição de  x̃ = (n+1)/2 => (50+1)/2 = 25,5  
+
+Verifiquemos, na tabela de distribuição, a posição calculada da mediana. Para
+
+isso, usamos a coluna de FREq ACUMULADA, que também corresponde à
+
+sequência de posições de valores na amostra.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem42.png)
+
+### CALCULANDO O VALOR DA MEDIANA
+
+A posição 25,5 (vide tabela) está entre 15 e 31, então podemos dizer neste
+
+intervalo, a mediana corresponde a um valor que ocupa a posição 25,5 -15 neste intervalo.
+
+Usamos a fórmula seguinte para calcularmos uma mediana numa amostra de classes:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem43.png)
+
+Onde:
+
+A/2 = frequência acumulada/2 = 25,0
+
+Aa=valor da frequência acumulada anterior=15
+
+C=tamanho da classe=0,1
+
+ci=valor inicial da classe correspondente=1,60
+
+f=frequência da classe correspondente
+
+Temos:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem44.png)
+
+### CALCULANDO A ASSIMETRIA
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem45.png)
+
+### CALCULANDO OS QUARTIS E DECIS
+
+Seguimos o mesmo raciocínio que usamos para a mediana
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem46.png)
+
+### CURTOSE
+
+K=$\frac{(Q3-Q1)}{(2(D9-D1)}$
+
+K=$\frac{(Q3-Q1)}{(2(D9-D1)}$ = $\frac{(1,75-1,57)}{(2(1,80-1,47)}$ = 0,27 platicurtico
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem47.png)
+
  
  
  

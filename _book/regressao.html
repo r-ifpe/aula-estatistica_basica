@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 4 Regressão | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 4 Regressão | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 4 Regressão | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="distribuicao-de-frequencia.html"/>
 
-<link rel="next" href="estatistica-descritiva.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -126,7 +126,9 @@
 <li class="chapter" data-level="3.1.8" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#curtose-2"><i class="fa fa-check"></i><b>3.1.8</b> CURTOSE</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="regressao.html"><a href="regressao.html"><i class="fa fa-check"></i><b>4</b> REGRESSÃO</a></li>
+<li class="chapter" data-level="4" data-path="regressao.html"><a href="regressao.html"><i class="fa fa-check"></i><b>4</b> Regressão</a><ul>
+<li class="chapter" data-level="4.1" data-path="regressao.html"><a href="regressao.html#exercicios-7"><i class="fa fa-check"></i><b>4.1</b> Exercícios</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -147,130 +149,79 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Samuel Macêdo, Edelson Varela…</em></p>
-<p class="date"><em>2020-02-29</em></p>
+<div id="regressao" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Regressão</h1>
+<p>A análise de regressão estuda a relação entre uma variável dependente e outras</p>
+<p>variáveis chamadas variáveis independentes. A relação entre elas é representada</p>
+<p>por um modelo matemático, que associa a variável dependente com a(s) variável(is) independente(s).</p>
+<p>Correlação: A forma como as variáveis se relacionam. Positiva, quando as variáveis</p>
+<p>são diretamente proporcionais, ou negativa, quando as variáveis são inversamente proporcionais.</p>
+<div id="exemplos" class="section level4">
+<h4><span class="header-section-number">4.0.0.1</span> Exemplos:</h4>
+<ul>
+<li><p>Altura dos pais e altura dos filhos;</p></li>
+<li><p>Renda semanal e despesas de consumo;</p></li>
+<li><p>Variação dos salários e taxa de desemprego;</p></li>
+<li><p>Demanda dos produtos de uma firma e publicidade.</p></li>
+</ul>
+<p>Após construirmos o gráfico, verificamos seu comportamento e aplicamos o modo correspondente.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem48.png" /></p>
+<p>Na Calculadora:</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem49.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem50.png" /></p>
+<p>Para calcularmos Y= A+BX, ou seja, determinar os valores de A e B na equação.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem51.png" /></p>
+<p>*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria
+o</p>
+<p>salário pago ao funcionário com 8 anos (x=8) de empresa, substituímos na equação:</p>
+<p>Ŷ(8)= A+Bx =&gt; 0,5 + 1,1(8) = 9,3 ou</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem52.png" /></p>
+<p>*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria o</p>
+<p>tempo necessário de trabalho para que o funcionário fosse remunerado com 12</p>
+<p>(y=12) unidades monetárias, substituímos na equação:</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem54.png" /></p>
+<p>Coeficiente de correlação linear</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem53.png" /></p>
+<p>Coeficiente linear:</p>
+<p>O Coeficiente de correlação linear mede o quão próximos estão de uma reta.</p>
+<p>Os valores de R compreendem -1≤R≤1 . Quanto mais próximos de -1 ou +1 indicam maior</p>
+<p>proximidade com a reta.</p>
+<p>+R indica que a função é crescente</p>
+<p>-R indica que a função é decrescente.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem55.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem56.png" /></p>
+<p>Modelo logaritmo</p>
+<p>Exemplo: Taxa de crescimento de uma árvore a partir de 1 ano de plantada.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem57.png" /></p>
+<p>Inserir os valores</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem58.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem59.png" /></p>
+<p>Ŷ(8)= A+BlnX =&gt; 1,61 + 1,92lLnX</p>
+<p>Modelo exponencial</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem60.png" /></p>
+<p>Inserir os valores</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem61.png" /></p>
+<p><span class="math inline">\(Ŷ= Ae^{BX} =&gt; 3.e^{0,58X}\)</span></p>
+<p>Modelo Power (Exponencial sem perdas)</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem62.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem63.png" /></p>
+<p><span class="math inline">\(Ŷ= AX^{B} =&gt; 1.X^{3}\)</span></p>
+<p>Modo inversa y= A + (B/x)</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem64.png" /></p>
+<p>Inserir os valores</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem65.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem66.png" /></p>
+<p>Ŷ= A+ B/X = -0,0001 + 1,000/X</p>
+<p>Modo quadrática</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem67.png" /></p>
+<p>Inserir os valores</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem68.png" /></p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem69.png" /></p>
+<p><span class="math inline">\(Ŷ= A+ BX + CX^{2} = 9,19 – 2,29X + 0,21X^{2}\)</span></p>
 </div>
-<div id="introducao" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> Introdução</h1>
-<p>Olá, seja bem vindo :)</p>
-<p>Este material se refere ao curso de estatística básica ministrado aqui no IFPE e contém tanto a teoria quanto a prática. Para o fazer os exercícios será necessário possuir uma calculadora científica (não vamos fazer contas na mão, ne? ninguém merece).</p>
-<div id="conceito" class="section level2">
-<h2><span class="header-section-number">1.1</span> Conceito</h2>
-<p>Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.</p>
-<p>A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.</p>
-</div>
-<div id="importancia" class="section level2">
-<h2><span class="header-section-number">1.2</span> Importância</h2>
-<p>O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados.</p>
-</div>
-<div id="calculadoras-cientificas" class="section level2">
-<h2><span class="header-section-number">1.3</span> Calculadoras Científicas</h2>
-<p>É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.</p>
-<div id="teclas-basicas" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Teclas básicas</h3>
-<p>•Ligar: Botão <strong>ON</strong>.</p>
-<p>• Desligar: Aperte <strong>SHIFT</strong> e em seguida aperte <strong>AC</strong>.</p>
-<p>• Tecla <strong>AC</strong>: apaga tudo que está na tela.</p>
-<p>• Tecla <strong>DEL</strong>: apaga o último Termo digitado.</p>
-<p>• Botão <strong>SHIFT</strong> ou <strong>2ND</strong>: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.</p>
-<p>• <strong>As setas (direcionais)</strong>: aperte-a para movimentar pelo visor. Da <strong>esquerda</strong> para a <strong>direita</strong>, com o intuito de conferir, apagar ou até mesmo redigitar. De <strong>cima</strong> para <strong>baixo</strong>, com a intenção de para conferir as contas feitas.</p>
-<p>• <strong>MODE</strong>: Ao pressiona-lo, serão mostrados os modos da sua calculadora.</p>
-<hr />
-<div id="atencao" class="section level4">
-<h4><span class="header-section-number">1.3.1.1</span> <strong>ATENÇÃO!</strong></h4>
-<p><strong>A calculadora científica tem como base a língua inglesa, então o ponto (</strong>.<strong>) separa decimal e a vírgula (</strong>,<strong>) milhar.</strong></p>
-<hr />
-</div>
-</div>
-<div id="modos" class="section level3">
-<h3><span class="header-section-number">1.3.2</span> Modos</h3>
-<p>No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:</p>
-<div id="casio-fx-82ms" class="section level4">
-<h4><span class="header-section-number">1.3.2.1</span> <strong><em>CASIO fx-82MS</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>SD</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="casio-fx-82es-plus" class="section level4">
-<h4><span class="header-section-number">1.3.2.2</span> <strong><em>CASIO fx-82ES PLUS</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="nway-sc991ep" class="section level4">
-<h4><span class="header-section-number">1.3.2.3</span> <strong><em>NWAY SC991EP</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no mod de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="hp-10s-scientific-calculator" class="section level4">
-<h4><span class="header-section-number">1.3.2.4</span> <strong><em>HP 10S + Scientific calculator</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número 2 que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="kenko-kk-83ms-5" class="section level4">
-<h4><span class="header-section-number">1.3.2.5</span> <strong><em>Kenko kk-83MS-5</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo no de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-</div>
-<div id="usando-a-calculadora-modelo-casio-fx-991esplus" class="section level3">
-<h3><span class="header-section-number">1.3.3</span> USANDO A CALCULADORA – MODELO (CASIO fx 991ESplus)</h3>
-<p>Para amostras maiores usamos nossa calculadora para agilizar os cálculos e</p>
-<p>otimizar o tempo de resolução.</p>
-<p>Tomando o exemplo anterior, vamos classificar esta amostra.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Identificar a mediana</p></li>
-<li><p>Calcular a média</p></li>
-<li><p>Calcular o desvio médio padrão</p></li>
-<li><p>Determinar a simetria</p></li>
-<li><p>Determinar a Curtose</p></li>
-</ol>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem22.png" /></p>
-<p>1º passo: Identificar o nº de elementos da amostra (N)</p>
-<p>Contando os elementos N= 40</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem23.png" /></p>
-<p>2° passo: verifique a frequencia dos dados</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem25.png" /></p>
-</div>
-<div id="selecionando-o-modo-de-calculo" class="section level3">
-<h3><span class="header-section-number">1.3.4</span> SELECIONANDO O MODO DE CÁLCULO</h3>
-<p>1 – Após ligar a calculadora, selecionar o modo estatístico.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem26.png" /></p>
-<p>2 – escolher o menu para os cálculos descritivos (Variáveis simples).</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem27.png" /></p>
-<p>3 – Aparecerá a seguinte tela: Onde poderão ser inseridos os dados da amostra e suas respectivas frequências.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem28.png" /></p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem29.png" /></p>
-<p>Após a inserção dos dados, vamos aos resultados.</p>
-<p>1 – Pressione AC ao final da inserção dos valores e frequências(isto limpa a introdução de valores), após isso, pressione:</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem30.png" /></p>
-<p>2 – Escolha o cálculo estatístico (relembrando: estamos trabalhando com VARiáveis simples.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem31.png" /></p>
-<p>Para obtermos o resultado da média pressionamos</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem32.png" /></p>
-<p>Para obtermos o resultado do desvio médio padrão pressionamos</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem33.png" /></p>
-</div>
-<div id="calculando-a-assimetria" class="section level3">
-<h3><span class="header-section-number">1.3.5</span> CALCULANDO A ASSIMETRIA</h3>
-<p>Após obtermos o resultado do desvio padrão (σ),</p>
-<p>1 - Pressionamos <img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem34.png" /></p>
-<p>2 – Inserimos a fórmula de Assimetria</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem35.png" /></p>
-</div>
-<div id="roteiro" class="section level3">
-<h3><span class="header-section-number">1.3.6</span> ROTEIRO:</h3>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem36.png" /></p>
-<p>A= -0,997 levemente assimétrica à esquerda.</p>
-<p>Q(1)= 40(1/4)= 4. A posição <span class="math inline">\(\color{red}{\text{10}}\)</span> corresponde ao dado <span class="math inline">\(\color{red}{\text{06}}\)</span>, portanto Q(1)= 06</p>
-<p>(3)= 40(3/4)=30. A posição <span class="math inline">\(\color{green}{\text{30}}\)</span> corresponde ao dado <span class="math inline">\(\color{green}{\text{14}}\)</span>, portanto Q(3)= 14.</p>
-<p>D(1)= 40(1/10)= 4. A posição <span class="math inline">\(\color{red}{\text{4}}\)</span> corresponde ao dado <span class="math inline">\(\color{red}{\text{02}}\)</span>, portanto D(1)= 02</p>
-<p>D(9)= 40(9/10)=36. A posição <span class="math inline">\(\color{green}{\text{36}}\)</span> corresponde ao lado <span class="math inline">\(\color{green}{\text{16}}\)</span>, portanto D(9)= 16</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem37.png" /></p>
-<p>Na calculadora, inserimos:</p>
-<p>(14-6)/2/(16-2)=</p>
+<div id="exercicios-7" class="section level2">
+<h2><span class="header-section-number">4.1</span> Exercícios</h2>
 
-</div>
 </div>
 </div>
             </section>
@@ -278,8 +229,8 @@
           </div>
         </div>
       </div>
+<a href="distribuicao-de-frequencia.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="estatistica-descritiva.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

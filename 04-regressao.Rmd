@@ -1,63 +1,130 @@
-# Calculadoras Científicas
+# Regressão
 
-   É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
+A análise de regressão estuda a relação entre uma variável dependente e outras
 
+variáveis chamadas variáveis independentes. A relação entre elas é representada
 
-### Teclas básicas
+por um modelo matemático, que associa a variável dependente com a(s) variável(is) independente(s).
 
-•Ligar: Botão **ON**.
+Correlação: A forma como as variáveis se relacionam. Positiva, quando as variáveis
 
-•	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
+são diretamente proporcionais, ou negativa, quando as variáveis são inversamente proporcionais.
 
-•	Tecla **AC**: apaga tudo que está na tela.
+#### Exemplos:
 
-• Tecla **DEL**: apaga o último Termo digitado.
+* Altura dos pais e altura dos filhos; 
 
-•	Botão **SHIFT** ou **2ND**: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.
+* Renda semanal e despesas de consumo;
 
-•	**As setas (direcionais)**: aperte-a para movimentar pelo visor. Da **esquerda** para a **direita**, com o intuito de conferir, apagar ou até mesmo redigitar. De **cima** para **baixo**, com a intenção de para conferir as contas feitas.
+*	Variação dos salários e taxa de desemprego; 
 
-•	**MODE**: Ao pressiona-lo, serão mostrados os modos da sua calculadora.
+*	Demanda dos produtos de uma firma e publicidade.
 
-***
+Após construirmos o gráfico, verificamos seu comportamento  e aplicamos o modo correspondente.
 
-#### **ATENÇÃO!**
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem48.png)
 
-**A calculadora científica tem como base a língua inglesa, então o ponto (**.**) separa decimal e a vírgula (**,**) milhar.**
+Na Calculadora:
 
-***
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem49.png)
 
-### Modos
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem50.png)
 
-No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:
+Para calcularmos Y= A+BX, ou seja, determinar os valores de A e B na equação.
 
-#### ***CASIO fx-82MS***
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem51.png)
 
-Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **SD**.
+*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria
+o
 
-Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+salário pago ao funcionário com 8 anos (x=8) de empresa, substituímos na equação:
 
-#### ***CASIO fx-82ES PLUS***
+Ŷ(8)= A+Bx  => 0,5 + 1,1(8) = 9,3 ou
 
-Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem52.png)
 
-Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria o
 
-#### ***NWAY  SC991EP***
+tempo necessário de trabalho para que o funcionário fosse remunerado com 12 
 
-Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+(y=12) unidades monetárias, substituímos na equação:
 
-Para colocar no mod de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem54.png)
 
-#### ***HP 10S + Scientific calculator***
+Coeficiente de correlação linear
 
-Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número 2 que corresponde a **STAT**.
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem53.png)
 
-Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+Coeficiente linear:
 
-#### ***Kenko kk-83MS-5***
+O Coeficiente de correlação linear mede o quão próximos estão de uma reta.
 
-Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+Os valores de R compreendem -1≤R≤1 . Quanto mais próximos de -1 ou +1 indicam maior
 
-Para colocar no modo no de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3**  que corresponde a **REG**.
+proximidade com a reta.
 
++R indica que a função é crescente
+
+-R indica que a função é decrescente.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem55.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem56.png)
+
+Modelo logaritmo
+
+Exemplo:  Taxa de crescimento de uma árvore a partir de 1 ano de plantada.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem57.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem58.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem59.png)
+
+Ŷ(8)= A+BlnX  => 1,61 + 1,92lLnX
+
+Modelo exponencial
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem60.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem61.png)
+
+$Ŷ= Ae^{BX} => 3.e^{0,58X}$
+
+Modelo Power (Exponencial sem perdas)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem62.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem63.png)
+
+$Ŷ= AX^{B}  => 1.X^{3}$
+
+Modo inversa  y= A + (B/x)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem64.png)
+
+Inserir os valores     
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem65.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem66.png)
+
+Ŷ= A+ B/X  = -0,0001 + 1,000/X
+
+Modo quadrática
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem67.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem68.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem69.png)
+
+$Ŷ= A+ BX + CX^{2}  = 9,19 – 2,29X + 0,21X^{2}$
+
+## Exercícios
