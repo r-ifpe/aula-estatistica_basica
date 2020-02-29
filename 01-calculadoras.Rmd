@@ -7,6 +7,7 @@ Enquanto esse dia não chega, vamos ao que interessa e aprender alguns truques n
 ## Modelos
 
 As melhores calculadoras científicas, até o momento, são a da marca CASIO. O modelo mais comum é a fx-82MS e você pode adquirir em qualquer loja de eletrônicos. A CASIO também tem um outro modelo que é a fx-82ES PLUS, este modelo é menos comum, mas também faz tudo que precisamos aqui pro curso. Qualquer outra calculadora científica de outra marca vai seguir os mesmos padrões ou da fx-82MS (a grande maioria) ou da fx-82ES PLUS.
+Não se preocupe, apenas identifique na sua calculadora qual tipo de modelo da CASIO ela segue. 
 
 Outras marcas disponíveis com o preço mais acessível são a Kenko e NWAY. Caso você opte por estas marcas certifique-se que ela tenha setas direcionais (cima, baixo, esquerda e direita). Isto será indispensável para a gente no curso e não será possível acompanhar o assunto em calculadoras sem setas, ok?
 
@@ -21,6 +22,8 @@ Diferentes das calculadoras normais, a científica precisa que você aperte **=*
 Muitas vezes digitamos algo errado, é normal. Caso precise apagar algo use **DEL** para a última coisa que você digitou ou apague tudo usando **AC**.
 
 ## Tecla **MODE**
+
+Esta é a tecla principal da nossa calculadora, é dela que acontece a mágica de não precisar fazer as contas na mão. Aqui aparecerão algumas diferenças entre as calculadoras, mas não se preocupe, será mostrado como se faz nas duas ;)
 
 •Ligar: Botão **ON**.
 
