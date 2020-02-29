@@ -1,10 +1,4 @@
----
-title: "Estatística Básica"
-output:
-  github_document:
-    fig_width: 9
-    fig_height: 5
----
+# Livro de Estatística Básica
 
 Este repositório contém o código que gera o livro da disciplina de estatística básica lecionado no IFPE.
 O link para ele está [aqui](https://ifpe-estatisticabasica.netlify.com/).
