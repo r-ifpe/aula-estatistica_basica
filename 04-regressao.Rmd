@@ -1,0 +1,130 @@
+# Regressão
+
+A análise de regressão estuda a relação entre uma variável dependente e outras
+
+variáveis chamadas variáveis independentes. A relação entre elas é representada
+
+por um modelo matemático, que associa a variável dependente com a(s) variável(is) independente(s).
+
+Correlação: A forma como as variáveis se relacionam. Positiva, quando as variáveis
+
+são diretamente proporcionais, ou negativa, quando as variáveis são inversamente proporcionais.
+
+#### Exemplos:
+
+* Altura dos pais e altura dos filhos; 
+
+* Renda semanal e despesas de consumo;
+
+*	Variação dos salários e taxa de desemprego; 
+
+*	Demanda dos produtos de uma firma e publicidade.
+
+Após construirmos o gráfico, verificamos seu comportamento  e aplicamos o modo correspondente.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem48.png)
+
+Na Calculadora:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem49.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem50.png)
+
+Para calcularmos Y= A+BX, ou seja, determinar os valores de A e B na equação.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem51.png)
+
+*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria
+o
+
+salário pago ao funcionário com 8 anos (x=8) de empresa, substituímos na equação:
+
+Ŷ(8)= A+Bx  => 0,5 + 1,1(8) = 9,3 ou
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem52.png)
+
+*Para fazermos um prognóstico (ajuste), com relação ao exemplo, de qual seria o
+
+tempo necessário de trabalho para que o funcionário fosse remunerado com 12 
+
+(y=12) unidades monetárias, substituímos na equação:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem54.png)
+
+Coeficiente de correlação linear
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem53.png)
+
+Coeficiente linear:
+
+O Coeficiente de correlação linear mede o quão próximos estão de uma reta.
+
+Os valores de R compreendem -1≤R≤1 . Quanto mais próximos de -1 ou +1 indicam maior
+
+proximidade com a reta.
+
++R indica que a função é crescente
+
+-R indica que a função é decrescente.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem55.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem56.png)
+
+Modelo logaritmo
+
+Exemplo:  Taxa de crescimento de uma árvore a partir de 1 ano de plantada.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem57.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem58.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem59.png)
+
+Ŷ(8)= A+BlnX  => 1,61 + 1,92lLnX
+
+Modelo exponencial
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem60.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem61.png)
+
+$Ŷ= Ae^{BX} => 3.e^{0,58X}$
+
+Modelo Power (Exponencial sem perdas)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem62.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem63.png)
+
+$Ŷ= AX^{B}  => 1.X^{3}$
+
+Modo inversa  y= A + (B/x)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem64.png)
+
+Inserir os valores     
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem65.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem66.png)
+
+Ŷ= A+ B/X  = -0,0001 + 1,000/X
+
+Modo quadrática
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem67.png)
+
+Inserir os valores
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem68.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem69.png)
+
+$Ŷ= A+ BX + CX^{2}  = 9,19 – 2,29X + 0,21X^{2}$
+
+## Exercícios

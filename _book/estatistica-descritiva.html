@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estatística Básica</title>
+  <title>Capítulo 2 Estatística Descritiva | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estatística Básica" />
+  <meta property="og:title" content="Capítulo 2 Estatística Descritiva | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 2 Estatística Descritiva | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="estatistica-descritiva.html"/>
+<link rel="prev" href="introducao.html"/>
+<link rel="next" href="colorbluetextquartis.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -152,129 +152,120 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estatística Básica</h1>
-<p class="author"><em>Samuel Macêdo, Edelson Varela…</em></p>
-<p class="date"><em>2020-02-29</em></p>
+<div id="estatistica-descritiva" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Estatística Descritiva</h1>
+<div id="medidas-de-tendencia-central" class="section level2">
+<h2><span class="header-section-number">2.1</span> Medidas de Tendência Central</h2>
+<p>Neste capítulo veremos as três principais medidas de tendência central:
+média, mediana e moda.</p>
+<div id="media" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Média</h3>
+<p>É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por <span class="math inline">\(\overline{X}\)</span>. A fórmula é dada por:</p>
+<p><span class="math display">\[\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}\]</span></p>
+<p>Onde x corresponde a cada elemento do conjunto de dados, <span class="math inline">\(x_n\)</span> corresponde ao
+último elemento do conjunto de dados e <span class="math inline">\(n\)</span> é o número total de elementos do conjunto de dados.</p>
+<p>Exemplo: 1-1-2-2-2-2-3-4-5-6</p>
+<p><span class="math display">\[\overline{X} = \frac{1+1+2+2+2+2+3+4+5+6}{10} = \frac{30}{10} = 3\]</span>
+Como você pode perceber, a cálculo da média é igual ao que você aprendeu na escola. A diferença aqui é a interpretação dela. Para nós estatísticos, a média significa, literalmente, um centro. Você deve ter visto em física algo sobre centro de massa, um ponto em um objeto que é como se todo seu peso estivesse concentrado neste único ponto, sabe como calcula isso? usando médias.</p>
+<p>Para a estatística, a média também significa um centro e é como se todos os elementos daquela amostra fossem representados por aquele único número. Por exemplo, quando se entra numa sala e pergunta a idade da turma, não se diz a idade de cada um dos alunos, tira-se uma média das idades. Se, por exemplo, na sua sala a média de idade é 20, isso é um ponto central e tem-se a ideia de todos naquela sala tem 20 anos, ou pelo menos próximo a isso.</p>
+<p>Mas, as vezes pode acontecer o caso de um elemento apresentar um valor muito maior (ou muito menor) que os demais. Por exemplo, imagine um jogo em que todos marcam 50 pontos e de repente alguem vem e marca 500. A esses elementos cujo o valor é muito longe da média chamamos eles de pontos aberrantes ou <em>outliers</em>.
+Isso pode prejudicar a avaliação da medida de tendência central. Suponha a sequência 1-2-3-4-5, a média é 3, certo? Mas se alterarmos um único elemento da sequência, por exemplo 1-2-3-4-500, a média agora é 102. Percebe que o valor 102 não representa essa sequencia como medida de centro? O elemento de valor 500 é claramente um <em>outlier</em> e isso faz com que a média se “perca” como medida de centro.</p>
+<p>Quando temos <em>outliers</em> na amostra e não temos como retirar, precisamos de uma segunda medida de centro: a mediana.</p>
 </div>
-<div id="introducao" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> Introdução</h1>
-<p>Olá, seja bem vindo :)</p>
-<p>Este material se refere ao curso de estatística básica ministrado aqui no IFPE e contém tanto a teoria quanto a prática. Para o fazer os exercícios será necessário possuir uma calculadora científica (não vamos fazer contas na mão, ne? ninguém merece).</p>
-<div id="conceito" class="section level2">
-<h2><span class="header-section-number">1.1</span> Conceito</h2>
-<p>Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.</p>
-<p>A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.</p>
+<div id="mediana" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Mediana</h3>
+<p>É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como <span class="math inline">\(\widetilde{X}\)</span>. Para calcular a mediana siga o esquema abaixo.</p>
+<ul>
+<li>Se a quantidade de elementos for impar, use <span class="math inline">\(\frac{n + 1}{2}\)</span></li>
+<li>Se a quantidade de elementos for par, tire a média entre o elemento <span class="math inline">\(\frac{n}{2}\)</span> e <span class="math inline">\(\frac{n}{2} + 1\)</span></li>
+</ul>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5 (quantidade de elementos impar)
+Aqui são 9 elementos então <span class="math inline">\(\frac{9 + 1}{2} = 5\)</span>. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.</p>
+<p>Exemplo: 1-1-2-2-3-4-5-6-7-7 (quantidade de elementos par)
+Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição <span class="math inline">\(\frac{10}{2} = 5\)</span> e posição <span class="math inline">\(\frac{10}{2} + 1 = 6\)</span>. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então <span class="math inline">\(\frac{3 + 4}{2} = 3,5\)</span>, logo o valor da mediana para este conjunto de números é 3,5.</p>
 </div>
-<div id="importancia" class="section level2">
-<h2><span class="header-section-number">1.2</span> Importância</h2>
-<p>O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados.</p>
+<div id="moda" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Moda</h3>
+<p>É o valo do elemento que ocorre com maior frequência. Em estatística representamos por <span class="math inline">\(M_o\)</span>. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita.</p>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5-6<br />
+<span class="math inline">\(M_o = 2\)</span></p>
+<p>Exemplo: 1-1-2-3-4-5-5<br />
+<span class="math inline">\(M_o = 1 \space e \space 5\)</span> (bi-modal)</p>
+<p>Exemplo: 1-2-3-4-5<br />
+Amodal (nenhum elemento se repete)</p>
 </div>
-<div id="calculadoras-cientificas" class="section level2">
-<h2><span class="header-section-number">1.3</span> Calculadoras Científicas</h2>
-<p>É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.</p>
-<div id="teclas-basicas" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Teclas básicas</h3>
-<p>•Ligar: Botão <strong>ON</strong>.</p>
-<p>• Desligar: Aperte <strong>SHIFT</strong> e em seguida aperte <strong>AC</strong>.</p>
-<p>• Tecla <strong>AC</strong>: apaga tudo que está na tela.</p>
-<p>• Tecla <strong>DEL</strong>: apaga o último Termo digitado.</p>
-<p>• Botão <strong>SHIFT</strong> ou <strong>2ND</strong>: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.</p>
-<p>• <strong>As setas (direcionais)</strong>: aperte-a para movimentar pelo visor. Da <strong>esquerda</strong> para a <strong>direita</strong>, com o intuito de conferir, apagar ou até mesmo redigitar. De <strong>cima</strong> para <strong>baixo</strong>, com a intenção de para conferir as contas feitas.</p>
-<p>• <strong>MODE</strong>: Ao pressiona-lo, serão mostrados os modos da sua calculadora.</p>
-<hr />
-<div id="atencao" class="section level4">
-<h4><span class="header-section-number">1.3.1.1</span> <strong>ATENÇÃO!</strong></h4>
-<p><strong>A calculadora científica tem como base a língua inglesa, então o ponto (</strong>.<strong>) separa decimal e a vírgula (</strong>,<strong>) milhar.</strong></p>
-<hr />
-</div>
-</div>
-<div id="modos" class="section level3">
-<h3><span class="header-section-number">1.3.2</span> Modos</h3>
-<p>No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:</p>
-<div id="casio-fx-82ms" class="section level4">
-<h4><span class="header-section-number">1.3.2.1</span> <strong><em>CASIO fx-82MS</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>SD</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="casio-fx-82es-plus" class="section level4">
-<h4><span class="header-section-number">1.3.2.2</span> <strong><em>CASIO fx-82ES PLUS</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="nway-sc991ep" class="section level4">
-<h4><span class="header-section-number">1.3.2.3</span> <strong><em>NWAY SC991EP</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no mod de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="hp-10s-scientific-calculator" class="section level4">
-<h4><span class="header-section-number">1.3.2.4</span> <strong><em>HP 10S + Scientific calculator</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número 2 que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
-</div>
-<div id="kenko-kk-83ms-5" class="section level4">
-<h4><span class="header-section-number">1.3.2.5</span> <strong><em>Kenko kk-83MS-5</em></strong></h4>
-<p>Para por no <strong>modo estatístico</strong> aperte o botão <strong>MODE</strong> e logo em seguida aperte o número <strong>2</strong> que corresponde a <strong>STAT</strong>.</p>
-<p>Para colocar no modo no de <strong>regressão linear</strong> aperte o botão <strong>MODE</strong> e em seguida aperte o número <strong>3</strong> que corresponde a <strong>REG</strong>.</p>
+<div id="exercicios" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Exercícios</h3>
 </div>
 </div>
-<div id="usando-a-calculadora-modelo-casio-fx-991esplus" class="section level3">
-<h3><span class="header-section-number">1.3.3</span> USANDO A CALCULADORA – MODELO (CASIO fx 991ESplus)</h3>
-<p>Para amostras maiores usamos nossa calculadora para agilizar os cálculos e</p>
-<p>otimizar o tempo de resolução.</p>
-<p>Tomando o exemplo anterior, vamos classificar esta amostra.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Identificar a mediana</p></li>
-<li><p>Calcular a média</p></li>
-<li><p>Calcular o desvio médio padrão</p></li>
-<li><p>Determinar a simetria</p></li>
-<li><p>Determinar a Curtose</p></li>
-</ol>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem22.png" /></p>
-<p>1º passo: Identificar o nº de elementos da amostra (N)</p>
-<p>Contando os elementos N= 40</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem23.png" /></p>
-<p>2° passo: verifique a frequencia dos dados</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem25.png" /></p>
+<div id="medidas-de-dispersao" class="section level2">
+<h2><span class="header-section-number">2.2</span> Medidas de Dispersão</h2>
+<p>Variância, Desvio Padrão, Amplitude, Intervalo-Interquantil, Coeficiente de Variação.</p>
+<div id="variancia" class="section level4">
+<h4><span class="header-section-number">2.2.0.1</span> Variância</h4>
+<p>Mede a sua dispersão estatística, indicando “o quão longe” em geral os seus</p>
+<p>valores se encontram do valor esperado.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem11.png" /></p>
 </div>
-<div id="selecionando-o-modo-de-calculo" class="section level3">
-<h3><span class="header-section-number">1.3.4</span> SELECIONANDO O MODO DE CÁLCULO</h3>
-<p>1 – Após ligar a calculadora, selecionar o modo estatístico.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem26.png" /></p>
-<p>2 – escolher o menu para os cálculos descritivos (Variáveis simples).</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem27.png" /></p>
-<p>3 – Aparecerá a seguinte tela: Onde poderão ser inseridos os dados da amostra e suas respectivas frequências.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem28.png" /></p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem29.png" /></p>
-<p>Após a inserção dos dados, vamos aos resultados.</p>
-<p>1 – Pressione AC ao final da inserção dos valores e frequências(isto limpa a introdução de valores), após isso, pressione:</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem30.png" /></p>
-<p>2 – Escolha o cálculo estatístico (relembrando: estamos trabalhando com VARiáveis simples.</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem31.png" /></p>
-<p>Para obtermos o resultado da média pressionamos</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem32.png" /></p>
-<p>Para obtermos o resultado do desvio médio padrão pressionamos</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem33.png" /></p>
+<div id="desvio-medio-padrao" class="section level4">
+<h4><span class="header-section-number">2.2.0.2</span> Desvio Médio Padrão</h4>
+<p>Indica o quanto o conjunto de dados é uniforme. Quando o desvio é baixo, quer</p>
+<p>dizer que os dados do conjunto estão mais próximos da média.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem12.png" /></p>
 </div>
-<div id="calculando-a-assimetria" class="section level3">
-<h3><span class="header-section-number">1.3.5</span> CALCULANDO A ASSIMETRIA</h3>
-<p>Após obtermos o resultado do desvio padrão (σ),</p>
-<p>1 - Pressionamos <img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem34.png" /></p>
-<p>2 – Inserimos a fórmula de Assimetria</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem35.png" /></p>
+<div id="variancia-1" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Variância</h3>
 </div>
-<div id="roteiro" class="section level3">
-<h3><span class="header-section-number">1.3.6</span> ROTEIRO:</h3>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem36.png" /></p>
-<p>A= -0,997 levemente assimétrica à esquerda.</p>
-<p>Q(1)= 40(1/4)= 4. A posição <span class="math inline">\(\color{red}{\text{10}}\)</span> corresponde ao dado <span class="math inline">\(\color{red}{\text{06}}\)</span>, portanto Q(1)= 06</p>
-<p>(3)= 40(3/4)=30. A posição <span class="math inline">\(\color{green}{\text{30}}\)</span> corresponde ao dado <span class="math inline">\(\color{green}{\text{14}}\)</span>, portanto Q(3)= 14.</p>
-<p>D(1)= 40(1/10)= 4. A posição <span class="math inline">\(\color{red}{\text{4}}\)</span> corresponde ao dado <span class="math inline">\(\color{red}{\text{02}}\)</span>, portanto D(1)= 02</p>
-<p>D(9)= 40(9/10)=36. A posição <span class="math inline">\(\color{green}{\text{36}}\)</span> corresponde ao lado <span class="math inline">\(\color{green}{\text{16}}\)</span>, portanto D(9)= 16</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem37.png" /></p>
-<p>Na calculadora, inserimos:</p>
-<p>(14-6)/2/(16-2)=</p>
-
+<div id="distancia-interquartilica" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Distância Interquartílica</h3>
+</div>
+<div id="exercicios-1" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Exercícios</h3>
+</div>
+</div>
+<div id="assimetria" class="section level2">
+<h2><span class="header-section-number">2.3</span> Assimetria</h2>
+<div id="simetria" class="section level4">
+<h4><span class="header-section-number">2.3.0.1</span> SIMETRIA</h4>
+<p>Uma curva (ou distribuição) é simétrica quando os valores em torno do ponto</p>
+<p>central, ou seja, a média, a mediana e a moda coincidem. Os valores se agrupam</p>
+<p>acima ou abaixo do ponto central, e este “desvio” da simetria denomina-se</p>
+<p>assimetria.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem13.png" /></p>
+</div>
+<div id="assimetria-1" class="section level4">
+<h4><span class="header-section-number">2.3.0.2</span> ASSIMETRIA</h4>
+<p>1 - Diz-se que uma assimetria é do tipo positiva quando os valores mais altos das</p>
+<p>observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à</p>
+<p>direita da ordenada (frequência) máxima do que à esquerda. Também chamada de</p>
+</div>
+<div id="assimetrica-a-direita." class="section level4">
+<h4><span class="header-section-number">2.3.0.3</span> assimétrica à direita.</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem14.png" /></p>
+<p>2 - Diz-se que uma assimetria é do tipo negativa quando os valores mais altos</p>
+<p>das observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à</p>
+<p>esquerda da ordenada (frequência) máxima do que à direita. Também chamada de</p>
+</div>
+<div id="assimetrica-a-esquerda." class="section level4">
+<h4><span class="header-section-number">2.3.0.4</span> assimétrica á esquerda.</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem15.png" /></p>
+</div>
+<div id="calculando-a-assimetria-1" class="section level4">
+<h4><span class="header-section-number">2.3.0.5</span> CALCULANDO A ASSIMETRIA</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem16.png" /></p>
+<p>x̅= (1+1+2+2+2+2+3+4+5+6)/10 = 30/10 = 3</p>
+<p>σ2=Σ[ (x1 -x̅)2 + (x2 -x̅)2 + (x3 -x̅)2 + (x4 -x̅)2 + (x5 -x̅)2 + (x6 -x̅)2 + (x7 -x̅)2 + (x8 -x̅)2 + (x9 -x̅)2 + (x10 -x̅)2 ] /n</p>
+<p>σ2= (1-3)2 + (1-3)2 + (2-3)2 +(2-3)2 +(2-3)2 +(2-3)2 +(3-3)2 +(4-3)2 + (5-3)2 +(6-3)2 / 10=</p>
+<p>σ2 = (4+4+1+1+1+1+0+1+4+9)/10= 2,6 (Variância)</p>
+<p>σ = √2,6 = 1,61 (Desvio médio)</p>
+<p>A= 3(x̅ -x ̃)/ σ = 3(3-2)/2,6 = 1,15 Assimétrico à direita.</p>
+</div>
+<div id="corte" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> CORTE</h3>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem17.png" /></p>
+</div>
+<div id="exercicios-2" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Exercícios</h3>
 </div>
 </div>
 </div>
@@ -283,8 +274,8 @@
           </div>
         </div>
       </div>
-
-<a href="estatistica-descritiva.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introducao.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="colorbluetextquartis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
