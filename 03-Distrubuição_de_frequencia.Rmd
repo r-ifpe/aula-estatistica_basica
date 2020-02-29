@@ -318,6 +318,7 @@ Usamos a fórmula seguinte para calcularmos uma mediana numa amostra de classes:
 
 ![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem43.png)
 
+
 Onde:
 
 A/2 = frequência acumulada/2 = 25,0
