@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica</title>
+  <title>Capítulo 1 Estatística Descritiva | Estatística Básica</title>
   <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica" />
+  <meta property="og:title" content="Capítulo 1 Estatística Descritiva | Estatística Básica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 \(\color{blue}{\text{BoxPlot}}\) | Estatística Básica" />
+  <meta name="twitter:title" content="Capítulo 1 Estatística Descritiva | Estatística Básica" />
   
   <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="colorbluetextquartis.html"/>
-<link rel="next" href="distribuicao-de-frequencia.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="colorbluetextquartis.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -152,115 +152,121 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="colorbluetextboxplot" class="section level1">
-<h1><span class="header-section-number">Capítulo 3</span> <span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></h1>
-<p>O BoxPlot é um gráfico para a percepção de valores discrepantes (outliers), que são</p>
-<p>os valores muito diferentes do restante de conjunto de dados.</p>
-<p>Esses valores discrepantes podem representar erros no processo de coleta ou de
-dados, nesse caso devem ser corrigidos ou até excluídos do banco de dados.</p>
-<p>Um exemplo nítido disso seria sobre a idade média de uma sala.</p>
-<p>Vamos pegar uma sala do primeiro ano do ensino médio, onde normalmente a idade
-média é de 15 anos. Se adicionarmos uma pessoa de 60 anos, a idade média pode subir para</p>
-<p>até 20 anos. Ou ao contrário, se adicionarmos uma criança de um ano.</p>
-<p>Na construção do gráfico BoxPlot, utilizamos apenas algumas das medidas de posição, como:</p>
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Estatística Descritiva</h1>
+<div id="medidas-de-tendencia-central" class="section level2">
+<h2><span class="header-section-number">1.1</span> Medidas de Tendência Central</h2>
+<p>Neste capítulo veremos as três principais medidas de tendência central:
+média, mediana e moda.</p>
+<div id="media" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Média</h3>
+<p>É o valor médio entre todos os valores de um conjunto de dados. Em estatística costuma-se representar por <span class="math inline">\(\overline{X}\)</span>. A fórmula é dada por:</p>
+<p><span class="math display">\[\overline{X} = \frac{x_1 + x_2 + ... + x_n}{n}\]</span></p>
+<p>Onde x corresponde a cada elemento do conjunto de dados, <span class="math inline">\(x_n\)</span> corresponde ao
+último elemento do conjunto de dados e <span class="math inline">\(n\)</span> é o número total de elementos do conjunto de dados.</p>
+<p>Exemplo: 1-1-2-2-2-2-3-4-5-6</p>
+<p><span class="math display">\[\overline{X} = \frac{1+1+2+2+2+2+3+4+5+6}{10} = \frac{30}{10} = 3\]</span>
+Como você pode perceber, a cálculo da média é igual ao que você aprendeu na escola. A diferença aqui é a interpretação dela. Para nós estatísticos, a média significa, literalmente, um centro. Você deve ter visto em física algo sobre centro de massa, um ponto em um objeto que é como se todo seu peso estivesse concentrado neste único ponto, sabe como calcula isso? usando médias.</p>
+<p>Para a estatística, a média também significa um centro e é como se todos os elementos daquela amostra fossem representados por aquele único número. Por exemplo, quando se entra numa sala e pergunta a idade da turma, não se diz a idade de cada um dos alunos, tira-se uma média das idades. Se, por exemplo, na sua sala a média de idade é 20, isso é um ponto central e tem-se a ideia de todos naquela sala tem 20 anos, ou pelo menos próximo a isso.</p>
+<p>Mas, as vezes pode acontecer o caso de um elemento apresentar um valor muito maior (ou muito menor) que os demais. Por exemplo, imagine um jogo em que todos marcam 50 pontos e de repente alguem vem e marca 500. A esses elementos cujo o valor é muito longe da média chamamos eles de pontos aberrantes ou <em>outliers</em>.
+Isso pode prejudicar a avaliação da medida de tendência central. Suponha a sequência 1-2-3-4-5, a média é 3, certo? Mas se alterarmos um único elemento da sequência, por exemplo 1-2-3-4-500, a média agora é 102. Percebe que o valor 102 não representa essa sequencia como medida de centro? O elemento de valor 500 é claramente um <em>outlier</em> e isso faz com que a média se “perca” como medida de centro.</p>
+<p>Quando temos <em>outliers</em> na amostra e não temos como retirar, precisamos de uma segunda medida de centro: a mediana.</p>
+</div>
+<div id="mediana" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Mediana</h3>
+<p>É o elemento que ocupa a posição central do conjunto de dados quando estes estão em ordem, seja crescente ou decrescente. Em estatística, costama-se representar a mediana como <span class="math inline">\(\widetilde{X}\)</span>. Para calcular a mediana siga o esquema abaixo.</p>
 <ul>
-<li><p>Quartis (Q1 e Q3);</p></li>
-<li><p>Mediana;</p></li>
-<li><p>E a distância interquartílica 1,5 x DIQ= Q3-Q1.</p></li>
+<li>Se a quantidade de elementos for impar, use <span class="math inline">\(\frac{n + 1}{2}\)</span></li>
+<li>Se a quantidade de elementos for par, tire a média entre o elemento <span class="math inline">\(\frac{n}{2}\)</span> e <span class="math inline">\(\frac{n}{2} + 1\)</span></li>
 </ul>
-<p>ainda não entendeu?</p>
-<p>Falendo de maneira leiga, a função do BoxPlot é literalmente uma forma de “excluir”</p>
-<p>os números ou dados que atrapalhariam uma melhor dedução de uma problemática.</p>
-<p><span class="math inline">\(\color{blue}{\text{BoxPlot}}\)</span></p>
-<p>(gráfico)</p>
-<p>O BoxPlot é constituído por uma caixa, a caixa é delimitada pelo valor do primeiro</p>
-<p>quartil (Q1) a margem da esquerda e pelo valor do terceiro quartil Q3 a margem da direita.</p>
-<p>Uma linha é traçada dentro da caixa caracterizando o valor do segundo quartil Q2 (mediana).</p>
-<p>Entre o primeiro e o terceiro quartil, temos 50% dos dados. Pode-se pensar então, que a caixa</p>
-<p>contém metade dos dados do conjunto. A largura da caixa é dada por (Q3-Q1), que é chamada</p>
-<p>de distância interquartílica (1,5 x DIQ=Q3-Q1).</p>
-<p>Traça-se uma linha horizontal a partir do Q1 até o menor valor não discrepante e outra</p>
-<p>a partir de Q3 até o maior valor não discrepante.</p>
-<p>Os valores que são considerados discrepantes (outliers):</p>
-<ul>
-<li><p>São menores que (Q1 - 1,5D)</p></li>
-<li><p>São maiores que (Q3 + 1,5D)</p></li>
-</ul>
-<p>Os valores discrepantes são representados no gráfico por asterisco, ‘’ * ‘’</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg1.png" /></p>
-<p><span class="math inline">\(\color{red}{\text{LEMBRANDO BENÇA QUE O GRÁFICO TEM QUE FICAR EM PÉ}}\)</span></p>
-<p>Aqui vai um bizú: é só comparar o boxplot com o eixo “ y ” do plano cartesiano.</p>
-<p>Ainda perdido bença?</p>
-<p>Bora praticar!</p>
-<ul>
-<li>Exemplo 1:</li>
-</ul>
-<p><span class="math inline">\(\color{blue}{\text{1 8 9 10 11 12 12 12 12 12 12 13 14 15 16 54}}\)</span></p>
-<ol style="list-style-type: decimal">
-<li>Calcule os quartis:</li>
-</ol>
-<p><span class="math inline">\(\color{red}{\text{1º $Q=\frac{1}{4} x n≡$}}\)</span> <span class="math inline">\(\frac{1}{4} x 16= \frac{16}{4}\)</span> <span class="math inline">\(\color{red}{\text{≡ 1º $Q=4$}}\)</span></p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg2.png" /></p>
-<p><span class="math inline">\(\color{red}{\text{1º Q = 10}}\)</span></p>
-<p><span class="math inline">\(\color{purple}{\text{3º $Q=\frac{3}{4} x n≡$}}\)</span> <span class="math inline">\(\frac{3}{4} x 16= \frac{48}{4}\)</span> <span class="math inline">\(\color{purple}{\text{≡ 3º $Q=12$}}\)</span></p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica%20radiologia\imagens\boximg3.png" /></p>
-<p><span class="math inline">\(\color{purple}{\text{3º Q = 13}}\)</span></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Calcule agora a Distancia Interquartil:</li>
-</ol>
-<p>1,5 x D = (<span class="math inline">\(\color{purple}{\text{3º Q}}\)</span> – <span class="math inline">\(\color{red}{\text{1º Q}}\)</span>)</p>
-<p>1,5 x D= ( <span class="math inline">\(\color{purple}{\text{13}}\)</span> – <span class="math inline">\(\color{red}{\text{10}}\)</span>)</p>
-<p>1,5 x <span class="math inline">\(\color{green}{\text{3}}\)</span></p>
-<p><span class="math inline">\(\color{green}{\text{DIQ= 4,5}}\)</span></p>
-<p><span class="math inline">\(\color{red}{\text{1º Q= 10 ↔10}}\)</span> <span class="math inline">\(\color{green}{\text{-4,5}}\)</span> <span class="math inline">\(\color{red}{\text{=}}\)</span> 5,5</p>
-<p><span class="math inline">\(\color{purple}{\text{3º=13 ↔13}}\)</span> <span class="math inline">\(\color{green}{\text{+ 4,5}}\)</span> <span class="math inline">\(\color{purple}{\text{=}}\)</span> 17,5</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Faça o BoxPlot:</li>
-</ol>
-<div id="grafico-boxplot" class="section level4">
-<h4><span class="header-section-number">3.0.0.1</span> GRÁFICO BOXPLOT</h4>
-<p>A dispersão é representada pela amplitude do gráfico, que pode ser calculada</p>
-<p>como valor máximo – valor mínimo. Quanto maior for a amplitude, maior será a</p>
-<p>variação nos dados. A posição da linha mediana no retângulo informa sobre a</p>
-<p>assimetria da distribuição.</p>
-<p>Em primeiro lugar, calcularemos o intervalo interquartil</p>
-<p>“O intervalo interquartil é a diferença entre o primeiro quartil e o terceiro</p>
-<p>quartil. O intervalo interquartil é uma medida de variabilidade baseada na</p>
-<p>divisão de um conjunto de dados em quartis.</p>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5 (quantidade de elementos impar)
+Aqui são 9 elementos então <span class="math inline">\(\frac{9 + 1}{2} = 5\)</span>. Lembre-se que 5 não é o valor da mediana e sim a posição da mediana. Olhando pra sequência deste exemplo o quinto elemento é 2, por isso a mediana para esse conjunto de números é 2.</p>
+<p>Exemplo: 1-1-2-2-3-4-5-6-7-7 (quantidade de elementos par)
+Aqui são 10 elementos então a posição da mediana será a média entre os elementos da posição <span class="math inline">\(\frac{10}{2} = 5\)</span> e posição <span class="math inline">\(\frac{10}{2} + 1 = 6\)</span>. O elemento da posição 5 é 3 e o elemento da posição 6 é 4, então <span class="math inline">\(\frac{3 + 4}{2} = 3,5\)</span>, logo o valor da mediana para este conjunto de números é 3,5.</p>
 </div>
-<div id="diq-q3-q1" class="section level4">
-<h4><span class="header-section-number">3.0.0.2</span> DIQ= Q3-Q1</h4>
+<div id="moda" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Moda</h3>
+<p>É o valo do elemento que ocorre com maior frequência. Em estatística representamos por <span class="math inline">\(M_o\)</span>. Uma sequência de dados podem apresentar mais de uma moda caso tenham mais de um elemento com a mesma quantidade de repetição. Um conjunto de dados, inclusive pode não aprenstar moda caso nenhum elemento se repita.</p>
+<p>Exemplo: 1-1-2-2-2-2-2-3-4-5-6<br />
+<span class="math inline">\(M_o = 2\)</span></p>
+<p>Exemplo: 1-1-2-3-4-5-5<br />
+<span class="math inline">\(M_o = 1 \space e \space 5\)</span> (bi-modal)</p>
+<p>Exemplo: 1-2-3-4-5<br />
+Amodal (nenhum elemento se repete)</p>
 </div>
-<div id="limites-superior-e-inferior" class="section level3">
-<h3><span class="header-section-number">3.0.1</span> Limites superior e inferior</h3>
-<p>Numa coleta de dados podem ocorrer erros de arredondamentos ou erros de</p>
-<p>observação. São considerados discrepantes dentro de uma mesma amostra e</p>
-<p>podem levar a erros nas análises sobre a distribuição dos dados. Portanto,</p>
-<p>estabelece-se o critério de limite inferior e de limite superior nos quartis</p>
-<p>(os dados que estiverem além destes limites são considerados discrepantes).</p>
-<p>Então:</p>
-<div id="liq1-c-e-ls-q3c" class="section level4">
-<h4><span class="header-section-number">3.0.1.1</span> Li=Q1-c e Ls= Q3+c</h4>
-<p>Embora c seja uma constante que pertence aos números reais (R) e pode assumir</p>
-<p>qualquer valor, é preferível usar o valor c=1,5 que é capaz de captar mais de 99%</p>
-<p>dos dados embaixo de uma curva normal para mais e para menos do limite superior e do limite</p>
-<p>inferior, mas não é capaz de captar 100% dos dados deixando uma margem para a</p>
-<p>visualização dos dados discrepantes. Portanto ao calcularmos o Intervalo interquartil</p>
-<p>teremos:</p>
-</div>
-<div id="diq-q3-q1x-15" class="section level4">
-<h4><span class="header-section-number">3.0.1.2</span> DIQ= (Q3-Q1)x 1,5</h4>
-<p>Tomando o exemplo anterior:</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem20.png" /></p>
-<p>Q(1)= 40(1/4)= 4. A posição <span class="math inline">\(\color{red}{\text{10}}\)</span> corresponde ao dado <span class="math inline">\(\color{red}{\text{06}}\)</span>, portanto Q(1)= 06</p>
-<p>Q(3)= 40(3/4)=30. A posição <span class="math inline">\(\color{green}{\text{30}}\)</span> corresponde ao dado <span class="math inline">\(\color{green}{\text{14}}\)</span>, portanto Q(3)= 14.</p>
-<p>DIQ= (Q3-Q1)x 1,5 = (14-6) x1,5 = 12</p>
-<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem24.png" /></p>
+<div id="exercicios" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Exercícios</h3>
 </div>
 </div>
-<div id="exercicios-5" class="section level3">
-<h3><span class="header-section-number">3.0.2</span> Exercícios</h3>
-
+<div id="medidas-de-dispersao" class="section level2">
+<h2><span class="header-section-number">1.2</span> Medidas de Dispersão</h2>
+<p>Variância, Desvio Padrão, Amplitude, Intervalo-Interquantil, Coeficiente de Variação.</p>
+<div id="variancia" class="section level4">
+<h4><span class="header-section-number">1.2.0.1</span> Variância</h4>
+<p>Mede a sua dispersão estatística, indicando “o quão longe” em geral os seus</p>
+<p>valores se encontram do valor esperado.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem11.png" /></p>
+</div>
+<div id="desvio-medio-padrao" class="section level4">
+<h4><span class="header-section-number">1.2.0.2</span> Desvio Médio Padrão</h4>
+<p>Indica o quanto o conjunto de dados é uniforme. Quando o desvio é baixo, quer</p>
+<p>dizer que os dados do conjunto estão mais próximos da média.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem12.png" /></p>
+</div>
+<div id="variancia-1" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Variância</h3>
+</div>
+<div id="distancia-interquartilica" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Distância Interquartílica</h3>
+</div>
+<div id="exercicios-1" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Exercícios</h3>
+</div>
+</div>
+<div id="assimetria" class="section level2">
+<h2><span class="header-section-number">1.3</span> Assimetria</h2>
+<div id="simetria" class="section level4">
+<h4><span class="header-section-number">1.3.0.1</span> SIMETRIA</h4>
+<p>Uma curva (ou distribuição) é simétrica quando os valores em torno do ponto</p>
+<p>central, ou seja, a média, a mediana e a moda coincidem. Os valores se agrupam</p>
+<p>acima ou abaixo do ponto central, e este “desvio” da simetria denomina-se</p>
+<p>assimetria.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem13.png" /></p>
+</div>
+<div id="assimetria-1" class="section level4">
+<h4><span class="header-section-number">1.3.0.2</span> ASSIMETRIA</h4>
+<p>1 - Diz-se que uma assimetria é do tipo positiva quando os valores mais altos das</p>
+<p>observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à</p>
+<p>direita da ordenada (frequência) máxima do que à esquerda. Também chamada de</p>
+</div>
+<div id="assimetrica-a-direita." class="section level4">
+<h4><span class="header-section-number">1.3.0.3</span> assimétrica à direita.</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem14.png" /></p>
+<p>2 - Diz-se que uma assimetria é do tipo negativa quando os valores mais altos</p>
+<p>das observações, ou seja, a Curva de Frequência tem uma “cauda” mais longa à</p>
+<p>esquerda da ordenada (frequência) máxima do que à direita. Também chamada de</p>
+</div>
+<div id="assimetrica-a-esquerda." class="section level4">
+<h4><span class="header-section-number">1.3.0.4</span> assimétrica á esquerda.</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem15.png" /></p>
+</div>
+<div id="calculando-a-assimetria-1" class="section level4">
+<h4><span class="header-section-number">1.3.0.5</span> CALCULANDO A ASSIMETRIA</h4>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem16.png" /></p>
+<p>x̅= (1+1+2+2+2+2+3+4+5+6)/10 = 30/10 = 3</p>
+<p>σ2=Σ[ (x1 -x̅)2 + (x2 -x̅)2 + (x3 -x̅)2 + (x4 -x̅)2 + (x5 -x̅)2 + (x6 -x̅)2 + (x7 -x̅)2 + (x8 -x̅)2 + (x9 -x̅)2 + (x10 -x̅)2 ] /n</p>
+<p>σ2= (1-3)2 + (1-3)2 + (2-3)2 +(2-3)2 +(2-3)2 +(2-3)2 +(3-3)2 +(4-3)2 + (5-3)2 +(6-3)2 / 10=</p>
+<p>σ2 = (4+4+1+1+1+1+0+1+4+9)/10= 2,6 (Variância)</p>
+<p>σ = √2,6 = 1,61 (Desvio médio)</p>
+<p>A= 3(x̅ -x ̃)/ σ = 3(3-2)/2,6 = 1,15 Assimétrico à direita.</p>
+</div>
+<div id="corte" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> CORTE</h3>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem17.png" /></p>
+</div>
+<div id="exercicios-2" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Exercícios</h3>
+</div>
 </div>
 </div>
             </section>
@@ -268,8 +274,8 @@ média é de 15 anos. Se adicionarmos uma pessoa de 60 anos, a idade média pode
           </div>
         </div>
       </div>
-<a href="colorbluetextquartis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="distribuicao-de-frequencia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="colorbluetextquartis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
