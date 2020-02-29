@@ -1,6 +1,6 @@
 --- 
 title: "Estatística Básica"
-author: "Samuel Macêdo,  Edelson Varela..."
+author: "Samuel Macêdo e Edelson Varela"
 date: "`r Sys.Date()`"
 bibliography:
 - book.bib
@@ -17,6 +17,12 @@ biblio-style: apalike
 Olá, seja bem vindo :)
 
 Este material se refere ao curso de estatística básica ministrado aqui no IFPE e contém tanto a teoria quanto a prática. Para o fazer os exercícios será necessário possuir uma calculadora científica (não vamos fazer contas na mão, ne? ninguém merece). 
+
+Gostaria de agradecer a ajuda dos alunos Eduardo Henrique, Eddie Muller e Kevyn Santos por terem escrito boa parte dos textos em Rmarkdown e subido no github ;) Aliás, todo este conteúdo está no neste repositório <https://github.com/r-ifpe/aula-estatistica_basica> e qualquer tipo de contribuição será muito bem vinda! 
+
+Caso tenha alguma dúvida, sugestão ou crítica, também pode falar comigo pelo email samuelmacedo@recife.ifpe.edu.br. 
+
+Bom estudo :)
 
 ## Conceito
 
