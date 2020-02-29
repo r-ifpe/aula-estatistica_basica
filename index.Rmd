@@ -12,3 +12,178 @@ site: bookdown::bookdown_site
 biblio-style: apalike
 ---
 
+# Introdução 
+
+Olá, seja bem vindo :)
+
+Este material se refere ao curso de estatística básica ministrado aqui no IFPE e contém tanto a teoria quanto a prática. Para o fazer os exercícios será necessário possuir uma calculadora científica (não vamos fazer contas na mão, ne? ninguém merece). 
+
+## Conceito
+
+Estatística é a ciência responsável pela coleta, organização e interpretação de dados. Se utiliza das teorias probabilísticas para explicar a frequência da ocorrência de eventos.
+
+A estatística descritiva se preocupa em descrever os dados cujo objetivo é o de produzir uma impressão mais rápida e viva do fenômeno em estudo.
+
+## Importância
+
+O estudo estatístico é muito importante em situações de planejamento, coleta de dados, organização e análise de informações coletadas, interpretação e divulgação de dados e resultados. 
+
+## Calculadoras Científicas
+
+   É uma calculadora eletrônica geralmente efetuada manualmente, para cálculos mais complexos,nas áreas das ciências exatas.  
+
+
+### Teclas básicas
+
+•Ligar: Botão **ON**.
+
+•	Desligar: Aperte **SHIFT** e em seguida aperte **AC**.
+
+•	Tecla **AC**: apaga tudo que está na tela.
+
+• Tecla **DEL**: apaga o último Termo digitado.
+
+•	Botão **SHIFT** ou **2ND**: pressione o botão para selecionar os comandos que estão em primeiro, na parte superior das teclas, com a mesma cor do mesmo.
+
+•	**As setas (direcionais)**: aperte-a para movimentar pelo visor. Da **esquerda** para a **direita**, com o intuito de conferir, apagar ou até mesmo redigitar. De **cima** para **baixo**, com a intenção de para conferir as contas feitas.
+
+•	**MODE**: Ao pressiona-lo, serão mostrados os modos da sua calculadora.
+
+***
+
+#### **ATENÇÃO!**
+
+**A calculadora científica tem como base a língua inglesa, então o ponto (**.**) separa decimal e a vírgula (**,**) milhar.**
+
+***
+
+### Modos
+
+No que se refere ao uso das calculadoras científicas possuem diversos modelos e marcas, modificando configurações e nomes de teclas, mas que não interfere nas suas funcionalidades. As mais utilizadas pelos discentes:
+
+#### ***CASIO fx-82MS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **SD**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***CASIO fx-82ES PLUS***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***NWAY  SC991EP***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no mod de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***HP 10S + Scientific calculator***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número 2 que corresponde a **STAT**.
+
+Para colocar no modo de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3** que corresponde a **REG**.
+
+#### ***Kenko kk-83MS-5***
+
+Para por no **modo estatístico** aperte o botão **MODE** e logo em seguida aperte o número **2** que corresponde a **STAT**.
+
+Para colocar no modo no de **regressão linear** aperte o botão **MODE** e em seguida aperte o número **3**  que corresponde a **REG**.
+
+
+	
+### USANDO A CALCULADORA – MODELO (CASIO fx 991ESplus)
+
+Para amostras maiores usamos nossa calculadora para agilizar os cálculos e
+
+otimizar o tempo de resolução.
+
+Tomando o exemplo anterior, vamos classificar esta amostra.
+
+a) Identificar a mediana
+
+b) Calcular a média
+
+c) Calcular o desvio médio padrão
+
+d) Determinar a simetria
+
+d) Determinar a Curtose
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem22.png)
+
+1º passo: Identificar o nº de elementos da amostra (N)
+
+Contando os elementos N= 40
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem23.png)
+
+2° passo: verifique a frequencia dos dados
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem25.png)
+
+### SELECIONANDO O MODO DE CÁLCULO
+
+1 – Após ligar a calculadora, selecionar o modo estatístico.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem26.png)
+
+2 – escolher o menu para os cálculos descritivos (Variáveis simples).
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem27.png)
+
+3 – Aparecerá a seguinte tela: Onde poderão ser inseridos os dados da amostra e suas respectivas frequências.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem28.png)
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem29.png)
+
+Após a inserção dos dados, vamos aos resultados.
+
+1 – Pressione AC ao final da inserção dos valores e frequências(isto limpa a introdução de valores), após isso, pressione:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem30.png)
+
+2 – Escolha o cálculo estatístico (relembrando: estamos trabalhando com VARiáveis simples.
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem31.png)
+
+Para obtermos o resultado da média pressionamos
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem32.png)
+
+Para obtermos o resultado do desvio médio padrão pressionamos
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem33.png)
+
+### CALCULANDO A ASSIMETRIA 
+
+Após obtermos o resultado do desvio padrão (σ), 
+
+1 - Pressionamos  ![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem34.png)
+
+2 – Inserimos a fórmula de Assimetria 
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem35.png)
+
+### ROTEIRO:
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem36.png)
+
+A= -0,997 levemente assimétrica à esquerda.
+
+Q(1)= 40(1/4)= 4. A posição $\color{red}{\text{10}}$ corresponde ao dado $\color{red}{\text{06}}$, portanto Q(1)= 06
+
+(3)= 40(3/4)=30. A posição $\color{green}{\text{30}}$ corresponde ao dado $\color{green}{\text{14}}$, portanto Q(3)= 14.
+
+D(1)= 40(1/10)= 4. A posição $\color{red}{\text{4}}$ corresponde ao dado $\color{red}{\text{02}}$, portanto D(1)= 02
+
+D(9)= 40(9/10)=36. A posição $\color{green}{\text{36}}$ corresponde ao lado $\color{green}{\text{16}}$, portanto D(9)= 16
+
+![](C:\Users\EHS\Desktop\ebook estatistica\imagens\imagem37.png)
+
+Na calculadora, inserimos:
+
+(14-6)/2/(16-2)= 
+
