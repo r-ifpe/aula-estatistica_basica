@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Distribuição de frequência | Estatística Básica</title>
+  <meta name="description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Distribuição de frequência | Estatística Básica" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
+  <meta name="github-repo" content="r-ifpe/aula-estatistica_basica" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Distribuição de frequência | Estatística Básica" />
+  
+  <meta name="twitter:description" content="Referencia para o curso de estatistica basica feito em R usando bookdown." />
+  
+
+<meta name="author" content="Samuel Macêdo, Edelson Varela e Vanessa Silva" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="estatistica-descritiva.html"/>
+<link rel="next" href="regressao.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Estatística Básica</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Apresentação</a></li>
+<li class="chapter" data-level="1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html"><i class="fa fa-check"></i><b>1</b> Calculadoras Científicas</a><ul>
+<li class="chapter" data-level="1.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#modelos"><i class="fa fa-check"></i><b>1.1</b> Modelos</a></li>
+<li class="chapter" data-level="1.2" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#teclas-basicas"><i class="fa fa-check"></i><b>1.2</b> Teclas básicas</a></li>
+<li class="chapter" data-level="1.3" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#armazenando-os-dados"><i class="fa fa-check"></i><b>1.3</b> Armazenando os dados</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#fx-82ms"><i class="fa fa-check"></i><b>1.3.1</b> fx-82MS</a></li>
+<li class="chapter" data-level="1.3.2" data-path="calculadoras-cientificas.html"><a href="calculadoras-cientificas.html#fx-82es-plus"><i class="fa fa-check"></i><b>1.3.2</b> fx-82ES PLUS</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html"><i class="fa fa-check"></i><b>2</b> Estatística Descritiva</a><ul>
+<li class="chapter" data-level="2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-tendencia-central"><i class="fa fa-check"></i><b>2.1</b> Medidas de Tendência Central</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#media"><i class="fa fa-check"></i><b>2.1.1</b> Média</a></li>
+<li class="chapter" data-level="2.1.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#mediana"><i class="fa fa-check"></i><b>2.1.2</b> Mediana</a></li>
+<li class="chapter" data-level="2.1.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#moda"><i class="fa fa-check"></i><b>2.1.3</b> Moda</a></li>
+<li class="chapter" data-level="2.1.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios"><i class="fa fa-check"></i><b>2.1.4</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-dispersao"><i class="fa fa-check"></i><b>2.2</b> Medidas de Dispersão</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#variancia-1"><i class="fa fa-check"></i><b>2.2.1</b> Variância</a></li>
+<li class="chapter" data-level="2.2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#distancia-interquartilica"><i class="fa fa-check"></i><b>2.2.2</b> Distância Interquartílica</a></li>
+<li class="chapter" data-level="2.2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-1"><i class="fa fa-check"></i><b>2.2.3</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#assimetria"><i class="fa fa-check"></i><b>2.3</b> Assimetria</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#corte"><i class="fa fa-check"></i><b>2.3.1</b> CORTE</a></li>
+<li class="chapter" data-level="2.3.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-2"><i class="fa fa-check"></i><b>2.3.2</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#quartis"><i class="fa fa-check"></i><b>2.4</b> Quartis</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#colorbluetextdecis"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(\color{blue}{\text{Decis}}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#quantis"><i class="fa fa-check"></i><b>2.5</b> Quantis</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-3"><i class="fa fa-check"></i><b>2.5.1</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#curtose"><i class="fa fa-check"></i><b>2.6</b> Curtose</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#calculando-quartil-e-decil"><i class="fa fa-check"></i><b>2.6.1</b> <strong>Calculando Quartil e Decil</strong></a></li>
+<li class="chapter" data-level="2.6.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#classificacao"><i class="fa fa-check"></i><b>2.6.2</b> Classificação</a></li>
+<li class="chapter" data-level="2.6.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-4"><i class="fa fa-check"></i><b>2.6.3</b> Exercícios</a></li>
+<li class="chapter" data-level="2.6.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#resolucao-e-gabarito"><i class="fa fa-check"></i><b>2.6.4</b> <strong>Resolução e Gabarito</strong></a></li>
+<li class="chapter" data-level="2.6.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#curtose-1"><i class="fa fa-check"></i><b>2.6.5</b> CURTOSE</a></li>
+<li class="chapter" data-level="2.6.6" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#calculo-da-curtose"><i class="fa fa-check"></i><b>2.6.6</b> CÁLCULO DA CURTOSE</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#boxplot"><i class="fa fa-check"></i><b>2.7</b> Boxplot</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#limites-superior-e-inferior"><i class="fa fa-check"></i><b>2.7.1</b> Limites superior e inferior</a></li>
+<li class="chapter" data-level="2.7.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-5"><i class="fa fa-check"></i><b>2.7.2</b> Exercícios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html"><i class="fa fa-check"></i><b>3</b> Distribuição de frequência</a><ul>
+<li class="chapter" data-level="3.1" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#exercicios-6"><i class="fa fa-check"></i><b>3.1</b> Exercícios</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#exemplo"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo:</a></li>
+<li class="chapter" data-level="3.1.2" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#inserindo-os-valores-na-calculadora"><i class="fa fa-check"></i><b>3.1.2</b> INSERINDO OS VALORES NA CALCULADORA</a></li>
+<li class="chapter" data-level="3.1.3" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#mediana-1"><i class="fa fa-check"></i><b>3.1.3</b> MEDIANA</a></li>
+<li class="chapter" data-level="3.1.4" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#calculando-a-posicao-da-mediana"><i class="fa fa-check"></i><b>3.1.4</b> CALCULANDO A POSIÇÃO DA MEDIANA</a></li>
+<li class="chapter" data-level="3.1.5" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#calculando-o-valor-da-mediana"><i class="fa fa-check"></i><b>3.1.5</b> CALCULANDO O VALOR DA MEDIANA</a></li>
+<li class="chapter" data-level="3.1.6" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#calculando-a-assimetria-1"><i class="fa fa-check"></i><b>3.1.6</b> CALCULANDO A ASSIMETRIA</a></li>
+<li class="chapter" data-level="3.1.7" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#calculando-os-quartis-e-decis"><i class="fa fa-check"></i><b>3.1.7</b> CALCULANDO OS QUARTIS E DECIS</a></li>
+<li class="chapter" data-level="3.1.8" data-path="distribuicao-de-frequencia.html"><a href="distribuicao-de-frequencia.html#curtose-2"><i class="fa fa-check"></i><b>3.1.8</b> CURTOSE</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regressao.html"><a href="regressao.html"><i class="fa fa-check"></i><b>4</b> Regressão</a><ul>
+<li class="chapter" data-level="4.1" data-path="regressao.html"><a href="regressao.html#exercicios-7"><i class="fa fa-check"></i><b>4.1</b> Exercícios</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estatística Básica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="distribuicao-de-frequencia" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Distribuição de frequência</h1>
+<p>A distribuição de frequência é um agrupamento de dados distribuídos em classes, frequências e frequências acumuladas. Esses dados podem ser representados em tabelas ou gráficos, chamados de histogramas.</p>
+<p><strong>Classes</strong>: são os principais dados da tabela. Possuem intervalos entre o número inferior e o número superior, onde o superior não pertence ao intervalo. Para acharmos o ponto médio, tiramos a média entre a soma dos intervalos de cada classe.</p>
+<p><strong>Frequências</strong>: São as ocorrências dos valores dos intervalos de cada classe.</p>
+<p><strong>Frequência Acumulada</strong>: É a soma de todas as classes anteriores até a ultima classe.</p>
+<p><span class="math inline">\(\color{green}{\text{(Exemplo 1)}}\)</span>: De acordo com os passos, descubra a média, mediana, o desvio de padrão e a assimetria.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Classe</strong></th>
+<th><strong>Frequência</strong></th>
+<th><strong>F.Acumulada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>60-70</strong></td>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td><strong>70-80</strong></td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td><strong>80-90</strong></td>
+<td>2</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td><strong>90-100</strong></td>
+<td>8</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td><strong>100-110</strong></td>
+<td>6</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td><strong>110-120</strong></td>
+<td>14</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td><strong>120-130</strong></td>
+<td>10</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td><strong>130-140</strong></td>
+<td>12</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 1</strong>: descobrir os pontos médios e adicionar à calculadora no modo SD (Ex:65;75;85;95;105;115;125;135) editando suas respectivas frequências.</p>
+<p><strong>Passo 2</strong>: Descobrir a média <strong><span class="math inline">\(\overline x\)</span> = 102.5</strong></p>
+<p><strong>Passo 3</strong>: Descobrir a mediana (a posição da média das frequências dividida pela frequência multiplicado pelo tamanho da classe somado ao inicio dela) <strong><span class="math inline">\(\tilde{x}\)</span>=105</strong></p>
+<p><strong>Passo 4</strong>: Descobrir o desvio de padrão <strong>σ=25.42</strong></p>
+<p><strong>Passo 5</strong>: Descobrir a assimetria <strong>A= -0.2</strong></p>
+<p><strong>Passo 6</strong>: Desenhar o <span class="math inline">\(\color{yellow}{\text{Histograma}}\)</span></p>
+<p><span class="math inline">\(\color{green}{\text{(Exemplo 2)}}\)</span>:Seguindo os mesmos passos anteriores.Descubra a média, mediana, o desvio de padrão e a assimetria.Descobrindo também o 1º e 3º quartil, o 1º e 9º decil e a curtose.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Classe</strong></th>
+<th><strong>Frequência</strong></th>
+<th><strong>F.Acumulada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>15-25</strong></td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><strong>25-35</strong></td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td><strong>35-45</strong></td>
+<td>15</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td><strong>45-55</strong></td>
+<td>10</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td><strong>55-65</strong></td>
+<td>5</td>
+<td>45</td>
+</tr>
+<tr class="even">
+<td><strong>65-75</strong></td>
+<td>14</td>
+<td>59</td>
+</tr>
+<tr class="odd">
+<td><strong>75-85</strong></td>
+<td>0</td>
+<td>59</td>
+</tr>
+<tr class="even">
+<td><strong>85-95</strong></td>
+<td>1</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\overline x\)</span>=47.83…
+<span class="math inline">\(\tilde{x}\)</span>=55
+σ=17.03…
+Q1=25 ,Q3=55
+D1=26 ,D9=71.42
+A=-1.26
+K=0.3</p>
+<p><strong>OBS</strong>: Antes de calcular a curtose, deverá descobrir a posição dos quartis e decis.(a posição do quantil, dividida pela frequência multiplicadapelo tamanho da classe somado ao inicio dela).</p>
+<hr />
+<div id="exercicios-6" class="section level2">
+<h2><span class="header-section-number">3.1</span> Exercícios</h2>
+<p>1.Qual gráfico é o mais adequado para se fazer a representaçao gráfica de uma distribuição de frequências?</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Diagrama de Barras</p></li>
+<li><p>Pictograma</p></li>
+<li><p>Polígono de Frenquência</p></li>
+<li><p>Histograma</p></li>
+</ol>
+<p>2.Em 20 dias um professor anotou o número de alunos ausentes, e fez a tabela de frequências abaixo:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Aulos Ausentes</th>
+<th>Frequências</th>
+<th>Percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-3</td>
+<td>5</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>4-7</td>
+<td><strong>B</strong></td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>8-12</td>
+<td>C</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td>12-16</td>
+<td>2</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<p>Qual o número que a letra <strong>B</strong> corresponde?</p>
+<pre><code>A) 5
+
+B) 6
+
+C) 7
+
+D) 8
+
+E) 9</code></pre>
+<p>3.A tabela abaixo indica a frequência relativa de 4 produtos (A,B,C,D) encontrados em 30 lojas.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Produtos</th>
+<th>Frenquência Absoluta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0,3</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>0,4</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>0,1</td>
+</tr>
+</tbody>
+</table>
+<p>O número de lojas que os produtos <strong>B</strong> ou <strong>D</strong> foram encontrados foi de?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>7</p></li>
+<li><p>9</p></li>
+<li><p>12</p></li>
+<li><p>15</p></li>
+<li><p>18</p></li>
+</ol>
+<p>4.Foi realizada uma pesquisa para se saber qual o número de Tv’s em cada casa, 200 residências participaram da pesquisa.</p>
+<table>
+<thead>
+<tr class="header">
+<th>N°de TV’s</th>
+<th>Frequência Absoluta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>118</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>48</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Qual a porcentagem de casas que têm mais de uma TV?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>12%</p></li>
+<li><p>37%</p></li>
+<li><p>63%</p></li>
+<li><p>46%</p></li>
+<li><p>74%</p></li>
+</ol>
+<p>5.O máximo de um gráfico de frequência absoluta acumulada de uma variável discreta é?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Decil</p></li>
+<li><p>Amplitude</p></li>
+<li><p>Moda</p></li>
+<li><p>Cumulativo</p></li>
+<li><p>Número total de observações</p></li>
+</ol>
+<p>6.Polígonos de frequência e Histogramas são representacões gráficas de distribuições:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>não uniformes</p></li>
+<li><p>de acumulações</p></li>
+<li><p>uniformes</p></li>
+<li><p>assimétricas</p></li>
+<li><p>de Frequências</p></li>
+</ol>
+<p>7.A tabela a seguir mostra uma entrevista feita com 50 clientes e está dividida por faixa etária.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Ordem de faixa etária</th>
+<th>Faixa etária</th>
+<th>Número de Clientes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1°</td>
+<td>18-25</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>2°</td>
+<td>25-32</td>
+<td>24</td>
+</tr>
+<tr class="odd">
+<td>3°</td>
+<td>32-40</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>4°</td>
+<td>40-48</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>É correto afirmar que:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Pelo menos 1 , na terceira faixa etária, têm 32 anos.</p></li>
+<li><p>Há, na primeira faixa etária, ao menos 1 têm 25 anos.</p></li>
+<li><p>12% tem mais 18 anos.</p></li>
+<li><p>48% tem entre 18 e 32 anos.</p></li>
+<li><p>88% têm menos de 40 anos.</p></li>
+</ol>
+<p>8.Considere a tabela a seguir</p>
+<table>
+<thead>
+<tr class="header">
+<th>Classes</th>
+<th>Frequências Acumuladas(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400-500</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>500-600</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>600-700</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>700-800</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>800-900</td>
+<td>55</td>
+</tr>
+<tr class="even">
+<td>900-1000</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>A estimativa da distribuição que não é superada em 60% das observações é?</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>890.88</p></li>
+<li><p>911.11</p></li>
+<li><p>890,66</p></li>
+<li><p>915,67</p></li>
+<li><p>987,98</p></li>
+</ol>
+<p>9.Dos 110 empregados de uma empresa, 80 são casados, 70 possuem casa própria e 30 são solteiros e possuem casa própria. julgue o item a seguir.</p>
+<p>Dos empregados que possuem casa própria há mais solteiros que casados.</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Certo</p></li>
+<li><p>Errado</p></li>
+</ol>
+<p>10.Foram entrevistados 800 telespectadores sobre o programa de televisão de sua preferência e se obteve a seguinte tabela:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Programas de TV</th>
+<th>Número de Telespectadores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Novelas</td>
+<td>300</td>
+</tr>
+<tr class="even">
+<td>Esportes</td>
+<td>128</td>
+</tr>
+<tr class="odd">
+<td>Filmes</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>Noticiários</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td>Shows</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p>Construa um quadro com a distibuição de frequência relativa.</p>
+<p>### DISTRIBUIÇÃO DE FREQUÊNCIA</p>
+<p>Agrupamento de dados, distribuídos em classes, de modo que podemos</p>
+<p>contabilizar o número de ocorrências (frequência) em cada classe. O número de</p>
+<p>ocorrências de uma determinada classe recebe o nome de frequência absoluta.</p>
+<p>Também podemos dizer que é um arranjo de valores que uma ou mais variáveis</p>
+<p>tomam em uma amostra. Cada entrada na tabela contém a frequência ou a</p>
+<p>contagem de ocorrências de valores dentro de um grupo ou intervalo específico, e</p>
+<p>deste modo, a tabela resume a distribuição dos valores da amostra.</p>
+<div id="exemplo" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Exemplo:</h3>
+<p>Num exame biomédico foram obtidos os seguintes dados de altura:</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem38.png" /></p>
+<p>Observamos que a amostra é formada por grupos e não por dados absolutos, então como incluiremos esses grupos nos cálculos?</p>
+<ul>
+<li>Usando o valor médio desses intervalos como valores de amostra.</li>
+</ul>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem39.png" /></p>
+<p>Agora temos uma amostra onde podemos distribuir linearmente da seguinte forma:</p>
+<p>1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,45 - 1,55 - 1,55 - 1,55 - 1,55 - 1,55 - 1,55 -</p>
+<p>1,55 - 1,55 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,65 -</p>
+<p>1,65- 1,65 - 1,65 - 1,65 - 1,65 - 1,65 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 -</p>
+<p>1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 - 1,75 -1,85 -1,85 -1,85 -1,85 -1,95</p>
+<p>Onde temos n=50</p>
+</div>
+<div id="inserindo-os-valores-na-calculadora" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> INSERINDO OS VALORES NA CALCULADORA</h3>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem40.png" /></p>
+<p>Para obtermos o resultado do desvio médio padrão pressionamos</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem41.png" /></p>
+</div>
+<div id="mediana-1" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> MEDIANA</h3>
+<p>A amostra original é formada por classes. Cada classe corresponde a um intervalo</p>
+<p>de valores e a esse intervalo podemos denomina-lo de tamanho da classe.</p>
+<p>Exemplo:</p>
+<p>CLASSE 1- corresponde ao intervalo [1,40 - 1,50], portanto o tamanho da classe será…</p>
+<p>1,50 – 1,40 = 0,10</p>
+</div>
+<div id="calculando-a-posicao-da-mediana" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> CALCULANDO A POSIÇÃO DA MEDIANA</h3>
+<div id="posicao-de-x-n12-5012-255" class="section level4">
+<h4><span class="header-section-number">3.1.4.1</span> posição de x̃ = (n+1)/2 =&gt; (50+1)/2 = 25,5</h4>
+<p>Verifiquemos, na tabela de distribuição, a posição calculada da mediana. Para</p>
+<p>isso, usamos a coluna de FREq ACUMULADA, que também corresponde à</p>
+<p>sequência de posições de valores na amostra.</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem42.png" /></p>
+</div>
+</div>
+<div id="calculando-o-valor-da-mediana" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> CALCULANDO O VALOR DA MEDIANA</h3>
+<p>A posição 25,5 (vide tabela) está entre 15 e 31, então podemos dizer neste</p>
+<p>intervalo, a mediana corresponde a um valor que ocupa a posição 25,5 -15 neste intervalo.</p>
+<p>Usamos a fórmula seguinte para calcularmos uma mediana numa amostra de classes:</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem43.png" /></p>
+<p>Onde:</p>
+<p>A/2 = frequência acumulada/2 = 25,0</p>
+<p>Aa=valor da frequência acumulada anterior=15</p>
+<p>C=tamanho da classe=0,1</p>
+<p>ci=valor inicial da classe correspondente=1,60</p>
+<p>f=frequência da classe correspondente</p>
+<p>Temos:</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem44.png" /></p>
+</div>
+<div id="calculando-a-assimetria-1" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> CALCULANDO A ASSIMETRIA</h3>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem45.png" /></p>
+</div>
+<div id="calculando-os-quartis-e-decis" class="section level3">
+<h3><span class="header-section-number">3.1.7</span> CALCULANDO OS QUARTIS E DECIS</h3>
+<p>Seguimos o mesmo raciocínio que usamos para a mediana</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem46.png" /></p>
+</div>
+<div id="curtose-2" class="section level3">
+<h3><span class="header-section-number">3.1.8</span> CURTOSE</h3>
+<p>K=<span class="math inline">\(\frac{(Q3-Q1)}{(2(D9-D1)}\)</span></p>
+<p>K=<span class="math inline">\(\frac{(Q3-Q1)}{(2(D9-D1)}\)</span> = <span class="math inline">\(\frac{(1,75-1,57)}{(2(1,80-1,47)}\)</span> = 0,27 platicurtico</p>
+<p><img src="C:\Users\EHS\Desktop\ebook%20estatistica\imagens\imagem47.png" /></p>
+<hr />
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="estatistica-descritiva.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regressao.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["aula-estatistica_basica.pdf", "aula-estatistica_basica.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
