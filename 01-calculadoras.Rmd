@@ -21,9 +21,33 @@ Diferentes das calculadoras normais, a científica precisa que você aperte **=*
 
 Muitas vezes digitamos algo errado, é normal. Caso precise apagar algo use **DEL** para a última coisa que você digitou ou apague tudo usando **AC**.
 
-## Tecla **MODE**
+## Armazenando os dados
 
-Esta é a tecla principal da nossa calculadora, é dela que acontece a mágica de não precisar fazer as contas na mão. Aqui aparecerão algumas diferenças entre as calculadoras, mas não se preocupe, será mostrado como se faz nas duas ;)
+No canto superior direito você irá encontrar a teclas **MODE**, esta é a tecla principal da nossa calculadora e é aqui que acontece a mágica de não precisar fazer as contas na mão. Aqui aparecerão algumas diferenças entre as calculadoras, mas não se preocupe, será mostrado como se faz nas duas ;)
+
+### Na fx-82MS
+
+A primeira coisa a se fazer é apertar tecla **MODE**, ao fazer isto irão aparecer três opções: **COMP**, **SD** e **REG**. A opção 1 (**COMP**) é a própria calculadora, volte para este modo quando terminar suas contas. A opção 3 (**REG**) é o modo regressão e será visto mais na frente. A opção que queremos aqui é a de número 2 (**SD**) e eu chamo ela de modo estatísica. 
+
+Como está na opção 2, basta apenas apertar a tecla **2** da sua calculadora. Perceba que na tela da sua calculadora agora aparece la em cima SD. Pronto, estamos no modo estatística!
+
+Em cima da tecla **AC** tem a tecla **M+**, perceba que logo abaixo desta tecla tem escrito `DT[CL]`^[Lembre-se que as calculadoras estão em inglês. DT significa *Data* (Dados) e CL significa *Clear* (apagar).]. Esta tecla no modo estatística servirá para adicionar e remover números.
+
+Suponha a sequência abaixo, vamos por estes números na calculadora!
+
+$$ 3,\space 4,\space 4,\space 4,\space 6,\space 7,\space 7 $$
+É simples, basta apertar a tecla **3** e depois **M+**. Aparecerá na sua tela `n = 1`, isto quer dizer que só um número esta armazenado. Aperte para baixo no direcional e aparecerá `x1 = 3` que significa que o primeiro número que você inseriu foi 3. Se você apertar novamente o direcional para baixo irá aparecer na tela `freq1 = 1`, isto significa que o número só se repetiu uma vez, ou seja, possui freqência 1.  
+
+Imagine, agora, que você digitou errado, por exemplo, 2 ao invès de 3. Na sua tela iria aparecer `x1 = 2`, para corrigir este erro basta digitar o número correto (no nosso caso 3) e apertar a tecla **=**. 
+
+O próximo número é o 4, mas ele se repete três vezes. Você poderia até pôr ele três vezes usando **4** e depois **M+**, contudo, é mais fácil e rápido pôr ele uma vez única vez e depois corrigir a frequência. Adicione o 4 utilizando **4** e depois **M+**, depois disso use o direcional até encontrar o 4 (caso não tenha errado nada até agora, aparecerá na tela `x2 = 4`. Perceba que `x2` é por que o segundo número que colocamos foi 4, o primeiro foi um 3, lembra?). Agora que você encontrou o valor que deseja alterar a frequência, aperte mais uma vez o direcional para baixo e irá aparecer na tela `freq2 = 1`. Como ele apareceu três vezes, apenas aperte **3** e **M+**, pronto agora o 4 três frequência 3 :)
+
+Agora você já sabe pôr os números e ajustar as repetições. E se você quiser apagar? Caso queira remover um número, você irá utilizar mesma tecla **M+**, mas precisará incluir o **SHIFT**. Por exemplo, caso queira apagar o 3, vá com o direcional até este número e quando aparecer na tela `x1 = 3` aperte **SHIFT** e depois **M+**. Perceba que este procedimento remove aquele número da sequência, ou seja, se você apagasse o 4 com frequência 3, todos os três números 4 seriam apagados.
+
+Por fim, para apagar todos os números e voltar ao início, basta alterar o modo da calucludara. Simples, aperte **MODE** e depois **1** para voltar para a calculadora normal ou **MODE** e depois  **2** se quiser voltar para o modo estatística.
+
+### NA fx-82ES PLUS
+
 
 •Ligar: Botão **ON**.
 
