@@ -142,7 +142,7 @@ A= 3(x̅ -x ̃)/ σ = 3(3-2)/2,6 = 1,15 Assimétrico à direita.
 
 ### Exercícios
 
-# $\color{blue}{\text{Quartis}}$
+## Quartis
 
 Utilizando o nome como pista. É literalmente, dividir o conjunto de dados em
 
@@ -758,8 +758,6 @@ D(9)= 40(9/10)=36. A posição $\color{green}{\text{36}}$ corresponde ao dado $\
 
 
 ## Boxplot
-
-# $\color{blue}{\text{BoxPlot}}$
 
   O BoxPlot é um gráfico para a percepção de valores discrepantes (outliers), que são
 
